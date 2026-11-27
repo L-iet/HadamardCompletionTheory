@@ -21,8 +21,8 @@ class LakeCatalogueTest(unittest.TestCase):
         p=self.root/'lakefile.lean';s=p.read_text(encoding='utf-8');self.assertIn(old,s)
         p.write_text(s.replace(old,new,1),encoding='utf-8',newline='\n')
     def test_current_configuration(self):self.check()
-    def test_raised_proof_limit_rejected(self):
-        self.change('lean_lib CompletionCyclicExistence where\n  moreLeanArgs := #["-M1024"]','lean_lib CompletionCyclicExistence where\n  moreLeanArgs := #["-M2048"]')
+    def test_unrecorded_proof_limit_rejected(self):
+        self.change('lean_lib CompletionCyclicExistence where\n  moreLeanArgs := #["-M4096"]','lean_lib CompletionCyclicExistence where\n  moreLeanArgs := #["-M2048"]')
         with self.assertRaisesRegex(AssertionError,'compiler arguments'):self.check()
     def test_default_target_drift_rejected(self):
         self.change('@[default_target]\nlean_lib CompletionTheory where','lean_lib CompletionTheory where')

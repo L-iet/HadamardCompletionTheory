@@ -47,7 +47,7 @@ lean_lib AlgorithmChallenge where
 lean_lib AlgorithmSolution where
 
 lean_lib CompletionRepair where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib RepairChallenge where
 
@@ -55,7 +55,7 @@ lean_lib RepairChallenge where
 lean_lib RepairSolution where
 
 lean_lib CompletionCodeTrap where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib CodeChallenge where
 
@@ -63,55 +63,55 @@ lean_lib CodeChallenge where
 lean_lib CodeSolution where
 
 lean_lib CompletionLattice where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib LatticeChallenge where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 @[default_target]
 lean_lib LatticeSolution where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib CompletionCharacter where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib CharacterChallenge where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 @[default_target]
 lean_lib CharacterSolution where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib CompletionBloch where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib BlochChallenge where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 @[default_target]
 lean_lib BlochSolution where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib CompletionQuaternary where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib QuaternaryChallenge where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 @[default_target]
 lean_lib QuaternarySolution where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
 
 lean_lib CompletionCyclicExistence where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
   plugins := #[{key := .packageTarget .anonymous `nativeRuntime}]
 
 lean_lib CyclicExistenceChallenge where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
   plugins := #[{key := .packageTarget .anonymous `nativeRuntime}]
 
 @[default_target]
 lean_lib CyclicExistenceSolution where
-  moreLeanArgs := #["-M1024"]
+  moreLeanArgs := #["-M4096"]
   plugins := #[{key := .packageTarget .anonymous `nativeRuntime}]
 

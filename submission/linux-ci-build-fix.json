@@ -1,0 +1,26 @@
+{
+  "updatedAtUTC": "2026-11-27T06:46:08.351960+00:00",
+  "previousPublishedCommit": "a76cdddb5d345d6c9505b1f38a774b2ceaae0e31",
+  "changedSourceInventoryFiles": [
+    "lakefile.lean",
+    "scripts/bootstrap_native_mathlib.py",
+    "scripts/check_native_loader_smoke.py",
+    "scripts/test_lake_catalogue.py",
+    "scripts/test_native_runtime.py",
+    "submission/lake-catalogue.toml"
+  ],
+  "mathematicalStatementTokensUnchanged": true,
+  "permittedAxiomsUnchanged": true,
+  "selectedTargetsUnchanged": true,
+  "changes": [
+    "Compiled native objects with Lake-compatible -DLEAN_EXPORTING",
+    "Required a successful Lean plugin-load smoke test before accepting a fresh runtime receipt",
+    "Added a tiny plugin compile/load CI step",
+    "Raised configured proof-build memory ceiling from 1024 to 4096 MiB",
+    "Set routine CI LEAN_NUM_THREADS to 1 and enabled fail-fast build scheduling"
+  ],
+  "fullProofBuildRerun": false,
+  "comparatorRerun": false,
+  "independentKernelChecksRerun": false,
+  "status": "prepared-awaiting-fresh-mechanical-verification"
+}

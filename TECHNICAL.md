@@ -132,7 +132,11 @@ and permits writes in `.lake/build` and `.lake/config`; no generated runtime
 files are written beside those directories. This can take substantial
 time and disk space. Compilation uses at most two workers and is resumable.
 The generated libraries initialize the elaborator; they supply no mathematical
-axioms. New proof modules and the axiom-profile reader retain the 1GiB limit.
+axioms. Proof libraries use a 4 GiB per-process Lean ceiling to accommodate
+Linux interpreter memory demand; the separate axiom-profile reader retains
+its 1 GiB limit. Routine CI requests one Lean/Lake worker thread. Native
+objects use `-DLEAN_EXPORTING`, matching Lake, and the bootstrap loads the
+finished plugin in a small Lean smoke test before writing a successful receipt.
 The existing name-only export preflight keeps its 4GiB diagnostic cap.
 All proofs still require standard-axiom audits and independent kernel checks.
 

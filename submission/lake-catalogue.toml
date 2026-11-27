@@ -31,7 +31,7 @@ name = "AlgorithmSolution"
 
 [[lean_lib]]
 name = "CompletionRepair"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "RepairChallenge"
@@ -41,7 +41,7 @@ name = "RepairSolution"
 
 [[lean_lib]]
 name = "CompletionCodeTrap"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "CodeChallenge"
@@ -51,60 +51,60 @@ name = "CodeSolution"
 
 [[lean_lib]]
 name = "CompletionLattice"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "LatticeChallenge"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "LatticeSolution"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "CompletionCharacter"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "CharacterChallenge"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "CharacterSolution"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "CompletionBloch"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "BlochChallenge"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "BlochSolution"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "CompletionQuaternary"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "QuaternaryChallenge"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "QuaternarySolution"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "CompletionCyclicExistence"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "CyclicExistenceChallenge"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]
 
 [[lean_lib]]
 name = "CyclicExistenceSolution"
-moreLeanArgs = ["-M1024"]
+moreLeanArgs = ["-M4096"]

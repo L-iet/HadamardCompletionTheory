@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
-      LEAN_NUM_THREADS: '2'
+      LEAN_NUM_THREADS: '1'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -27,8 +27,10 @@ jobs:
       - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
         with:
           build: false
+      - name: Check native loader exports
+        run: python3 scripts/check_native_loader_smoke.py
       - name: Build proof modules
-        run: lake build
+        run: lake --fail-fast build
       - name: Audit pinned licenses and target axioms
         run: |
           python3 scripts/audit_mathlib_licenses.py

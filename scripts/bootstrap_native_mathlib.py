@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Build licensed elaborator support. Mathematical proofs still use Lean-M1024.
+"""Build licensed elaborator support. Mathematical proof checking is separate from runtime compilation.
 All output is disposable data under the writable Lake build directory. No theorem or axiom is supplied by this code.
 """
 from pathlib import Path
@@ -13,6 +13,17 @@ def atomic(f,a):
  os.replace(t,f)
 def run(cmd,r,log):
  with log.open('wb') as w:return subprocess.run(cmd,cwd=r,stdout=w,stderr=subprocess.STDOUT,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0)).returncode
+
+def native_compile_flags(windows):
+ # Match Lake's exported-object facet; Linux leanc otherwise hides initializers.
+ return ['-c','-O0','-DLEAN_EXPORTING']+([] if windows else ['-fPIC'])
+
+def smoke_test_loader(r,out,loader):
+ source=out/'RuntimeSmoke.lean'
+ source.write_text('module\nimport Init\nexample : True := by trivial\n',encoding='utf-8',newline='\n')
+ code=run(['lean','-M4096','--plugin='+str(loader),'--root='+str(out),str(source)],r,out/'logs'/'loader-smoke.log')
+ if code:raise RuntimeError('Native loader smoke test failed; see '+str(out/'logs'/'loader-smoke.log'))
+ return {'actualExit':code,'sourceSHA256':sha(source),'memoryLimit':'-M4096'}
 
 def default_output_dir(project_root):
  return project_root.resolve()/'.lake/build/cyclic-native'
@@ -49,12 +60,12 @@ def build(r,out,args):
    else:
     local=r/(name.replace('.','/')+'.lean')
     if local.is_file():todo.append(local)
- flags=['-c','-O0']+([] if win else ['-fPIC'])
+ flags=native_compile_flags(win)
  settings={'format':2,'compiler':str(cc),'compilerSHA256':sha(cc),'flags':flags,'platform':sys.platform,'leanToolchainSHA256':sha(r/'lean-toolchain'),'lakeManifestSHA256':sha(r/'lake-manifest.json'),'recipeSHA256':sha(Path(__file__)),'ownedSourceHashes':own}
  result=out/'result.json'
  if result.is_file():
   a=read(result)
-  if a.get('status')=='native runtime built; no mathematical verification inferred' and a.get('proofLimit')=='-M1024' and a.get('settings')==settings and all(Path(x['file']).is_file() and sha(Path(x['file']))==x['sha256'] for x in a['libraries']) and Path(a['loader']['file']).is_file() and sha(Path(a['loader']['file']))==a['loader']['sha256'] and all(sha(Path(x['source']))==x['sha256'] for x in a['licenses'].values()):
+  if a.get('status')=='native runtime built; no mathematical verification inferred' and a.get('proofLimit')=='-M4096' and a.get('loaderSmokeTest',{}).get('actualExit')==0 and a.get('settings')==settings and all(Path(x['file']).is_file() and sha(Path(x['file']))==x['sha256'] for x in a['libraries']) and Path(a['loader']['file']).is_file() and sha(Path(a['loader']['file']))==a['loader']['sha256'] and all(sha(Path(x['source']))==x['sha256'] for x in a['licenses'].values()):
    print('Validated cached licensed native runtime; proof limits unchanged.',flush=True);return
  index={}
  for pkg in (r/'.lake/packages').iterdir():
@@ -128,13 +139,14 @@ def build(r,out,args):
  loaderSrc=out/'CyclicNativeLoader.lean';paths=[Path(x['file']).as_posix() for x in libraries]
  loaderSrc.write_text('/- Copyright (c) 2026 Joshua Mark. Apache-2.0. Runtime only. -/\nmodule\nimport Lean.LoadDynlib\ninitialize do\n  for path in #['+', '.join(json.dumps(x,ensure_ascii=False) for x in paths)+'] do\n    Lean.loadDynlib (System.FilePath.mk path)\n',encoding='utf-8',newline='\n')
  loaderLib=out/('CyclicNativeLoader.dll' if win else 'libCyclicNativeLoader.so');loaderC=out/'CyclicNativeLoader.c';loaderObj=out/'CyclicNativeLoader.o'
- commands=[['lean','-M1024','--root='+str(out),'-o',str(out/'CyclicNativeLoader.olean'),'-c',str(loaderC),str(loaderSrc)],[str(cc),*flags,str(loaderC),'-o',str(loaderObj)],[str(cc),'-shared',str(loaderObj),'-o',str(loaderLib)]]
+ commands=[['lean','-M4096','--root='+str(out),'-o',str(out/'CyclicNativeLoader.olean'),'-c',str(loaderC),str(loaderSrc)],[str(cc),*flags,str(loaderC),'-o',str(loaderObj)],[str(cc),'-shared',str(loaderObj),'-o',str(loaderLib)]]
  for i,cmd in enumerate(commands):
   code=run(cmd,r,logs/('loader-'+str(i)+'.log'));print('Native loader',i,'actual exit',code,flush=True)
   if code:raise SystemExit(code)
  assert 'initialize_CyclicNativeLoader' in loaderC.read_text(encoding='utf-8')
+ smoke=smoke_test_loader(r,out,loaderLib)
  for m in modules.values():assert sha(Path(m['source']))==m['sourceSHA256']
  assert settings['lakeManifestSHA256']==sha(r/'lake-manifest.json') and settings['leanToolchainSHA256']==sha(r/'lean-toolchain')
- atomic(result,{'status':'native runtime built; no mathematical verification inferred','settings':settings,'key':key,'libraries':libraries,'loader':{'name':'CyclicNativeLoader','file':str(loaderLib),'sha256':sha(loaderLib),'sourceSHA256':sha(loaderSrc),'cSHA256':sha(loaderC)},'licenses':licenses,'modules':modules,'proofLimit':'-M1024','requiresStandardAxiomAuditAndBothKernels':True})
+ atomic(result,{'status':'native runtime built; no mathematical verification inferred','settings':settings,'key':key,'libraries':libraries,'loader':{'name':'CyclicNativeLoader','file':str(loaderLib),'sha256':sha(loaderLib),'sourceSHA256':sha(loaderSrc),'cSHA256':sha(loaderC)},'licenses':licenses,'modules':modules,'proofLimit':'-M4096','loaderSmokeTest':smoke,'requiresStandardAxiomAuditAndBothKernels':True})
  print('Licensed native runtime built. Mathematical builds/audits/comparisons remain separate.',flush=True)
 if __name__=='__main__':main()

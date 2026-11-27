@@ -14,6 +14,19 @@ import native_runtime
 
 
 class NativeRuntimeTest(unittest.TestCase):
+    def test_production_flags_export_initializers(self):
+        for windows in [False, True]:
+            flags = bootstrap.native_compile_flags(windows)
+            self.assertIn('-DLEAN_EXPORTING', flags)
+            self.assertEqual('-fPIC' in flags, not windows)
+
+    def test_failed_loader_is_not_accepted(self):
+        with TemporaryDirectory() as temporary:
+            out = Path(temporary)
+            with patch.object(bootstrap, 'run', return_value=1):
+                with self.assertRaisesRegex(RuntimeError, 'smoke test failed'):
+                    bootstrap.smoke_test_loader(out, out, out / 'missing-loader')
+
     def exercise_bootstrap(self, explicit=False, readonly=False):
         with TemporaryDirectory() as temporary:
             root = Path(temporary).resolve() / 'source'
