@@ -676,12 +676,12 @@
     "scripts/refresh_paper_bundle.py": "d325a7ee181f15bf453a5400438da482e1407cbd98326f9dabdbe1490156d862",
     "scripts/run_comparator.py": "08fb96667362688db116509d118004f2980a2d19cb151758cd64323eaa37f698",
     "scripts/run_local_comparator.py": "9eff93809db05890ec3b0617a410a6e7f461f3a81a9e1444c2258ea0e79efa63",
-    "scripts/submission_scope.py": "f2ad5fbe536960b2d67f5903a8491ac586d43b5f8156d39409882c0a904e54f1",
+    "scripts/submission_scope.py": "b0727b8c3e76580a60ae3029c8e16781242e3e8c9cf6a93c7df49c4dff8afd96",
     "scripts/test_comparison_coverage.py": "aca75d6bbdf51e0bbbbc43b3720e8635080f9ed3c47a0b36aa3635ed758b849b",
     "scripts/test_comparison_groups.py": "163d4716cc8452401ba631eefb0301bdb83e3b773947c1aea980a70518b24516",
     "scripts/test_lake_catalogue.py": "76b4411a48cfa6e1347a820357af81a30b47caa51c6bbe1e29f3673ada840a37",
     "scripts/test_submission_checks.py": "0c9683e30c46ba9b0862c139e7535242a48bae399c5ddbdc5019a9a91d8a03ed",
-    "scripts/test_submission_scope.py": "4c5031e42db0f860bb80259466429dbc7a62a6a03d4d50aa7d9bfeedf3590d4f",
+    "scripts/test_submission_scope.py": "e5968648baed0b26e8e0ace8a1e1cf57c8455b709218ebf47a66abbfecea6e82",
     "scripts/validate_metadata.py": "2db06efe5055a96456de787b2387b03dfc3dd4bc0600d47280528b5b1f7b64b3",
     "Solution.lean": "d9c1cbd2669f315a92bc8ba4bc1145c62960b3dbdb69c73f7b41e7bbaf08b05d",
     "submission/comparison-groups.json": "0f23c87be60965e97db397030e01cfe1fca833431b0191a171f4b0933b6ec00e",
@@ -699,5 +699,7 @@
   "originalKernelAcceptanceAtUTC": "2026-11-25T16:34:02.226715+00:00",
   "kernelReceiptKey": "d466aafede618f096a4060c6b770cb9826e7ac437041418379c53e4c406136a8",
   "kernelReceiptSHA256": "c84dc2e1e9605d74367460a13a53faf741b42b919cb45c45e35540f038f04bf1",
-  "kernelReceiptPath": "submission/kernel-receipts/quaternary/d466aafede618f096a4060c6b770cb9826e7ac437041418379c53e4c406136a8"
+  "kernelReceiptPath": "submission/kernel-receipts/quaternary/d466aafede618f096a4060c6b770cb9826e7ac437041418379c53e4c406136a8",
+  "nonProofMaintenance": "submission/nonproof-maintenance.json",
+  "kernelProcessesRerunForMaintenance": false
 }

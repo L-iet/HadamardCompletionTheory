@@ -1,0 +1,130 @@
+{
+  "updatedAtUTC": "2026-11-27T03:23:22.517540+00:00",
+  "previousPublishedCommit": "62be0082e8dbaede215973f87092ce68c8b77c6b",
+  "changedNonProofSources": [
+    "scripts/submission_scope.py",
+    "scripts/test_submission_scope.py"
+  ],
+  "allLeanSourcesAndPinnedBuildInputsUnchanged": true,
+  "kernelProcessesRerun": false,
+  "leanBuildRerun": false,
+  "axiomAuditRerun": false,
+  "reason": "README reorganization, removal of prose-disclosure gates, and fresh-checkout test-fixture fixes. Existing actual builds, axiom audits and accepted proof exports remain valid because no Lean source, build input, target, permitted axiom or proof byte changed.",
+  "oldInventorySHA256": "50bb60649fd37eca144d2c332367844ea8a039696e28a2a333fdb0f74a5dc9dd",
+  "newInventorySHA256": "96bf5235d0a4aeac4f084a8f0f479fe92b770d0cd011d7f2e0b9484a8b417312",
+  "comparisonReports": [
+    {
+      "path": "submission/local-comparator-result.json",
+      "previousReportSHA256": "ec29150bfca3d40d9e7e25fe93568442e92c4a72832104ae10bd1f258b079121",
+      "exportSHA256": {
+        "challenge": "79f7b0197414c16d313fa6c0846c503737189267be9aa2f737531445b51603ab",
+        "solution": "f14c7834cc6b19a1605c951e9cff88e9288b8630e07805cccc1f09256f03240b"
+      },
+      "proofBytesUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-algorithms-result.json",
+      "previousReportSHA256": "263921bf7f751b053589b1422094a40e01105c6d0f76a82db599ec668e110f9d",
+      "exportSHA256": {
+        "challenge": "7a6deee516e0e6e0dd097147972e9f33caf6e16580d4b1bb94a145352fb6b714",
+        "solution": "9a53ba564b48f5b5cb6f428cbfcef9513ba618306c132d9d1e5a36d7fd7fd649"
+      },
+      "proofBytesUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-repair-result.json",
+      "previousReportSHA256": "3876d50d4637cd1f8f09c6ae54d452e33a05beb616f2f6fe5aecd6df4753caf8",
+      "exportSHA256": {
+        "challenge": "3dd6e27851c5d4e345d4a442cdb0488f88a472c369b1c15530d635936fb9e6bb",
+        "solution": "a69d207ad51e91c35844184588aa12f3697bc9613b4ec9059c0ff25a1652bc8f"
+      },
+      "proofBytesUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-codes-result.json",
+      "previousReportSHA256": "2e52d99b22f0521f4cc63f827c1c4c42c678c1656fa37a36f86c489516877fd2",
+      "exportSHA256": {
+        "challenge": "3758d44f1cdfcdd762e546bc7faa777c1f3736ed8e8449e0e1b83d2102d977b4",
+        "solution": "a18a3564139509375649f7de45eaf84086e2e7617ec441ab8cd1f9f7a587c20c"
+      },
+      "proofBytesUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-lattice-result.json",
+      "previousReportSHA256": "7e8de83103940dfca211032125c5081c622a96bb14107d4921f3d4dde37549ef",
+      "exportSHA256": {
+        "challenge": "1644c2f83e732319c2c53b8aecc25b14fe6d54b0a6325588e7e11ff10325d9b7",
+        "solution": "116ddfe2a3f8f433565c250796d396704e90a8bae4f9ade4c9ff2ea8becee401"
+      },
+      "proofBytesUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-character-result.json",
+      "previousReportSHA256": "0e8d421c92227de6c43113a624c12bd2154a9c12628a96ef30061c9fc43c8d12",
+      "exportSHA256": {
+        "challenge": "15fe03a8a9e291c98ba09afeb90b584bd0743606efbd4e800e875a253c7ce6da",
+        "solution": "72e36f44a0af376222044532e3c4602c202d7fef8f7d3a716f0e874de4038e71"
+      },
+      "proofBytesUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-bloch-result.json",
+      "previousReportSHA256": "999e50124943659c471077665c263f57826d8f81b2cdc148ae3f2344c7255dfb",
+      "exportSHA256": {
+        "challenge": "d2389f6ff5ee1b6f9da92c71067ecc8bea2f366ab87caaeb6df079497e7af227",
+        "solution": "9ca08d49cd46f37f9834ec14882dc893969dc9595801e0eb31bfbbe959d2832c"
+      },
+      "proofBytesUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-quaternary-result.json",
+      "previousReportSHA256": "30337fb7d4ed6ff459bf03af0d72dbcd6fd5d8f816cd0a137fc7b7b7f27a3005",
+      "exportSHA256": {
+        "challenge": "32bf280dc0a57ccefee195ea715e2d7d82d4831159139111cab4376e6fbca9af",
+        "solution": "ee8f23b3253e2a00fbd33f7b5eb11430b051c68fc46215ebec3f4fa72600fa62"
+      },
+      "proofBytesUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-cyclic-existence-result.json",
+      "previousReportSHA256": "1f2fab894bc0f6c3d365edbed4b75159e02feb6eef99422e8d0da71ba763fffb",
+      "exportSHA256": {
+        "challenge": "2d6307d1e161e93b28925325f40d20d2fc3610322bd05c7acf4399eed03bee28",
+        "solution": "2856447d20ffb8989d61b57138439842b73021e2fd986bb217e6af2ec998afd5"
+      },
+      "proofBytesUnchanged": true
+    }
+  ],
+  "tests": [
+    {
+      "transcript": "submission/maintenance-tests/test_comparison_coverage.log",
+      "SHA256": "d4d0e6621b0a3732c69e255286c396f59e777a616020aa8462ad909ea49c8b53",
+      "initialLakeDirectoryPresent": false,
+      "status": "passed"
+    },
+    {
+      "transcript": "submission/maintenance-tests/test_comparison_groups.log",
+      "SHA256": "d7811b4bfe25d7e0c1be763690d30768631820097fc32400a15d62571fa7846d",
+      "initialLakeDirectoryPresent": false,
+      "status": "passed"
+    },
+    {
+      "transcript": "submission/maintenance-tests/test_lake_catalogue.log",
+      "SHA256": "32ad850c0b7f7736902e3825cb85cec5238a3810f78f10eabc9adce799fcdd39",
+      "initialLakeDirectoryPresent": false,
+      "status": "passed"
+    },
+    {
+      "transcript": "submission/maintenance-tests/test_submission_checks.log",
+      "SHA256": "6630e826fd27d6578143c222d6b73ecf3deb18237a536d89288f66c7a12e1b87",
+      "initialLakeDirectoryPresent": false,
+      "status": "passed"
+    },
+    {
+      "transcript": "submission/maintenance-tests/test_submission_scope.log",
+      "SHA256": "242e0e23a71f23f79bcfcfb064db07928e4ac7426e40e3450698fc9798a33fd2",
+      "initialLakeDirectoryPresent": false,
+      "status": "passed"
+    }
+  ]
+}
