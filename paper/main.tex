@@ -19,7 +19,7 @@
 \newcommand{\Sym}{\operatorname{Sym}}
 \newcommand{\Skew}{\operatorname{Skew}}
 \title{Arithmetic, completion and repair of Hadamard frames}
-\author{Joshua Mark\thanks{ORCID: \href{https://orcid.org/0009-0003-5905-2382}{0009-0003-5905-2382}. AI tools assisted with research, derivation, checking and formalization.}}
+\author{Joshua Mark\thanks{ORCID: \href{https://orcid.org/0009-0003-5905-2382}{0009-0003-5905-2382}. AI tools assisted with research, mathematical derivation, computation, exposition, consolidation, checking and Lean formalization.}}
 \date{26 November 2026 --- declared formalization scope}
 \begin{document}
 \maketitle
@@ -68,8 +68,9 @@ kernel-checked sign tests for all $120$ row pairs prove the required
 correlation restrictions. Denominators are cleared so that these finite
 certificates are checked directly over the integers. They yield the exact exchange cost three for
 the base frame and every Hadamard tensor factor, including the explicitly
-constructed Sylvester family. No claim of complete
-formal verification or an all-order Hadamard existence proof is made.
+constructed Sylvester family. The selected comparisons cover 62 of 64 principal claim records; the two
+excluded claims are listed below. These results do not establish all-order
+Hadamard existence.
 \end{abstract}
 \input{formalization-status}
 \tableofcontents
@@ -102,8 +103,9 @@ weakened replacements for any pending principal theorem below. The full
 four-row switch equivalence and zero-motion conclusion are formalized as
 \texttt{walshLift\_switch\_iff} and \texttt{walshLift\_support\_motion}
 (target CT-25-01). Comparator
-targets are limited to declarations whose proofs compile. Every remaining
-claim has a stable identifier and pending status in ALIGNMENT.json.
+targets are limited to declarations whose proofs compile. All 64 principal claims have stable identifiers in ALIGNMENT.json; 62 are
+covered by the selected comparisons. The conditional half-frame statement
+and the complete improving-neighbor census remain excluded, as listed above.
 The even-order defect-two completion statement is formalized as
 \texttt{even\_order\_defect\_two\_completion} (CT-03-03), retaining every
 original row through an explicit injection.

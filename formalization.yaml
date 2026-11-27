@@ -23,14 +23,14 @@
   },
   "sources": [
     {
-      "title": "Hadamard completion, weighing matrices, and extension methods research drafts",
+      "title": "Arithmetic, completion and repair of Hadamard frames",
       "authors": [
         "Joshua Mark"
       ],
-      "type": "other",
+      "type": "paper",
       "location": "paper/main.tex",
       "relationship": "formalizes",
-      "note": "Consolidates prior local research notes; novelty unestablished. See provenance inventory. Original companion Apache-2.0 proof sources are bundled for identical CT-20-01/02 statements; exact source hashes and license copy are recorded in submission/phase-proof-provenance.json. This repo has its own independent specifications and verification. The unconditional multiplier buffer uses a standalone minimal source closure of the author-owned Apache-2.0 multibase proof, with exact hashes and license in submission/baseline-source-provenance.json. No compiled artifacts or sibling-directory runtime dependency are used. The algorithm has a separate mathlib-only AlgorithmChallenge and comparator-algorithms.json. All groups in submission/comparison-groups.json are required for complete comparison coverage. The finite repair theorems have a separate mathlib-only RepairChallenge/comparator-repair.json with no definition holes; every registered comparison group is required. The complete order20 code-trap theorem has a separate mathlib-only CodeChallenge/comparator-codes.json with no definition holes. Every group in submission/comparison-groups.json is required."
+      "note": "Consolidates the research proofs and examples. See the title-page contribution account for AI assistance in research, derivation, computation, exposition and formalization, and the provenance inventory for source details. Original companion Apache-2.0 proof sources are bundled for identical CT-20-01/02 statements; exact source hashes and license copy are recorded in submission/phase-proof-provenance.json. This repo has its own independent specifications and verification. The unconditional multiplier buffer uses a standalone minimal source closure of the author-owned Apache-2.0 multibase proof, with exact hashes and license in submission/baseline-source-provenance.json. No compiled artifacts or sibling-directory runtime dependency are used. The algorithm has a separate mathlib-only AlgorithmChallenge and comparator-algorithms.json. All groups in submission/comparison-groups.json are required for complete comparison coverage. The finite repair theorems have a separate mathlib-only RepairChallenge/comparator-repair.json with no definition holes; every registered comparison group is required. The complete order20 code-trap theorem has a separate mathlib-only CodeChallenge/comparator-codes.json with no definition holes. Every group in submission/comparison-groups.json is required."
     },
     {
       "title": "Arithmetical Properties of Combinatorial Matrices",
@@ -50,21 +50,44 @@
       "title": "Three Squares Theorem",
       "authors": [
         "Anna Danilkin",
-        "Loïc Chevalier"
+        "LoÃ¯c Chevalier"
       ],
       "type": "other",
       "location": "https://isa-afp.org/entries/Three_Squares.html",
       "relationship": "background",
       "note": "BSD-3-Clause Isabelle reference. The explicit residue-matrix construction was translated with author notices and license retained in CompletionCyclicExistence. All Lean proofs are checked independently; classification, Dirichlet/Jacobi arithmetic and actual cyclic constructions are source-bound in submission/cyclic-existence-source-provenance.json. Native elaborator support uses only licensed pinned dependencies; no native proof axioms or native_decide."
+    },
+    {
+      "title": "Sparse Multi-Base Representations and Asymptotic Existence of Hadamard Matrices",
+      "authors": [
+        "Joshua Mark"
+      ],
+      "type": "paper",
+      "id": "https://github.com/L-iet/HadamardTensorStability/blob/cae4ba24e5fd392fe6ecbf10675cdb66423c661b/artifacts/baseline/hadamard_multibase_final.pdf",
+      "relationship": "adapts",
+      "location": "Earlier multibase manuscript: uniform quantitative Hadamard-gap theorem and odd-multiplier existence bound.",
+      "note": "Substantive mathematical input to the unconditional uniform power buffer; the separate conditional half-frame claim remains excluded. Source-port provenance is in submission/baseline-source-provenance.json. The earlier Lean formalization is recorded separately in related_formalizations."
     }
   ],
   "automation": {
     "methods": [
       {
         "method": "agent",
-        "tool_setup": "Codex: proof development, consolidation and checks; no expert review claimed."
+        "framework": "Codex",
+        "tool_setup": "AI-assisted research, mathematical exploration and derivation of statements, arguments and examples."
+      },
+      {
+        "method": "agent",
+        "framework": "Codex",
+        "tool_setup": "AI-assisted computation, proof development, consolidation and Lean formalization, including exact finite calculations and build, axiom-audit and proof-checking workflows."
+      },
+      {
+        "method": "agent",
+        "framework": "Codex",
+        "tool_setup": "AI-assisted mathematical exposition and manuscript preparation."
       }
-    ]
+    ],
+    "notes": "These methods record the material roles credited in the manuscript title-page contribution account (paper/main.tex, author footnote at line 22; paper/main.pdf, title page). The revised account explicitly names research, derivation, computation and exposition as well as formalization and checks. Pinned earlier contribution account: https://github.com/L-iet/HadamardCompletionTheory/blob/95cbc59ba0384d994d7ec995703f3101495e7670/paper/main.tex#L22. Authorship and responsible maintenance are recorded separately in project.authors and project.responsible_maintainers."
   },
   "review": {
     "status": "unchecked",
@@ -77,5 +100,12 @@
     "The order20 compatibility histogram is retained as a separately checked exact computational artifact; the Lean theorem establishes the universal ten-row bound and exact minimum loss without a Lean proof of every histogram count.",
     "Excluded principal claims: CT-18-01, CT-26-02. See submission/SCOPE.json and the paper formalization-status section. Private unfinished or unsubmitted developments are not included."
   ],
-  "acknowledgements": "Joshua Mark ORCID: https://orcid.org/0009-0003-5905-2382. Lean/mathlib contributors and cited authors retain their credits. AI work is disclosed in automation.methods."
+  "acknowledgements": "Joshua Mark ORCID: https://orcid.org/0009-0003-5905-2382. Lean/mathlib contributors and cited authors retain their credits. AI work is disclosed in automation.methods.",
+  "related_formalizations": [
+    {
+      "id": "https://github.com/L-iet/HadamardBound/tree/971eea9a79de3e3977f03c9c4dabea01532e83c8",
+      "relationship": "adapts",
+      "note": "Earlier Apache-2.0 Hadamard multibase Lean project by Joshua Mark. This repository includes a standalone source port of the proved existence/gap inputs in HadamardMultibase/. This is distinct from the prior mathematical manuscript; no sibling-directory runtime or compiled-artifact dependency is required. Retained source and license records identify the port."
+    }
+  ]
 }

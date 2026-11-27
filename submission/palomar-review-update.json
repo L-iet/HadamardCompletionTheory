@@ -1,0 +1,117 @@
+{
+  "updatedAtUTC": "2026-11-27T06:02:14.612760+00:00",
+  "previousPublishedCommit": "95cbc59ba0384d994d7ec995703f3101495e7670",
+  "changedVerifiedInventoryFiles": [
+    "formalization.yaml"
+  ],
+  "previousMetadataSHA256": "92a6453a4f0ae4f5fedc156467bf567d7de2062bbf0d4dc13a670386267414a5",
+  "newMetadataSHA256": "1e2f4526e3e3f67dbe25b89ccfd2c092c04842473a99d3662e0c572dc421f0b4",
+  "metadataChanges": [
+    "Expanded AI research, derivation, computation, exposition and formalization roles with pinned contribution account",
+    "Recorded substantive multibase mathematical source and separate related Lean formalization"
+  ],
+  "manuscriptChanges": [
+    "Updated author contribution account",
+    "Clarified exact existing proof coverage and selected submission scope",
+    "Removed obsolete blanket reference to pending higher-codimension proofs"
+  ],
+  "allLeanSourcesTargetsAndBuildInputsUnchanged": true,
+  "mathematicalTheoremStatementsUnchanged": true,
+  "paperRebuilt": true,
+  "paperTypesettingChecksPassed": true,
+  "newPaperPDFSHA256": "c75d43d9e41ef495f3c2d74a7d072cb90383da0c621bb5b53604c6bd81526e2f",
+  "paperSourceBundleSHA256": "cefead8d45d5789045baefaca5db6b75dacf47fed6451c8999b323e9f1cee49b",
+  "updatedBindingRecords": [
+    "axioms.json",
+    "build.json",
+    "local-comparator-algorithms-result.json",
+    "local-comparator-bloch-result.json",
+    "local-comparator-character-result.json",
+    "local-comparator-codes-result.json",
+    "local-comparator-cyclic-existence-result.json",
+    "local-comparator-lattice-result.json",
+    "local-comparator-quaternary-result.json",
+    "local-comparator-repair-result.json",
+    "local-comparator-result.json",
+    "readiness.json",
+    "submission-preparation.json"
+  ],
+  "unchangedAcceptedProofEvidence": [
+    {
+      "report": "submission/local-comparator-result.json",
+      "previousReportSHA256": "8c76de5bfdf322d87aed4bb52597e22a37c744fa5b32f80fdf2d53c1f6e2ce8c",
+      "exportSHA256": {
+        "challenge": "79f7b0197414c16d313fa6c0846c503737189267be9aa2f737531445b51603ab",
+        "solution": "f14c7834cc6b19a1605c951e9cff88e9288b8630e07805cccc1f09256f03240b"
+      }
+    },
+    {
+      "report": "submission/local-comparator-algorithms-result.json",
+      "previousReportSHA256": "28d9a9cb8f766cdc559950768dbb15bd2dcfa8ec355ee44591a063cff56df442",
+      "exportSHA256": {
+        "challenge": "7a6deee516e0e6e0dd097147972e9f33caf6e16580d4b1bb94a145352fb6b714",
+        "solution": "9a53ba564b48f5b5cb6f428cbfcef9513ba618306c132d9d1e5a36d7fd7fd649"
+      }
+    },
+    {
+      "report": "submission/local-comparator-repair-result.json",
+      "previousReportSHA256": "909ba21f1fe535bf3a956191f259b56157f2e57c90a560c36c328223008597ea",
+      "exportSHA256": {
+        "challenge": "3dd6e27851c5d4e345d4a442cdb0488f88a472c369b1c15530d635936fb9e6bb",
+        "solution": "a69d207ad51e91c35844184588aa12f3697bc9613b4ec9059c0ff25a1652bc8f"
+      }
+    },
+    {
+      "report": "submission/local-comparator-codes-result.json",
+      "previousReportSHA256": "fb2b5bcfd8362a69b59949b1c193d6e5aac7c83cf447de58005b85abb0193599",
+      "exportSHA256": {
+        "challenge": "3758d44f1cdfcdd762e546bc7faa777c1f3736ed8e8449e0e1b83d2102d977b4",
+        "solution": "a18a3564139509375649f7de45eaf84086e2e7617ec441ab8cd1f9f7a587c20c"
+      }
+    },
+    {
+      "report": "submission/local-comparator-lattice-result.json",
+      "previousReportSHA256": "5f10634624cd6dbf52ab8bfd6bf2f796babe00078be0074417aee7cfe67dd92b",
+      "exportSHA256": {
+        "challenge": "1644c2f83e732319c2c53b8aecc25b14fe6d54b0a6325588e7e11ff10325d9b7",
+        "solution": "116ddfe2a3f8f433565c250796d396704e90a8bae4f9ade4c9ff2ea8becee401"
+      }
+    },
+    {
+      "report": "submission/local-comparator-character-result.json",
+      "previousReportSHA256": "12558a39c64a1c8b057f32ede0cb397e68cef3691926800a7b085c4f31fe3289",
+      "exportSHA256": {
+        "challenge": "15fe03a8a9e291c98ba09afeb90b584bd0743606efbd4e800e875a253c7ce6da",
+        "solution": "72e36f44a0af376222044532e3c4602c202d7fef8f7d3a716f0e874de4038e71"
+      }
+    },
+    {
+      "report": "submission/local-comparator-bloch-result.json",
+      "previousReportSHA256": "3a91c5260b0cb72fa3db849631882cf662af4272e7d27675509001c20b52dd84",
+      "exportSHA256": {
+        "challenge": "d2389f6ff5ee1b6f9da92c71067ecc8bea2f366ab87caaeb6df079497e7af227",
+        "solution": "9ca08d49cd46f37f9834ec14882dc893969dc9595801e0eb31bfbbe959d2832c"
+      }
+    },
+    {
+      "report": "submission/local-comparator-quaternary-result.json",
+      "previousReportSHA256": "8a85032e061a9a7c61873e9ac8b74c67dbb4f2a263ecb22d9a6fc28cd5c304d4",
+      "exportSHA256": {
+        "challenge": "32bf280dc0a57ccefee195ea715e2d7d82d4831159139111cab4376e6fbca9af",
+        "solution": "ee8f23b3253e2a00fbd33f7b5eb11430b051c68fc46215ebec3f4fa72600fa62"
+      }
+    },
+    {
+      "report": "submission/local-comparator-cyclic-existence-result.json",
+      "previousReportSHA256": "2d5945717108f8002eff1c075abc7bb33fdee3a17c6b47ee91cc75c454a411d6",
+      "exportSHA256": {
+        "challenge": "2d6307d1e161e93b28925325f40d20d2fc3610322bd05c7acf4399eed03bee28",
+        "solution": "2856447d20ffb8989d61b57138439842b73021e2fd986bb217e6af2ec998afd5"
+      }
+    }
+  ],
+  "localLeanBuildRerun": false,
+  "localComparatorRerun": false,
+  "localKernelChecksRerun": false,
+  "evidencePolicy": "Only paper narrative and metadata changed. Original proof-check timestamps are retained. Pending paper-level packaging remains pending; no new acceptance is asserted."
+}

@@ -1,11 +1,11 @@
 {
   "pages": 65,
   "typesettingChecksPassed": true,
-  "pdfSHA256": "19a9b144e82c925702a0ba92ec96fcf031ac1d184bc1dd46d2f25d19add10ad8",
+  "pdfSHA256": "c75d43d9e41ef495f3c2d74a7d072cb90383da0c621bb5b53604c6bd81526e2f",
   "sourceHashes": {
     "formalization-status.tex": "9d6af786e63d599bb2d5edffec9c1dcd7b7206908bbadeaafa41f152b95f2483",
-    "formalized-completion.tex": "6cb0d10e506c9664f695b08fb0f92759d92bb36a289a129557179c3bdfaf984e",
-    "main.tex": "3cbae8c57c1a18c5103c5343fe4da659058eaaa39d853cf624fefa614ff0eb42",
+    "formalized-completion.tex": "46fc6a172e69fe2d4ccaa7c121c54f0eb6df863077ab5d2afe7dc16941d9d8c5",
+    "main.tex": "76e82415ad014b1294beca344816bb73a5a2bd2aa087fc4070e349fcb8b6a139",
     "sections/01-cyclic-hermitian-norms.tex": "f8a499e2cca2ecf47a3a660e93a4add2c5e5121e73bb3c14a36e794a4bebd2f4",
     "sections/02-quadratic-character-floor.tex": "0e23a078922a4f7915eee9689b8158d1aed7e1160f970597e175a0c1f81b1e5c",
     "sections/03-residual-foundations.tex": "43f6d02fe56a651b5472041cc21448a3e658d09a9bb89e127b5cb631747a992c",
