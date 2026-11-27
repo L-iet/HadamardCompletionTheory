@@ -1,0 +1,58 @@
+{
+  "updatedAtUTC": "2026-11-27T03:43:47.304968+00:00",
+  "previousPublishedCommit": "b06b89abe4cbfaefd0c69b1e589d8d8ca7d4d0bd",
+  "changedField": "formalization.yaml: project.description",
+  "oldMetadataSHA256": "1f67e34f29cbb4e54d90a58a98e1eb28bbbfc1c5dffa7626efe350d7e8a7b0e5",
+  "newMetadataSHA256": "92a6453a4f0ae4f5fedc156467bf567d7de2062bbf0d4dc13a670386267414a5",
+  "onlyDescriptionChanged": true,
+  "allLeanSourcesTargetsAndBuildInputsUnchanged": true,
+  "proofChecksRerun": false,
+  "reason": "Plain-English project summaries only. Actual prior build, axiom-audit and kernel evidence is retained, with unchanged proof bytes; original check timestamps are preserved.",
+  "comparisonReports": [
+    {
+      "path": "submission/local-comparator-algorithms-result.json",
+      "previousReportSHA256": "22195220c52098d6ae666b28e2bf046540f568554f9b7b79e95d9b9d5d77578f",
+      "exportsUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-bloch-result.json",
+      "previousReportSHA256": "c08aa15898f3a934a9d2208538bdce04faf7025e0572614bc9930cff7d9aba6a",
+      "exportsUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-character-result.json",
+      "previousReportSHA256": "8b8f5d826abc1c4ba91e6b6515b6a9299110fc9ae2870aec338d54e8da2b0261",
+      "exportsUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-codes-result.json",
+      "previousReportSHA256": "d22eec9c5a72f531e57cde6e7ad835dc1720619cc6e36c1dbe890feef3694507",
+      "exportsUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-cyclic-existence-result.json",
+      "previousReportSHA256": "d7ba8278829486621a14e5bb384aa2a339919d92866ca70e32142f9f239fffc4",
+      "exportsUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-lattice-result.json",
+      "previousReportSHA256": "45e610dfb70c9343672c46f460cfbf90a715ecff0e4a7040042f608e81c93078",
+      "exportsUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-quaternary-result.json",
+      "previousReportSHA256": "54c3af3dd4b92a2b50c73bb31c11e14426c5ecae700cd9dc1e050f18f0bed54e",
+      "exportsUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-repair-result.json",
+      "previousReportSHA256": "06768f671c6972a21673623469c277043b3ad6418e38e296763fc2a30103ff34",
+      "exportsUnchanged": true
+    },
+    {
+      "path": "submission/local-comparator-result.json",
+      "previousReportSHA256": "a6979d2e9b6e550272e94a6128f658d8d234375e76fd0a588968894ef215d29a",
+      "exportsUnchanged": true
+    }
+  ]
+}

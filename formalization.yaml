@@ -2,7 +2,7 @@
   "version": "v0.4",
   "project": {
     "name": "Hadamard completion, weighing matrices, and extension methods",
-    "description": "Verified submission scope: 62 of 64 principal manuscript claim records, restricted to the declarations selected by each Comparator configuration. Hadamard completion, weighing matrices, and extension methods. The manuscript also contains explicitly unsubmitted results listed in paper/ALIGNMENT.json and submission/SCOPE.json. Proof development is paused; full-manuscript formalization is not claimed.",
+    "description": "We construct a 16 by 24 partial Hadamard matrix whose minimum augmenting row-exchange cost is exactly three, and prove that this cost remains exactly three after tensoring with any full Hadamard matrix. For square weighing matrices of order divisible by four with two zeros per row, a real-valued filling exists exactly when a sign-valued Hadamard filling exists. We also classify the real subspaces containing the maximum possible number of sign vectors and derive a smaller-order completion criterion. See README.md for the main theorem statements, RESULTS.md for further results, paper/main.pdf for proofs and citations, and TECHNICAL.md for formalization coverage and build details.",
     "authors": [
       "Joshua Mark"
     ],
@@ -50,7 +50,7 @@
       "title": "Three Squares Theorem",
       "authors": [
         "Anna Danilkin",
-        "Lo\u00efc Chevalier"
+        "Loïc Chevalier"
       ],
       "type": "other",
       "location": "https://isa-afp.org/entries/Three_Squares.html",

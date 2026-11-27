@@ -539,7 +539,7 @@
     "CompletionTheory.lean": "38cee3a408f8e3bf86a23c591a51611012c1766ea67110e9af2af03b89f4080a",
     "CyclicExistenceChallenge.lean": "81815abbb62ad0273187a4cdb959028d077018a3118782f1bbce51ed1a3c2f04",
     "CyclicExistenceSolution.lean": "a15c3e769e44cf98699151545deb2da41d9d58da7f7454bc370782cea452862a",
-    "formalization.yaml": "1f67e34f29cbb4e54d90a58a98e1eb28bbbfc1c5dffa7626efe350d7e8a7b0e5",
+    "formalization.yaml": "92a6453a4f0ae4f5fedc156467bf567d7de2062bbf0d4dc13a670386267414a5",
     "HadamardMultibase/ApproximationFromSeparation.lean": "c5c308800923f7083c3e48d8048cc920e1483f7cf6907d53b4557bfcec1e8618",
     "HadamardMultibase/Arithmetic.lean": "4a5f0fcacd3a2f7e177475072f830a97658ceb7c97fc175caddfaed771d437c5",
     "HadamardMultibase/Asymptotics.lean": "0c210b033281f2e615d9a67f27e477709ebdeb0a06d50140ad8793fe2f5957fe",
@@ -699,5 +699,6 @@
   "kernelReceiptSHA256": "236bdd5680ea94bc0bb48bb1d52324eca4f654676c3cc0732bbbcadbd8451184",
   "kernelReceiptPath": "submission/kernel-receipts/codes/fc51539b43f2262f0c5df6ec21be73001dd06155b351930efb8f0924eb9167ec",
   "nonProofMaintenance": "submission/nonproof-maintenance.json",
-  "kernelProcessesRerunForMaintenance": false
+  "kernelProcessesRerunForMaintenance": false,
+  "metadataDescriptionMaintenance": "submission/metadata-description-maintenance.json"
 }
