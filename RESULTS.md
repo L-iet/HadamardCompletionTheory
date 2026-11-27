@@ -4,7 +4,7 @@ The [README](README.md) highlights three leading theorems. See “Tensor product
 
 ## Exact search in the residual dimension
 
-A $q$-dimensional subspace is determined by $q$ suitable coordinate positions. Consequently all its sign vectors can be found by checking at most $2^q$ assignments, or $2^{q-1}$ after identifying a vector with its negative when $q>0$. For rational linear constraints, the reconstruction and tests use exact rational arithmetic. The exponential cost depends on the residual dimension rather than the ambient matrix order.
+A $`q`$-dimensional subspace is determined by $`q`$ suitable coordinate positions. Consequently all its sign vectors can be found by checking at most $`2^q`$ assignments, or $`2^{q-1}`$ after identifying a vector with its negative when $`q>0`$. For rational linear constraints, the reconstruction and tests use exact rational arithmetic. The exponential cost depends on the residual dimension rather than the ambient matrix order.
 
 ## Additional proved results
 
@@ -43,7 +43,7 @@ The [paper](paper/main.pdf) supplies the definitions, hypotheses, proofs, and pr
 - Augmentation can destroy odd integer feasibility.
 - Rounding defect.
 - Exact modular count with a column-pair correction.
-- The row correction at orders $4\bmod8$.
+- The row correction at orders $`4\bmod8`$.
 - Exact boundary correction.
 - Two-parity rigidity.
 - Five rows remove compatibility tests.
