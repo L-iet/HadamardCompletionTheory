@@ -1,0 +1,15 @@
+{
+  "challenge_module": "CodeChallenge",
+  "solution_module": "CodeSolution",
+  "theorem_names": [
+    "CompletionTheory.finite_self_dual_code_trap",
+    "CompletionTheory.trapFivePrime"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

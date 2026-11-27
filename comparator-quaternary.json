@@ -1,0 +1,17 @@
+{
+  "challenge_module": "QuaternaryChallenge",
+  "solution_module": "QuaternarySolution",
+  "theorem_names": [
+    "CompletionTheory.Bloch.quaternary_bloch_discreteness",
+    "CompletionTheory.Bloch.quaternary_defect_two_completion_equivalence",
+    "CompletionTheory.Bloch.automatic_quaternary_bloch_rank",
+    "CompletionTheory.Bloch.automatic_quaternary_defect_two_completion"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

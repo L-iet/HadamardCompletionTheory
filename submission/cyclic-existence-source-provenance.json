@@ -1,0 +1,366 @@
+{
+  "scope": "Unconditional three-square case3mod8 and actual uniform/skew cyclic-norm constructions. Private11target comparison accepted; public builds/comparisons pending.",
+  "authors": [
+    "Joshua Mark"
+  ],
+  "upstreamReference": {
+    "archiveURL": "https://isa-afp.org/release/afp-Three_Squares-current.tar.gz",
+    "archiveSHA256": "55f71a3764eee5262018d6668b5c81e1f8f784d9b516a78eb145894326d4f87c",
+    "licenseURL": "https://isa-afp.org/LICENSE",
+    "licenseSHA256": "9ac784670a1624c9b0f83f61c2c68163985cfd50f5c2fbe9699623311a5ce4bd",
+    "authors": [
+      "Anna Danilkin",
+      "Lo\u00efc Chevalier"
+    ],
+    "status": "BSD-licensed Isabelle reference source only. No Lean dependency and no Lean theorem proved by this download. Preserve author notices and BSD license for any translated implementation."
+  },
+  "sources": [
+    {
+      "file": "CompletionCyclicExistence/BinaryKernelNormalization.lean",
+      "sourceSHA256": "2312ecb5c572696219c48f648096a0f4a2d3c9607b27aef46c5bbc849734cb65",
+      "privateOriginalSHA256": "cd794c201a07ca63586443d2957868c2a62f41ff798493bfa7da6ad1904e3c54",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/BinaryUnimodularNormalForm.lean",
+      "sourceSHA256": "146919a02cc32a85151b7adc22603990597f1a6ade8357d974d1ada6f0e6d000",
+      "privateOriginalSHA256": "2a399145c5f5c794a7de57b3b50d2e8ca88a0224c7d3f7fa2fd09a4d109e66be",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/DirichletPrimeSupport.lean",
+      "sourceSHA256": "474da09447579a384a2643132736ffbcd37e7e82e9935f0e8a43cb4faf6ebd90",
+      "privateOriginalSHA256": "474da09447579a384a2643132736ffbcd37e7e82e9935f0e8a43cb4faf6ebd90",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/FixedSumSquareInterface.lean",
+      "sourceSHA256": "fc8636f3a684b207aecd52d87ea21fa1b02b30d5e99f987124e8750781344f6a",
+      "privateOriginalSHA256": "41e00f717a26676226a5a6f558ebede4e4a9be0e30ffa0b9faad7fbae24046d5",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/FourSquaresFixedSum.lean",
+      "sourceSHA256": "a22a8f3dd27daf8d3cc484212e9cb8a4b9b523f19c1623e61290fec8ae90f4e0",
+      "privateOriginalSHA256": "d8047fba6ee061038f8614917d8ca866350bac41e1c77746dfe4a7cdc55c2066",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/FourSquaresFixedSumAlgebra.lean",
+      "sourceSHA256": "445da4455a4c8983aaac67fe8d5120d7d59f0dec3fa599125b2819cef1f13bb8",
+      "privateOriginalSHA256": "c3f9b6170f55df34dad2b09331714f2bdf1c7aed4b9bf510f02a6032ac06d488",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/IntegralFamilyGram.lean",
+      "sourceSHA256": "796423e4f53c4ebd6fd7ebf3dc00332704acdda41662ef787c47bcf79b1513dc",
+      "privateOriginalSHA256": "4691d615f8412d2f3893851e669667a2f67e821899a2d992573641c4fbac69e6",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/IntegralGramDeterminant.lean",
+      "sourceSHA256": "2cf971a503914961fed57e70821b6ed8943ef90fa9a94962b24a4ae04dbaee91",
+      "privateOriginalSHA256": "2cf971a503914961fed57e70821b6ed8943ef90fa9a94962b24a4ae04dbaee91",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/IntegralPositiveCongruence.lean",
+      "sourceSHA256": "a85770c850fa77fe4569c4bf862a5cba26aceec9f2917b5edf8a66563f2a86fa",
+      "privateOriginalSHA256": "a85770c850fa77fe4569c4bf862a5cba26aceec9f2917b5edf8a66563f2a86fa",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/JacobiResidueCriterion.lean",
+      "sourceSHA256": "432cff5e711d09f65a14a14dff5b2c2e964a96a53be1b4c6e2c5a9e0ddc594f2",
+      "privateOriginalSHA256": "432cff5e711d09f65a14a14dff5b2c2e964a96a53be1b4c6e2c5a9e0ddc594f2",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/KernelGramCoordinates.lean",
+      "sourceSHA256": "d8b4644985af41d5943927a18bb6ce81c18022e8667ca3fe515283d5e441795f",
+      "privateOriginalSHA256": "b07b2dcbc68e9fa95bc76de335bc3778a3e69086fe61a7ff12ba4dc8c09152b1",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/OddModulusResidueLift.lean",
+      "sourceSHA256": "b50e35320854ead6a7f94a0167707b5e2644f88cd80a0a1b42c9ab32145d3ae2",
+      "privateOriginalSHA256": "b50e35320854ead6a7f94a0167707b5e2644f88cd80a0a1b42c9ab32145d3ae2",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/OddSquareArithmetic.lean",
+      "sourceSHA256": "4f7497124ceeced8e5f83abc8d8052ece93479f041cd75f2e4f9a9bd8d260a56",
+      "privateOriginalSHA256": "4f7497124ceeced8e5f83abc8d8052ece93479f041cd75f2e4f9a9bd8d260a56",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/OrthogonalUnitSplitting.lean",
+      "sourceSHA256": "5e39ab42c4009f9ef74d5e1cbc0b913a999f568c314cbea3c0c930dfe83204b1",
+      "privateOriginalSHA256": "c2ad417becf35ae934bdcf0b22f016ec9e077e4464e136e3c92b6e2c2598465a",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/PositiveMatrixUnit.lean",
+      "sourceSHA256": "e398f2b2dd48ec7bd0f1f60dd403c0130ebd4cd247cdd6c3f0955ff400d976e9",
+      "privateOriginalSHA256": "25f5c780ed013878fe051d5649f5e781e979827086e5bea1b0706a901d674d19",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/PositiveUnitKernel.lean",
+      "sourceSHA256": "c0e7c5f6e51a50ace18f34f587238e4aefc8b3c3bb7b248832093a992a7cb33f",
+      "privateOriginalSHA256": "9a722403bc99b2981de29d1ce64427f2d36cdbb8df9c3926f144d4983658a697",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/PrimeProgressionArithmetic.lean",
+      "sourceSHA256": "68c72b80d695005218998cc5ead64283731bc3fd5a386c2e5968d3feadd753d8",
+      "privateOriginalSHA256": "68c72b80d695005218998cc5ead64283731bc3fd5a386c2e5968d3feadd753d8",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/PrimeProgressionResidueData.lean",
+      "sourceSHA256": "acdb2b04708dc67ba750a796d1b3ca1f1fcb816fe0870290be9990e452a0092c",
+      "privateOriginalSHA256": "e8cec2174ea3b3d1fe71bf7ca58ceab5358a2f21358a5e0498e63dbdc47669b4",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/PrimeResidueLift.lean",
+      "sourceSHA256": "409e349d44d834de0d62dc80a5349a6747c5460895452f136d863d689ce234e8",
+      "privateOriginalSHA256": "72888617cd4ca3877744b9ee6f944d91fce8f3f2e26d97f19e02faaf70a4ecca",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/ResidueExistenceInterface.lean",
+      "sourceSHA256": "f3a7f56469125c7c0d425655345b7da7531726c332516c5ae64a50541baccb60",
+      "privateOriginalSHA256": "e45eeae76bbc22956a5e7a98cdd49bb57c6132b221f8dd3064fd7bf80460c2d0",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/ResidueRealMatrix.lean",
+      "sourceSHA256": "ab9fd937b6c7eb1d873e38bd5676fda3ed9ae06d9397b1249ba6d3e10429a356",
+      "privateOriginalSHA256": "717095adfd3e26823f1d53366d12b0ac5927f09de81442425f4379c17185a25e",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "file": "CompletionCyclicExistence/ResidueThreeSquareRepresentation.lean",
+      "sourceSHA256": "919414e25d37a6cf94265b0ec29fadcff4b848535c5331776c9971ae66d24524",
+      "privateOriginalSHA256": "b4c5a16f93ceeba70c534d0fb6867706a20fdc05a415e4abb5046febd01cc79c",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/ResidueUnitVector.lean",
+      "sourceSHA256": "0f735c2f3f40560fc49c0debfeb289131fb29bcb4ad0fcbe40e73902c804cf16",
+      "privateOriginalSHA256": "b7c44cb1c06cf3ac34a9b06a72d2e6e1ba5322c8fbe5dd2f5950aa6ebb5a83a3",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/ShortUnimodularVector.lean",
+      "sourceSHA256": "420972433a48e5bd841e4c1c559caaea1ea9e1466e2a7004595cdcd51813558c",
+      "privateOriginalSHA256": "74328c938f98149215654bfdf62c98d3adf0de123c5565478d79466c2c9ce224",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/SkewCyclicAllEnergy.lean",
+      "sourceSHA256": "1dbdbf08617123080c1d1b708c38470b78b404c865142694e7bdb2d792e3f914",
+      "privateOriginalSHA256": "ea67d4e20a4e86139d41eb7760641271872ab208b288065402ea509e4bdf8702",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/SkewCyclicRegion.lean",
+      "sourceSHA256": "3e2f48249ac928b3efcd174014e6b1cec58b6eb53dcbbbf99cced60719b3e5d8",
+      "privateOriginalSHA256": "805cebe6e1bf778a8ead441ca727754364b07a9dcb33aad5ec97c68316c2defc",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/SmallBallVolumes.lean",
+      "sourceSHA256": "a071c0e0540cc57e0401b0921e3413bf97d6a140b825c25b6a6469a137333b13",
+      "privateOriginalSHA256": "a071c0e0540cc57e0401b0921e3413bf97d6a140b825c25b6a6469a137333b13",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/TernaryKernelNormalization.lean",
+      "sourceSHA256": "f7b9d918623343823876ef7d55b2100c0f86717318e1988ef517cbd7ff4c8e2c",
+      "privateOriginalSHA256": "c16354475862269a65c8a8873574b7dc4c2836ee12593f090418783a6e927e3c",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/TernaryThreeSquareValues.lean",
+      "sourceSHA256": "04fb5bf0ed5a3c3193fed1aa818e61a35e66cbe6d9f51f0c3596ff3ac2e388ad",
+      "privateOriginalSHA256": "e3383857bbe31eaa8727b3adb74e5b0df0b6d23e6234c3f3fcd5b3ad6e5269bb",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/TernaryUnimodularNormalForm.lean",
+      "sourceSHA256": "1f65162a4c9c791e47ddc9c44b4e27da0f404ebc1438a1f945660b9bbef611a6",
+      "privateOriginalSHA256": "172f6de09ad8fef76e6b55aeec03d486a6105814d54fcf4ad2b82e94068ca919",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/ThreeModEightResidueExistence.lean",
+      "sourceSHA256": "366d529bc9653c998f6af79a878d6d83359ee8bbedfb2c3186605fd8fa412254",
+      "privateOriginalSHA256": "44dda694dd9ce9030f8d9b7d5c6e8c7960708346b1bf509356f07f1d8d685d0e",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/ThreeSquareExistenceInterface.lean",
+      "sourceSHA256": "e7c2964a64dc6827726f8ed56abb702b6ef336d763428514205c02f07bf15c7f",
+      "privateOriginalSHA256": "47f84b8eaf132b8859c47270bc82f9afc5112136c22a65bd9f3fd5de4c2dc8f7",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/ThreeSquaresThreeModEight.lean",
+      "sourceSHA256": "0c13ff901d3fab095460a3759c633995d6dac092d5e535257d7a656f14ede1d1",
+      "privateOriginalSHA256": "a809c66bb0d3858cf438bbc181eadc045130ce176672fcd5c17bcc13ae96be44",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UniformCyclicExistence.lean",
+      "sourceSHA256": "916839165a6ecfdc98d4a7d81abcf315ee5dd286a69ce435a0123ad9e66f9369",
+      "privateOriginalSHA256": "e2d875cf8610921a774df8ef4102c2a38d969b557256de7384d372a33d44978c",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UniformCyclicFamily.lean",
+      "sourceSHA256": "a5917af16858c7106c74db9086602dd0d4abfdc9583b9e070628cc69eb0ecc96",
+      "privateOriginalSHA256": "a1e6f78bb906c60b552c01ad265079b6e636a40615630e1c66abdd65780d7993",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UniformCyclicSharp.lean",
+      "sourceSHA256": "ad443738202330b1337b3e006ea512b14e152b90faa7622fb749bcd8f74135f0",
+      "privateOriginalSHA256": "5bc82753ace688d2eba323ba2c1184097689427662ca41fefee0f75ea195ac4d",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UnimodularFundamentalVolume.lean",
+      "sourceSHA256": "68eac11423f1fe154f9e97aa0c17dfe6258ec4d927fb39882936108dff046be1",
+      "privateOriginalSHA256": "68eac11423f1fe154f9e97aa0c17dfe6258ec4d927fb39882936108dff046be1",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UnitAdaptedBasis.lean",
+      "sourceSHA256": "3d2ffba10f6d40629ccef7857cddc4cc7589026b6031a2d3f48d99e76bdc3ed8",
+      "privateOriginalSHA256": "bad1d44a6d161dccb652dbc4e536e35ba7e046aab6789ca4696b871ff5ead140",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UnitKernelDeterminant.lean",
+      "sourceSHA256": "bd050e3e4a6e1d2e4ce710a211829ab302114cd5540087271425323e82e6866b",
+      "privateOriginalSHA256": "083c3ce554aa09ea4bf3e29c683a3dff33874f1734c6e5c58a0feb7c93abd39c",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UnitKernelRank.lean",
+      "sourceSHA256": "b5bec60bc3e945a50a5bb178735ab3185e1829a2bd37073e56081053f8dc5508",
+      "privateOriginalSHA256": "d9b4647bf8e4c70a553d4fa7eb41229fff4d2852a307e36c8feca4702a1e9940",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UnitLineSplitting.lean",
+      "sourceSHA256": "f063a5cc55ac5d81831a99a4e0912b29b958223ab82b7d788d5f83f46d1ff79d",
+      "privateOriginalSHA256": "f063a5cc55ac5d81831a99a4e0912b29b958223ab82b7d788d5f83f46d1ff79d",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UnitOrthonormalBasis.lean",
+      "sourceSHA256": "1e473b75115edbe6733457e710e9c645886282b48cb40e3d1fd3afe7af44e51a",
+      "privateOriginalSHA256": "bdba67c2f00b78afbe8c62b67ef0d88b8ee527049b1f349add00239ae93c8877",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/UnitUnimodularVector.lean",
+      "sourceSHA256": "17fb0cec1ea75e1bdad94ea6801203f2460697bd0d4d32751a22260e33821434",
+      "privateOriginalSHA256": "fa789c5b6b3e4c97fed0d95e13d564b0b3d26f61c86b223ef77fbab364145590",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "CompletionCyclicExistence/ResidueMatrix.lean",
+      "sourceSHA256": "65a14e9b6fd7d29a884c3bae4aa44e834945927ebf21291d65ff06e8274ac75d",
+      "privateOriginalSHA256": "65a14e9b6fd7d29a884c3bae4aa44e834945927ebf21291d65ff06e8274ac75d",
+      "license": "BSD-3-Clause"
+    }
+  ],
+  "foundationSources": [
+    {
+      "sourceFile": "CompletionTheory/CyclicNorms.lean",
+      "sourceSHA256": "b6f36071091dbcc6ac3367362efd0cb6d223bef4da19591b5828812c74a49025",
+      "oleanFile": ".lake/build/lib/lean/CompletionTheory/CyclicNorms.olean",
+      "oleanSHA256": "73d4be99e7099b60b768f5c47efd54ad6802f3c49a9ca3e65d7c357ed6a2f7fa"
+    },
+    {
+      "sourceFile": "CompletionTheory/CyclicEnergy.lean",
+      "sourceSHA256": "c7e2f7076904290bb3f0e4eee07f0487f5447928ef2904dcbeb69de5292c9fb6",
+      "oleanFile": ".lake/build/lib/lean/CompletionTheory/CyclicEnergy.olean",
+      "oleanSHA256": "93339c3b0851a7b73fa208248e682d46c8d3024c4bb34d73329444be0fd07ce7"
+    },
+    {
+      "sourceFile": "CompletionCharacter/Scalar.lean",
+      "sourceSHA256": "0eb560549125c2fcd6820f6c9ac2cef344f004f43cdee27773de79b5ad0fc9f5",
+      "oleanFile": ".lake/build/lib/lean/CompletionCharacter/Scalar.olean",
+      "oleanSHA256": "c06a8d68e51dd4cdeaef52fc0e3de6679b2de6d6fdfdb2c3f2db3dfaecdc0c09"
+    },
+    {
+      "sourceFile": "CompletionCharacter/SkewScalar.lean",
+      "sourceSHA256": "9b85ed266f398d2689e23410123ee5c28644c96ea05e45ad930484442f0f6c61",
+      "oleanFile": ".lake/build/lib/lean/CompletionCharacter/SkewScalar.olean",
+      "oleanSHA256": "aef9923c436855b4ff626d165d0e025a0f334da53d309e9bf7874f6999d28d2e"
+    },
+    {
+      "sourceFile": "CompletionCharacter/SymmetricScalar.lean",
+      "sourceSHA256": "2da3bdd7dd5f147c2460f4efbb04289ad88e73930e6e4c2c6873dee5b5144cfb",
+      "oleanFile": ".lake/build/lib/lean/CompletionCharacter/SymmetricScalar.olean",
+      "oleanSHA256": "41325bee1bce0614ad5dbe4034436dd433568015852c039f92a6d1026a28d43b"
+    },
+    {
+      "sourceFile": "CompletionCharacter/Template.lean",
+      "sourceSHA256": "15789878c4e856c01fa61846d9302a0197d4de535e1f95f757f4151bdf5f8b12",
+      "oleanFile": ".lake/build/lib/lean/CompletionCharacter/Template.olean",
+      "oleanSHA256": "43bb32462b73c1e6c0f9c288b8e5ddf63d9384ee645282f6d26b04aeb7442e84"
+    },
+    {
+      "sourceFile": "CompletionCharacter/Full.lean",
+      "sourceSHA256": "e6f5fae45dc4b4640d2017e9393b6bc96de89473b9c0dad4b104ff8a93cd02e2",
+      "oleanFile": ".lake/build/lib/lean/CompletionCharacter/Full.olean",
+      "oleanSHA256": "9d016cf6d623fca295b0a2a9309ad36a1ab5f00ab764893dfbb39f1548300e32"
+    },
+    {
+      "sourceFile": "CompletionCharacter/PrimeCharacter.lean",
+      "sourceSHA256": "c355b038bd01eb21e62f7f059de6f9d1c4545f351d55bf9909d902121681245a",
+      "oleanFile": ".lake/build/lib/lean/CompletionCharacter/PrimeCharacter.olean",
+      "oleanSHA256": "8250e41bb4946e7c8579c9cd635bdfd4a42606f6a478be5985593583de012be9"
+    },
+    {
+      "sourceFile": ".lake/three-squares/ResidueMatrix.lean",
+      "sourceSHA256": "65a14e9b6fd7d29a884c3bae4aa44e834945927ebf21291d65ff06e8274ac75d",
+      "oleanFile": ".lake/three-squares/ResidueMatrix.olean",
+      "oleanSHA256": "f86bad5d1292f6032dfd5499b64ce99e80b497f6de20ee739d1deae6e73637ef"
+    }
+  ],
+  "privateComparisonResultSHA256": "f8bf3877b724f1d8cf06da97b97f9d69ee0d7780c264cd0d2cd994ca62d87a2d",
+  "proofLimit": "-M1024",
+  "nativeRuntime": "scripts/bootstrap_native_mathlib.py; runtime initialization only, all mathematical terms require standard axiom audits and independent kernels.",
+  "independentTheoremTargets": [
+    "CompletionTheory.ThreeSquares.large_prime_in_progression",
+    "CompletionTheory.ThreeSquares.residue_data_exists_three_mod_eight_api",
+    "CompletionTheory.ThreeSquares.three_squares_of_three_mod_eight_api",
+    "CompletionTheory.ThreeSquares.four_squares_fixed_sum_api",
+    "CompletionTheory.ThreeSquares.uniform_family_iff_threshold",
+    "CompletionTheory.ThreeSquares.uniform_large_energy_existence",
+    "CompletionTheory.ThreeSquares.small_cyclic_orders_all_odd_energy",
+    "CompletionTheory.ThreeSquares.skew_template_all_odd_energies",
+    "CompletionTheory.ThreeSquares.skew_character_large_energy_region",
+    "CompletionTheory.ThreeSquares.skew_character_threshold_sharp",
+    "CompletionTheory.ThreeSquares.prime_skew_large_energy_region"
+  ],
+  "independentConcreteDefinitions": [
+    "CompletionTheory.cyclicNorm",
+    "CompletionTheory.CyclicNormSolution",
+    "CompletionTheory.CharacterFloor.fullCharacterAnsatz",
+    "CompletionTheory.CharacterFloor.IsCharacterData",
+    "CompletionTheory.CharacterFloor.CharacterTemplateEnergy",
+    "CompletionTheory.CharacterFloor.IsSharpCharacterFloor",
+    "CompletionTheory.CharacterFloor.skewThreshold",
+    "CompletionTheory.ThreeSquares.uniformFamilyArray",
+    "CompletionTheory.ThreeSquares.UniformFamilySolution"
+  ]
+}

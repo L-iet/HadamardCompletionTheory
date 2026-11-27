@@ -1,0 +1,81 @@
+{
+  "version": "v0.4",
+  "project": {
+    "name": "Hadamard completion, weighing matrices, and extension methods",
+    "description": "Verified submission scope: 62 of 64 principal manuscript claim records, restricted to the declarations selected by each Comparator configuration. Hadamard completion, weighing matrices, and extension methods. The manuscript also contains explicitly unsubmitted results listed in paper/ALIGNMENT.json and submission/SCOPE.json. Proof development is paused; full-manuscript formalization is not claimed.",
+    "authors": [
+      "Joshua Mark"
+    ],
+    "responsible_maintainers": [
+      "Joshua Mark"
+    ],
+    "license": "Apache-2.0"
+  },
+  "classification": {
+    "arxiv": [
+      "math.CO",
+      "math.FA"
+    ],
+    "msc2020": [
+      "05B20",
+      "68V20"
+    ]
+  },
+  "sources": [
+    {
+      "title": "Hadamard completion, weighing matrices, and extension methods research drafts",
+      "authors": [
+        "Joshua Mark"
+      ],
+      "type": "other",
+      "location": "paper/main.tex",
+      "relationship": "formalizes",
+      "note": "Consolidates prior local research notes; novelty unestablished. See provenance inventory. Original companion Apache-2.0 proof sources are bundled for identical CT-20-01/02 statements; exact source hashes and license copy are recorded in submission/phase-proof-provenance.json. This repo has its own independent specifications and verification. The unconditional multiplier buffer uses a standalone minimal source closure of the author-owned Apache-2.0 multibase proof, with exact hashes and license in submission/baseline-source-provenance.json. No compiled artifacts or sibling-directory runtime dependency are used. The algorithm has a separate mathlib-only AlgorithmChallenge and comparator-algorithms.json. All groups in submission/comparison-groups.json are required for complete comparison coverage. The finite repair theorems have a separate mathlib-only RepairChallenge/comparator-repair.json with no definition holes; every registered comparison group is required. The complete order20 code-trap theorem has a separate mathlib-only CodeChallenge/comparator-codes.json with no definition holes. Every group in submission/comparison-groups.json is required."
+    },
+    {
+      "title": "Arithmetical Properties of Combinatorial Matrices",
+      "type": "paper",
+      "location": "https://thesis.caltech.edu/2899/",
+      "relationship": "background",
+      "note": "Mathematical reference only; no source code imported. Exact substantive dependencies and classical inputs are described in the paper."
+    },
+    {
+      "title": "Orthogonal Designs with Zero Diagonal",
+      "type": "paper",
+      "location": "https://doi.org/10.4153/CJM-1976-028-3",
+      "relationship": "background",
+      "note": "Mathematical reference only; no source code imported. Exact substantive dependencies and classical inputs are described in the paper."
+    },
+    {
+      "title": "Three Squares Theorem",
+      "authors": [
+        "Anna Danilkin",
+        "Lo\u00efc Chevalier"
+      ],
+      "type": "other",
+      "location": "https://isa-afp.org/entries/Three_Squares.html",
+      "relationship": "background",
+      "note": "BSD-3-Clause Isabelle reference. The explicit residue-matrix construction was translated with author notices and license retained in CompletionCyclicExistence. All Lean proofs are checked independently; classification, Dirichlet/Jacobi arithmetic and actual cyclic constructions are source-bound in submission/cyclic-existence-source-provenance.json. Native elaborator support uses only licensed pinned dependencies; no native proof axioms or native_decide."
+    }
+  ],
+  "automation": {
+    "methods": [
+      {
+        "method": "agent",
+        "tool_setup": "Codex: proof development, consolidation and checks; no expert review claimed."
+      }
+    ]
+  },
+  "review": {
+    "status": "unchecked",
+    "notes": "Selected declarations have local build, axiom-audit and comparison evidence. This does not claim independent human review, whole-manuscript formalization beyond the declared scope, or Palomar registry acceptance."
+  },
+  "limitations": [
+    "Full Hadamard conjecture not proved.",
+    "Small-defect quaternary completion explicitly assumes RealSmallDefectExtension, the classical real completion input assumed in the paper; that classical theorem is not proved here.",
+    "The exact algorithm and candidate-test count are formalized; the separate O(n^3) scalar-operation discussion is not yet formalized.",
+    "The order20 compatibility histogram is retained as a separately checked exact computational artifact; the Lean theorem establishes the universal ten-row bound and exact minimum loss without a Lean proof of every histogram count.",
+    "Excluded principal claims: CT-18-01, CT-26-02. See submission/SCOPE.json and the paper formalization-status section. Private unfinished or unsubmitted developments are not included."
+  ],
+  "acknowledgements": "Joshua Mark ORCID: https://orcid.org/0009-0003-5905-2382. Lean/mathlib contributors and cited authors retain their credits. AI work is disclosed in automation.methods."
+}

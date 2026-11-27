@@ -1,0 +1,92 @@
+\section{Three missing quaternary columns: a classical-input completion algorithm}
+Let $n$ be even and let $V\in\mu_4^{n\times(n-r)}$ satisfy
+$V^*V=nI$, with $1\le r\le3$. The following completion statement
+uses the \emph{classical real codimension-at-most-seven Hadamard
+completion theorem}. That input is explicitly assumed here, not
+reproved or claimed new. References include Hall's four-row result
+and Verheiden's extension, recorded in
+\url{https://thesis.caltech.edu/2899/}, and the primary discussion in
+\emph{Counting results for thin Butson matrices},
+\url{https://www.combinatorics.org/ojs/index.php/eljc/article/download/v21i3p12/pdf/}.
+
+\begin{lemma}[A one-column extension gate through realification]
+For arbitrary $r\ge1$, a quaternary column orthogonal to all columns
+of $V$ exists if and only if the real sign frame
+$A=\mathcal R((1+i)V)$ has an orthogonal real sign column.
+\end{lemma}
+\begin{proof}
+Write a real sign column in paired coordinates as
+$w=(a_1,b_1,\ldots,a_n,b_n)^T$ and let $u_i=a_i+ib_i$.
+The paired realified columns give
+$A^Tw=0$ if and only if $((1+i)V)^*u=0$, equivalently $V^*u=0$.
+Thus $z=u/(1+i)\in\mu_4^n$ is the desired new column.
+Conversely $(1+i)z$ has real and imaginary parts in $\{\pm1\}$,
+and realifies to such a $w$.
+\end{proof}
+
+\begin{theorem}[Automatic completion in complex codimension at most three]
+Every such $V$ with $1\le r\le3$ can be completed to a
+$\mathrm{BH}(n,4)$ matrix, retaining all its original columns.
+\end{theorem}
+\begin{proof}
+For even $n\ge4$, $A$ has $2n$ rows, $2n-2r$ sign columns and
+$A^TA=2nI$. Its real codimension is $2r\le6$, so classical real
+completion supplies a full real Hadamard extension and in particular
+one new real sign column orthogonal to $A$. The lemma converts that
+column to one quaternary column orthogonal to $V$. Append it and
+repeat at complex codimension $r-1$. The order is unchanged.
+For $n=2$ the assertion follows directly from the order-two matrix:
+one prescribed fourth-root column is completed by changing one sign,
+and an empty input uses that matrix itself.
+\end{proof}
+This avoids an unwarranted assumption that an arbitrary supplied real
+completion respects the canonical complex structure. Only one real
+column is used at each step; its canonical complex-structure partner
+is automatically another sign column. The unused real completing
+columns may be discarded, and the classical theorem is applied again.
+
+\begin{theorem}[An explicit finite exact algorithm]
+For $r\le3$, Gaussian-rational row reduction and at most
+$4^{r-1}+\cdots+4+1\le21$ candidate-column tests construct the
+completion. The theorem does not require a real Hadamard completion
+as algorithmic input.
+\end{theorem}
+\begin{proof}
+Compute a systematic basis of $\ker V^*$: Gaussian elimination
+selects $r$ free coordinate positions, and every kernel vector is
+determined by its values there. A fourth-root vector can be globally
+multiplied by a fourth root so that its first free coordinate equals
+one. Its other free coordinates have $4^{r-1}$ possible assignments.
+For each assignment compute the unique kernel vector and check all
+its entries are in $\mu_4$. The preceding theorem guarantees a
+successful assignment. Append that vector and repeat. Its squared
+norm is $n$, and its orthogonality to all existing columns is exact,
+so the invariants hold at every stage. All coefficients are Gaussian
+rational and every test can be done exactly.
+\end{proof}
+For fixed $r\le3$ the matrix elimination costs $O(n^3)$ scalar
+operations; after a kernel basis is available each candidate costs
+$O(nr)$ operations. This is an exact-arithmetic operation count,
+not an unrestricted bit-complexity or approximate-input claim.
+
+\begin{corollary}[A precise codimension-four gate]
+For a quaternary input with $r=4$, full quaternary completion is
+equivalent to the existence of even one new fourth-root column.
+The latter is decided by at most $4^3=64$ normalized candidate tests.
+If a new column exists, the remaining defect three is automatically
+completed by the theorem. No automatic existence of that first
+column at defect four is asserted.
+\end{corollary}
+In particular a maximal proper quaternary frame at even order must
+miss at least four columns. The result closes a fixed-size residual
+gap once a large partial frame is supplied; it does not construct
+that input at unknown orders. The completion theory and its small-
+alphabet consequence are not advertised as bibliographically new.
+
+\paragraph{Formalization of the one-column gate.} The independent theorem \texttt{quaternary\_\allowbreak realification\_\allowbreak gate} proves the sign alphabet, the $2nI$ column Gram identity, and the exact two-way extension equivalence for the explicitly realified matrix. The formal coordinates group the real and imaginary parts; interleaving these coordinates is a row permutation. The gate is proved for every column count and uses no real-completion assumption. The later automatic-completion and algorithm statements have their own formalization status.
+
+\paragraph{Formalization of the conditional completion and finite gate.}
+The Lean theorem \texttt{small\_defect\_quaternary\_completion} proves completion at every even order through defect three, retaining every original column. Its hypothesis \texttt{RealSmallDefectExtension} states the real small-codimension extension consequence of the classical input assumed above. That input remains explicit; the code does not assert a proof of the classical theorem. The theorem \texttt{quaternary\_defect\_four\_completion\_gate} proves the full defect-four equivalence and a sound and complete normalized candidate test with at most $64$ candidates. The proofs include phase normalization, information-coordinate enumeration, exact rank-nullity, and preservation of the Gram matrix on appending a column. The Gaussian-rational elimination operation-count algorithm has its own formalization status.
+
+\paragraph{Formalization of the exact algorithm.}
+The independent theorem \texttt{exact\_\allowbreak quaternary\_\allowbreak completion\_\allowbreak algorithm\_\allowbreak for\_\allowbreak complex\_\allowbreak input} covers every complex fourth-root input in the stated range. It proves exact Gaussian-rational encoding, correctness of the executable procedure, original-column retention, the full column Gram identity, and an actual counter of at most $21$ candidate tests. Certified Gaussian elimination is followed by normalized enumeration, a counted first-success search, and recursive appends. No supplied real completion is an algorithm input. The correctness theorem retains the classical real-extension hypothesis assumed above. The separate bounded specification \texttt{AlgorithmChallenge.lean}, configured by \texttt{comparator-algorithms.json}, compares reachable computational definitions without definition holes. The separate $O(n^3)$ scalar-operation estimate is not included in the formalized counter theorem.

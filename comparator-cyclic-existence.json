@@ -1,0 +1,34 @@
+{
+  "challenge_module": "CyclicExistenceChallenge",
+  "solution_module": "CyclicExistenceSolution",
+  "theorem_names": [
+    "CompletionTheory.ThreeSquares.large_prime_in_progression",
+    "CompletionTheory.ThreeSquares.residue_data_exists_three_mod_eight_api",
+    "CompletionTheory.ThreeSquares.three_squares_of_three_mod_eight_api",
+    "CompletionTheory.ThreeSquares.four_squares_fixed_sum_api",
+    "CompletionTheory.ThreeSquares.uniform_family_iff_threshold",
+    "CompletionTheory.ThreeSquares.uniform_large_energy_existence",
+    "CompletionTheory.ThreeSquares.small_cyclic_orders_all_odd_energy",
+    "CompletionTheory.ThreeSquares.skew_template_all_odd_energies",
+    "CompletionTheory.ThreeSquares.skew_character_large_energy_region",
+    "CompletionTheory.ThreeSquares.skew_character_threshold_sharp",
+    "CompletionTheory.ThreeSquares.prime_skew_large_energy_region"
+  ],
+  "definition_names": [
+    "CompletionTheory.cyclicNorm",
+    "CompletionTheory.CyclicNormSolution",
+    "CompletionTheory.CharacterFloor.fullCharacterAnsatz",
+    "CompletionTheory.CharacterFloor.IsCharacterData",
+    "CompletionTheory.CharacterFloor.CharacterTemplateEnergy",
+    "CompletionTheory.CharacterFloor.IsSharpCharacterFloor",
+    "CompletionTheory.CharacterFloor.skewThreshold",
+    "CompletionTheory.ThreeSquares.uniformFamilyArray",
+    "CompletionTheory.ThreeSquares.UniformFamilySolution"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

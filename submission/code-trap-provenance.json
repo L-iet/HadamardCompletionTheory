@@ -1,0 +1,19 @@
+{
+  "license": "Apache-2.0",
+  "author": "Joshua Mark",
+  "orcid": "https://orcid.org/0009-0003-5905-2382",
+  "codeOrigin": "Original Lean proofs and exact integer/rational/finite-field certificate generation in this project; no external implementation copied.",
+  "mathematicsDependency": "The pinned Apache-2.0 mathlib in lake-manifest.json.",
+  "methods": [
+    "Exact integer reconstruction from rational row elimination",
+    "Small kernel-only Boolean certificate batches",
+    "Symbolic residue-to-field reflection",
+    "Finite-dimensional bilinear duality and explicit pivot",
+    "Universal real-matrix sign encoding and optimal loss bound"
+  ],
+  "dataFile": "submission/code-trap-data.json",
+  "dataSHA256": "8a7ac43149009830dfe83adaeed2407cfd9e57bfc52961038edd407ab1d75cc0",
+  "principalDeclaration": "CompletionTheory.finite_self_dual_code_trap",
+  "proofModuleCount": 91,
+  "scope": "Full principal theorem; supplementary full compatibility histogram is a separate computational artifact."
+}

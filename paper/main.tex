@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,hyperref,array}
+\setlength{\emergencystretch}{3em}
+\setcounter{MaxMatrixCols}{20}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Skew}{\operatorname{Skew}}
+\title{Arithmetic, completion and repair of Hadamard frames}
+\author{Joshua Mark\thanks{ORCID: \href{https://orcid.org/0009-0003-5905-2382}{0009-0003-5905-2382}. AI tools assisted with research, derivation, checking and formalization.}}
+\date{26 November 2026 --- declared formalization scope}
+\begin{document}
+\maketitle
+\begin{abstract}
+We organize arithmetic, completion and repair results for real and fourth-root Hadamard
+frames. The results distinguish sign feasibility from integer or rational
+Gram completion, give exact residue and code-neighbor counts, reduce
+codimension-two compatible completion to a weighted grid, and describe
+two-zero weighing completion through a finite matrix kernel. A real
+zero-supported completion in that weighing setting exists exactly when
+a sign completion does; a support-moving switch repairs an explicit
+obstruction. Further sections give real and quaternary residual tests,
+small-codimension completion with its classical input explicit, and a
+conditional GRH transfer from sparse multibase existence to half-frames.
+The accompanying Lean development verifies supporting algebra, finite Walsh
+identities, and several complete research statements. Proved and pending
+claims are individually tracked in ALIGNMENT.json. The cyclic odd-multiplier
+closure is formalized for actual integer coefficient functions, including
+coefficient parity and every cyclic autocorrelation coefficient. The
+zero-aligned character obstruction is also formalized for actual coefficient
+arrays. General energy, parity, and boundary-sign necessities are proved. The
+minimum augmenting-exchange cost is formalized, including its infinite case,
+and the tensor cost inequality is proved for actual retained and inserted
+frames. Tensor persistence of terminality is proved, including the explicit
+$12\times20$ paper seed: its integer Gram identity, rational reconstruction,
+and exhaustive sign exclusion are kernel checked. The rounding-defect result
+is also formalized, including the parity alternatives, the Bessel
+bound for spoiled rows, and the actual frame obtained by deleting those
+rows and inserting the rounded vector. The information-coordinate
+theorem and complete finite cube enumeration are formalized over arbitrary
+fields, with explicit same-field reconstruction formulas and the exact
+antipodal assignment count. In particular the rational search uses rational
+coefficients throughout. The equality case of the cube-intersection bound
+is classified formally as signed duplication spaces in both directions.
+For actual partial-Hadamard residual spaces, equal block sizes $n/q$
+and the equivalence to an actual order-$q$ Hadamard completion are now
+also formalized, retaining every original row. The full tensor
+span-rigidity criterion is proved for actual candidate rows and augmenting
+exchanges, including the strict minimum-cost bound and infinite-cost case. The
+half-overlap pair-structure barrier and cost-three preservation are also
+formalized, using a shared-projection Bessel argument that covers arbitrary
+mixed tensor-column candidates. For the explicit $16\times24$ frame,
+terminality, the listed three-for-four exchange, and its full order-$24$
+completion are formalized. Exact rational reconstruction and exhaustive
+kernel-checked sign tests for all $120$ row pairs prove the required
+correlation restrictions. Denominators are cleared so that these finite
+certificates are checked directly over the integers. They yield the exact exchange cost three for
+the base frame and every Hadamard tensor factor, including the explicitly
+constructed Sylvester family. No claim of complete
+formal verification or an all-order Hadamard existence proof is made.
+\end{abstract}
+\input{formalization-status}
+\tableofcontents
+\section*{Organization and exact scope}
+The first group studies cyclic Hermitian norm constructions, residual lattices and modular sign counts. The
+second develops compatible self-dual codes, retained-space quotients and
+completion moments. The third treats real/quaternary dilations and near-full
+weighing matrices, ending with an explicit support-moving repair.
+Classical completion and conference theorems are named at their use sites;
+they are mathematical inputs, not new assumptions added to Lean. The GRH
+result is explicitly conditional. Exact finite certificates support the
+specified examples and are not substitutes for general proofs.
+
+This paper retains the full proofs from the corresponding research sections,
+with source hashes in INVENTORY.json. Repeated definitions in these groups
+have their stated local dimensions and fields. The companion PhaseGeometry
+paper owns analytic landscape and discrete Gram-energy move results;
+RootEntropyDesigns owns general moment-polytope and collision-entropy
+results. Only their completion interfaces are used here.
+
+\section*{What the current Lean development proves}
+The public namespace is \texttt{CompletionTheory}. It defines actual sign
+matrices, partial Hadamard Gram identities and weighing matrices, and proves
+horizontal Gram concatenation, orthogonal row-map invariance and a complete
+orthogonal-design filling implication with the standard mathlib Hadamard
+predicate as conclusion. It also proves the normalized four-row Walsh
+identity, the exact full-support sign criterion, and the complete ambient
+four-row weighing operation for admissible columns. These are supporting results, not
+weakened replacements for any pending principal theorem below. The full
+four-row switch equivalence and zero-motion conclusion are formalized as
+\texttt{walshLift\_switch\_iff} and \texttt{walshLift\_support\_motion}
+(target CT-25-01). Comparator
+targets are limited to declarations whose proofs compile. Every remaining
+claim has a stable identifier and pending status in ALIGNMENT.json.
+The even-order defect-two completion statement is formalized as
+\texttt{even\_order\_defect\_two\_completion} (CT-03-03), retaining every
+original row through an explicit injection.
+The exact residual criterion (CT-03-01) is also formalized, including
+positive semidefiniteness, rank, the scaled projection identity, diagonal
+and parity statements, and the equivalence with a sign Gram factor.
+\input{sections/01-cyclic-hermitian-norms.tex}
+\input{sections/02-quadratic-character-floor.tex}
+\input{sections/03-residual-foundations.tex}
+\input{sections/04-residual-lattices.tex}
+\input{sections/05-exchange-budget.tex}
+\input{sections/06-partial-frame-exchanges.tex}
+\input{sections/07-tensor-exchange-barrier.tex}
+\input{sections/08-parity-lattices.tex}
+\input{sections/09-short-coset-repair.tex}
+\input{sections/10-modular-lifting-eight.tex}
+\input{sections/11-modular-lifting-four.tex}
+\input{sections/12-compatible-codes.tex}
+\input{sections/13-terminal-code-trap.tex}
+\input{sections/14-neighbor-incidence.tex}
+\input{sections/15-quotient-grid.tex}
+\input{sections/16-completion-moments.tex}
+\input{sections/17-third-moments.tex}
+\input{sections/18-conditional-half-frame.tex}
+\input{sections/19-real-dilations.tex}
+\input{sections/20-quaternary-realification.tex}
+\input{sections/21-weighing-normal-form.tex}
+\input{sections/22-real-weighing-exactness.tex}
+\input{sections/23-complex-defect-two.tex}
+\input{sections/24-quaternary-defect-three.tex}
+\input{sections/25-support-moving-repair.tex}
+\input{sections/26-complete-neighbor-census.tex}
+\input{formalized-completion}
+\begin{thebibliography}{99}
+\bibitem{Ankeny} N. C. Ankeny, \emph{Sums of three squares},
+Proc. Amer. Math. Soc. 8 (1957), 316--319, Theorem 1.
+\url{https://doi.org/10.1090/S0002-9939-1957-0085275-8}.
+\bibitem{AFPThreeSquares} A. Danilkin and L. Chevalier,
+\emph{Three Squares Theorem}, Archive of Formal Proofs, May 3, 2023.
+\url{https://isa-afp.org/entries/Three_Squares.html}.
+\bibitem{LLL} A. Goldberger and Y. Strassler, \emph{A practical algorithm
+for completing half-Hadamard matrices using LLL}, J. Algebraic Combin.
+55 (2022), 217--244. Related authors' presentation:
+\url{https://www.netanya.ac.il/gur/data/Hadamard_Research/research9.pdf}.
+\bibitem{MW} J. MacWilliams, A theorem on the distribution of weights
+in a systematic code, Bell System Technical Journal 42 (1963),
+79--94. \url{https://doi.org/10.1002/j.1538-7305.1963.tb04003.x}.
+\bibitem{Paley} R. E. A. C. Paley, \emph{On orthogonal matrices},
+J. Math. Phys. 12 (1933), 311--320.
+\url{https://doi.org/10.1002/sapm1933121311}.
+\bibitem{Verheiden} E. P. Verheiden, \emph{Arithmetical Properties of
+Combinatorial Matrices}, Ph.D. thesis, Caltech, 1978.
+\url{https://thesis.caltech.edu/2899/}.
+\end{thebibliography}
+\end{document}

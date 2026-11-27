@@ -1,0 +1,89 @@
+\section{A formalized classical completion input}
+The following classical codimension-one case is proved in Lean, without
+assuming any Hadamard-completion theorem. It is an input toward the
+higher-codimension results, not a substitute for their pending proofs.
+\begin{theorem}[Codimension-one completion]
+For every integer $n\ge0$, every real sign matrix $W$ with $n$ rows and
+$n+1$ columns satisfying $WW^{\mathsf T}=(n+1)I_n$ extends to a Hadamard
+matrix of order $n+1$, retaining every prescribed row.
+\end{theorem}
+\begin{proof}
+Divide each row by $\sqrt{n+1}$ and extend the resulting orthonormal
+family to an orthonormal basis of $\mathbb R^{n+1}$. Multiply the basis
+rows by $\sqrt{n+1}$ to obtain a square real matrix $H$ with
+$HH^{\mathsf T}=(n+1)I$. The square Gram identity also gives
+$H^{\mathsf T}H=(n+1)I$. For each column the first $n$ entries are
+prescribed signs, so their squares sum to $n$. Its remaining entry
+therefore has square one and is a sign. All rows of $H$ are sign rows,
+and the required Hadamard identity and row retention hold.
+\end{proof}
+The exact public declaration is
+\texttt{CompletionTheory.codimension\_one\_completion}; its conclusion
+uses the standard mathlib \texttt{Matrix.IsHadamard} predicate.
+
+\begin{theorem}[Codimension-two completion]
+Every real sign frame of even order with exactly two missing rows extends
+to a real Hadamard matrix, retaining all prescribed rows.
+\end{theorem}
+\begin{proof}
+Extend the normalized frame to a real orthonormal basis and rescale, as
+above. Let $u_j,v_j$ denote the two missing entries of column $j$.
+The column Gram identity gives $u_j^2+v_j^2=2$. Fix a column $j_0$,
+put $a=u_{j_0}$, $b=v_{j_0}$, and rotate the missing rows by
+$\frac12\left(\begin{smallmatrix}a+b&b-a\\a-b&a+b\end{smallmatrix}\right)$.
+This is orthogonal and sends their $j_0$ column to $(1,1)^T$.
+Every residual correlation with $j_0$ is an even integer, since the
+order and number of prescribed signs are even. Consequently each
+new missing column satisfies $x^2+y^2=2$ and $x+y\in2\mathbb Z$.
+The latter sum is $-2,0$, or $2$ by Cauchy--Schwarz, and each case
+forces $x,y\in\{1,-1\}$. Thus the rotated missing rows are sign rows.
+\end{proof}
+The declaration is \texttt{CompletionTheory.codimension\_two\_completion}.
+
+\begin{theorem}[A switched codimension-three criterion]
+Let $P$ be a real partial Hadamard matrix with exactly three missing
+rows. If every off-diagonal column inner product of $P$ belongs to
+$\{-3,1\}$, then $P$ extends to a real Hadamard matrix retaining all rows.
+\end{theorem}
+\begin{proof}
+Extend to a scaled real orthonormal basis. The three residual coordinates
+$r_j$ of each column have squared norm three and pairwise inner product
+three or minus one. Inner product three implies equality of the residual
+vectors. If $t$ distinct residual vectors occur, their sum has squared
+norm $3t-t(t-1)=t(4-t)$, so $t\le4$. Assign the distinct classes to distinct
+members of $(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)$. These sign vectors have
+exactly the same Gram matrix as the residual columns. The resulting
+three sign rows, stacked with $P$, have column Gram equal to the order
+times identity. The square matrix therefore also has the required row
+Gram and is Hadamard.
+\end{proof}
+This is a sufficient criterion with an explicit correlation hypothesis,
+not the generic codimension-three completion theorem. Its declaration in
+the \texttt{CompletionTheory} namespace is
+\texttt{tetrahedral\_completion\_of\_card}; the separate
+\texttt{tetrahedral\_sign\_factor} proves the tetrahedral factorization.
+
+\begin{theorem}[Classical completion through codimension three]
+Every partial real Hadamard matrix of positive order divisible by four
+with at most three missing rows extends to a Hadamard matrix retaining
+all its prescribed rows.
+\end{theorem}
+\begin{proof}
+The cases zero, one and two were handled above. For three missing rows,
+the number $r$ of prescribed rows is congruent to one modulo four.
+Multiply each column by the product of its prescribed entries. Since
+$r$ is odd, every switched column has product one. The entrywise
+product of any two switched columns also has product one, hence has an
+even number of negative signs. Its sum is consequently congruent to
+$r$, and thus to one, modulo four. The real residual columns have
+squared norm three, so Cauchy--Schwarz bounds every off-diagonal
+prescribed column correlation between minus three and three. Only
+minus three and one have the required congruence. Apply the preceding
+tetrahedral criterion and undo the column switches. All prescribed rows
+are retained. Every step, including the parity argument, is formalized.
+\end{proof}
+The arbitrary-index theorem
+\texttt{CompletionTheory.codimension\_le\_three\_completion}
+returns the standard mathlib Hadamard predicate and an injection identifying
+every original row. This proves only the stated classical small-defect
+case; the codimension-four through seven inputs remain unformalized.

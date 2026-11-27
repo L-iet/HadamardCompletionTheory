@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "mode": "configured-verified-results",
+  "formalizationDevelopment": "paused",
+  "principalClaimCount": 64,
+  "submittedPrincipalClaims": [
+    {
+      "id": "CT-01-01",
+      "title": "Uniform large-energy existence",
+      "declarations": [
+        "CompletionTheory.ThreeSquares.uniform_family_iff_threshold"
+      ]
+    },
+    {
+      "id": "CT-01-02",
+      "title": "cyclic-hermitian-norms corollary 2",
+      "declarations": [
+        "CompletionTheory.ThreeSquares.small_cyclic_orders_all_odd_energy"
+      ]
+    },
+    {
+      "id": "CT-01-03",
+      "title": "Odd multiplier closure",
+      "declarations": [
+        "CompletionTheory.cyclicNorm_odd_multiplier"
+      ]
+    },
+    {
+      "id": "CT-01-04",
+      "title": "Skew-character large-energy region",
+      "declarations": [
+        "CompletionTheory.ThreeSquares.skew_character_large_energy_region"
+      ]
+    },
+    {
+      "id": "CT-01-05",
+      "title": "A zero-aligned character ansatz is impossible",
+      "declarations": [
+        "CompletionTheory.zero_aligned_norm_obstruction"
+      ]
+    },
+    {
+      "id": "CT-02-01",
+      "title": "Sharp floor in the full character span",
+      "declarations": [
+        "CompletionTheory.CharacterFloor.character_span_sharp_energy_floors"
+      ]
+    },
+    {
+      "id": "CT-02-02",
+      "title": "Only three prime lengths can reach the binary boundary",
+      "declarations": [
+        "CompletionTheory.CharacterFloor.prime_character_binary_boundary"
+      ]
+    },
+    {
+      "id": "CT-03-01",
+      "title": "Exact residual criterion",
+      "declarations": [
+        "CompletionTheory.residual_factor_completion_iff",
+        "CompletionTheory.residualGram_structure",
+        "CompletionTheory.residualGram_diagonal",
+        "CompletionTheory.residualGram_offDiagonal_parity"
+      ]
+    },
+    {
+      "id": "CT-03-02",
+      "title": "Anchor enumeration",
+      "declarations": [
+        "CompletionTheory.residual_anchor_enumeration"
+      ]
+    },
+    {
+      "id": "CT-03-03",
+      "title": "An elementary defect-two completion",
+      "declarations": [
+        "CompletionTheory.even_order_defect_two_completion"
+      ]
+    },
+    {
+      "id": "CT-04-01",
+      "title": "Eight missing rows can already be fatal",
+      "declarations": [
+        "CompletionTheory.repetition_partialHadamard",
+        "CompletionTheory.odd_repetition_unextendible",
+        "CompletionTheory.eight_missing_rows_obstruction",
+        "CompletionTheory.seedTwelve_hadamard"
+      ]
+    },
+    {
+      "id": "CT-05-01",
+      "title": "Odd-block exchange budget",
+      "declarations": [
+        "CompletionTheory.odd_block_exchange_budget"
+      ]
+    },
+    {
+      "id": "CT-05-02",
+      "title": "Cheap augmentation versus exact linear completion cost",
+      "declarations": [
+        "CompletionTheory.cheap_augmentation_exact_completion_cost"
+      ]
+    },
+    {
+      "id": "CT-06-01",
+      "title": "Cube intersections through information coordinates",
+      "declarations": [
+        "CompletionTheory.information_coordinate_enumeration"
+      ]
+    },
+    {
+      "id": "CT-06-02",
+      "title": "Maximum cube intersections are duplication spaces",
+      "declarations": [
+        "CompletionTheory.maximum_cube_iff_signed_duplication",
+        "CompletionTheory.residual_blocks_equal_size",
+        "CompletionTheory.residual_block_size_quotient",
+        "CompletionTheory.duplication_residual_completion_iff",
+        "CompletionTheory.maximum_residual_cube_completion"
+      ]
+    },
+    {
+      "id": "CT-06-03",
+      "title": "A three-row deletion barrier",
+      "declarations": [
+        "CompletionTheory.base24Frame_partialHadamard",
+        "CompletionTheory.base24_no_exchange_le_two",
+        "CompletionTheory.base24_exchangeCost_eq_three",
+        "CompletionTheory.base24_exchange_with_completion"
+      ]
+    },
+    {
+      "id": "CT-07-01",
+      "title": "Tensoring cannot amplify the exchange cost upward",
+      "declarations": [
+        "CompletionTheory.tensor_exchangeCost_le"
+      ]
+    },
+    {
+      "id": "CT-07-02",
+      "title": "A general span-rigidity criterion",
+      "declarations": [
+        "CompletionTheory.span_rigid_tensor_candidate_confined",
+        "CompletionTheory.span_rigidity_excludes_tensor_exchange",
+        "CompletionTheory.span_rigidity_tensor_cost_lower"
+      ]
+    },
+    {
+      "id": "CT-07-03",
+      "title": "Preservation under half-overlap pair structure",
+      "declarations": [
+        "CompletionTheory.half_overlap_structure_implies_correlations",
+        "CompletionTheory.two_distinct_rows_half_overlap_bound",
+        "CompletionTheory.half_overlap_pair_structure_excludes_exchange",
+        "CompletionTheory.half_overlap_tensor_cost_three"
+      ]
+    },
+    {
+      "id": "CT-07-04",
+      "title": "tensor-exchange-barrier corollary 4",
+      "declarations": [
+        "CompletionTheory.base24_tensor_partialHadamard",
+        "CompletionTheory.base24_tensor_noSignExtension",
+        "CompletionTheory.base24_tensor_exchangeCost_eq_three",
+        "CompletionTheory.exists_hadamard_power_two",
+        "CompletionTheory.base24_sylvester_family"
+      ]
+    },
+    {
+      "id": "CT-08-01",
+      "title": "Weighted odd-witness budget",
+      "declarations": [
+        "CompletionTheory.witnessBudget_eq_residual",
+        "CompletionTheory.weighted_odd_witness_budget"
+      ]
+    },
+    {
+      "id": "CT-08-02",
+      "title": "The first possible parity deficit is eight",
+      "declarations": [
+        "CompletionTheory.witnessBudget_mod_eight",
+        "CompletionTheory.small_defect_budget",
+        "CompletionTheory.defect_eight_zero"
+      ]
+    },
+    {
+      "id": "CT-08-03",
+      "title": "Saturated-lattice alternative",
+      "declarations": [
+        "CompletionTheory.rational_saturated_lattice_alternative"
+      ]
+    },
+    {
+      "id": "CT-09-01",
+      "title": "Exact one-row augmentation",
+      "declarations": [
+        "CompletionTheory.repair_exact_one_row_augmentation",
+        "CompletionTheory.repairOriginal_gram_entries",
+        "CompletionTheory.repairRetained_is_deletion"
+      ]
+    },
+    {
+      "id": "CT-09-02",
+      "title": "Augmentation can destroy odd integer feasibility",
+      "declarations": [
+        "CompletionTheory.repair_augmentation_destroys_odd_feasibility",
+        "CompletionTheory.repairOriginal_gram_entries",
+        "CompletionTheory.repairRetained_is_deletion"
+      ]
+    },
+    {
+      "id": "CT-09-03",
+      "title": "Rounding defect",
+      "declarations": [
+        "CompletionTheory.rounding_defect",
+        "CompletionTheory.rounding_defect_bound",
+        "CompletionTheory.rounded_row_repair"
+      ]
+    },
+    {
+      "id": "CT-10-01",
+      "title": "Exact modular count with a column-pair correction",
+      "declarations": [
+        "CompletionTheory.column_pair_modular_correction"
+      ]
+    },
+    {
+      "id": "CT-11-01",
+      "title": "The row correction at orders $4\\bmod8$",
+      "declarations": [
+        "CompletionTheory.modular_row_correction"
+      ]
+    },
+    {
+      "id": "CT-11-02",
+      "title": "Exact boundary correction",
+      "declarations": [
+        "CompletionTheory.four_row_boundary_correction"
+      ]
+    },
+    {
+      "id": "CT-12-01",
+      "title": "Two-parity rigidity",
+      "declarations": [
+        "CompletionTheory.modular_two_parity_bounds"
+      ]
+    },
+    {
+      "id": "CT-12-02",
+      "title": "Five rows remove compatibility tests",
+      "declarations": [
+        "CompletionTheory.five_rows_remove_code_compatibility"
+      ]
+    },
+    {
+      "id": "CT-12-03",
+      "title": "Exact code pivot",
+      "declarations": [
+        "CompletionTheory.self_dual_sign_code_pivot"
+      ]
+    },
+    {
+      "id": "CT-13-01",
+      "title": "Finite certified example",
+      "declarations": [
+        "CompletionTheory.finite_self_dual_code_trap"
+      ]
+    },
+    {
+      "id": "CT-13-02",
+      "title": "Elementary tensor persistence",
+      "declarations": [
+        "CompletionTheory.tensor_noSignExtension",
+        "CompletionTheory.codeTrap20_partialHadamard",
+        "CompletionTheory.codeTrap20_noSignExtension",
+        "CompletionTheory.codeTrap20_tensor_partialHadamard",
+        "CompletionTheory.codeTrap20_tensor_noSignExtension"
+      ]
+    },
+    {
+      "id": "CT-14-01",
+      "title": "Exact restricted-neighbor incidence count",
+      "declarations": [
+        "CompletionTheory.restricted_neighbor_incidence_and_improvement"
+      ]
+    },
+    {
+      "id": "CT-14-02",
+      "title": "A modular pool splits into two codes",
+      "declarations": [
+        "CompletionTheory.two_code_sign_pool"
+      ]
+    },
+    {
+      "id": "CT-15-01",
+      "title": "Weighted-grid classification",
+      "declarations": [
+        "CompletionTheory.weighted_code_grid_classification"
+      ]
+    },
+    {
+      "id": "CT-15-02",
+      "title": "Exact compatibility and optimal retained-space repair",
+      "declarations": [
+        "CompletionTheory.weighted_grid_optimal_repair"
+      ]
+    },
+    {
+      "id": "CT-16-01",
+      "title": "Exact first and second completion moments",
+      "declarations": [
+        "CompletionTheory.retained_actual_sign_first_two_moments",
+        "CompletionTheory.retained_actual_sign_second_moment_certificate",
+        "CompletionTheory.retained_line_weight_pair_identities",
+        "CompletionTheory.retained_line_quotient_rank_one"
+      ]
+    },
+    {
+      "id": "CT-16-02",
+      "title": "Exact expected sign count along the walk",
+      "declarations": [
+        "CompletionTheory.retained_code_walk_exact_expectation"
+      ]
+    },
+    {
+      "id": "CT-17-01",
+      "title": "Exact third-moment certificate",
+      "declarations": [
+        "CompletionTheory.actual_sign_third_moment_formulas",
+        "CompletionTheory.actual_sign_third_moment_certificate",
+        "CompletionTheory.retained_tuple_count_as_weighted_points"
+      ]
+    },
+    {
+      "id": "CT-18-02",
+      "title": "Uniform power-of-two buffer",
+      "declarations": [
+        "CompletionTheory.unconditional_uniform_power_buffer"
+      ]
+    },
+    {
+      "id": "CT-19-01",
+      "title": "An exact residual parameterization",
+      "declarations": [
+        "CompletionTheory.hadamard_seed_dilation_iff"
+      ]
+    },
+    {
+      "id": "CT-19-02",
+      "title": "A rounding threshold for real completions",
+      "declarations": [
+        "CompletionTheory.real_flatness_rounding_hadamard",
+        "CompletionTheory.quarticFlatness_identity",
+        "CompletionTheory.realFlatnessThreshold_lower",
+        "CompletionTheory.noncompletable_real_flatness_gap"
+      ]
+    },
+    {
+      "id": "CT-20-01",
+      "title": "A signed complex-structure criterion",
+      "declarations": [
+        "PhaseGeometry.signed_complex_structure_criterion"
+      ]
+    },
+    {
+      "id": "CT-20-02",
+      "title": "Exact criterion and quantitative separation",
+      "declarations": [
+        "PhaseGeometry.rhoFourth_le_one",
+        "PhaseGeometry.rhoFourth_one_iff_quaternary_phase_equivalent",
+        "PhaseGeometry.equivalent_quaternary_distance_lower"
+      ]
+    },
+    {
+      "id": "CT-21-01",
+      "title": "Forced block structure",
+      "declarations": [
+        "CompletionTheory.forced_two_zero_block_structure"
+      ]
+    },
+    {
+      "id": "CT-21-02",
+      "title": "All sign fillings in quadratic time",
+      "declarations": [
+        "CompletionTheory.all_sign_fillings_quadratic_time"
+      ]
+    },
+    {
+      "id": "CT-22-01",
+      "title": "The only possible component sections",
+      "declarations": [
+        "CompletionTheory.real_root_original_component_sections"
+      ]
+    },
+    {
+      "id": "CT-22-02",
+      "title": "Conference conversion",
+      "declarations": [
+        "CompletionTheory.real_diagonal_root_forces_full_plane"
+      ]
+    },
+    {
+      "id": "CT-22-03",
+      "title": "Exact real feasibility and solution topology",
+      "declarations": [
+        "CompletionTheory.real_feasibility_and_solution_topology"
+      ]
+    },
+    {
+      "id": "CT-22-04",
+      "title": "A sharper cardinality bound",
+      "declarations": [
+        "CompletionTheory.sharp_zero_preserving_fill_cardinalities"
+      ]
+    },
+    {
+      "id": "CT-23-01",
+      "title": "An exact rank test for a two-column flat completion",
+      "declarations": [
+        "CompletionTheory.Bloch.residual_bloch_unit_gram",
+        "CompletionTheory.Bloch.complex_defect_two_rank_criterion"
+      ]
+    },
+    {
+      "id": "CT-23-02",
+      "title": "Quaternary input needs no extra phase freedom",
+      "declarations": [
+        "CompletionTheory.Bloch.quaternary_bloch_discreteness",
+        "CompletionTheory.Bloch.quaternary_defect_two_completion_equivalence"
+      ]
+    },
+    {
+      "id": "CT-23-03",
+      "title": "Automatic quaternary completion using a classical real input",
+      "declarations": [
+        "CompletionTheory.Bloch.automatic_quaternary_bloch_rank",
+        "CompletionTheory.Bloch.automatic_quaternary_defect_two_completion"
+      ]
+    },
+    {
+      "id": "CT-24-01",
+      "title": "A one-column extension gate through realification",
+      "declarations": [
+        "CompletionTheory.quaternary_realification_gate"
+      ]
+    },
+    {
+      "id": "CT-24-02",
+      "title": "Automatic completion in complex codimension at most three",
+      "declarations": [
+        "CompletionTheory.small_defect_quaternary_completion"
+      ]
+    },
+    {
+      "id": "CT-24-03",
+      "title": "An explicit finite exact algorithm",
+      "declarations": [
+        "CompletionTheory.exact_quaternary_completion_algorithm_for_complex_input",
+        "CompletionTheory.exact_quaternary_completion_algorithm"
+      ]
+    },
+    {
+      "id": "CT-24-04",
+      "title": "A precise codimension-four gate",
+      "declarations": [
+        "CompletionTheory.quaternary_defect_four_completion_gate"
+      ]
+    },
+    {
+      "id": "CT-25-01",
+      "title": "A four-row support-moving switch",
+      "declarations": [
+        "CompletionTheory.walshLift_switch_iff",
+        "CompletionTheory.walshLift_support_motion"
+      ]
+    },
+    {
+      "id": "CT-25-02",
+      "title": "Two fixed-support row blocks cannot change feasibility",
+      "declarations": [
+        "CompletionTheory.two_fixed_support_pairs_preserve_feasibility"
+      ]
+    },
+    {
+      "id": "CT-26-01",
+      "title": "Syndrome census identity",
+      "declarations": [
+        "CompletionTheory.syndrome_neighbor_census"
+      ]
+    }
+  ],
+  "unsubmittedPrincipalClaims": [
+    {
+      "id": "CT-18-01",
+      "title": "Conditional quantitative half-frame",
+      "status": "excluded-unformalized",
+      "reason": "The complete principal statement has not been formalized. Supporting lemmas or computational certificates do not establish the whole claim.",
+      "section": "18-conditional-half-frame.tex"
+    },
+    {
+      "id": "CT-26-02",
+      "title": "Complete improving-neighbor census for this code",
+      "status": "excluded-unformalized",
+      "reason": "The complete principal statement has not been formalized. Supporting lemmas or computational certificates do not establish the whole claim.",
+      "section": "26-complete-neighbor-census.tex"
+    }
+  ],
+  "comparatorConfigurations": [
+    "comparator-algorithms.json",
+    "comparator-bloch.json",
+    "comparator-character.json",
+    "comparator-codes.json",
+    "comparator-cyclic-existence.json",
+    "comparator-lattice.json",
+    "comparator-quaternary.json",
+    "comparator-repair.json",
+    "comparator.json"
+  ],
+  "proofCoverageComplete": false,
+  "privateDevelopmentIncluded": false,
+  "registryVerificationClaimed": false,
+  "scopeStatement": "The submission covers exactly the declarations selected by its Comparator configuration; it does not assert machine verification of excluded manuscript results."
+}

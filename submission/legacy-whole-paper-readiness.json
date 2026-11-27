@@ -1,0 +1,59 @@
+{
+  "leanFiles": 627,
+  "intentionalChallengePlaceholders": 217,
+  "errors": [
+    "Missing verification artifact submission/comparator-result.json",
+    "Missing verification artifact submission/comparator-algorithms-result.json",
+    "Missing verification artifact submission/comparator-repair-result.json",
+    "Missing verification artifact submission/comparator-codes-result.json",
+    "Missing verification artifact submission/comparator-lattice-result.json",
+    "Missing verification artifact submission/comparator-character-result.json",
+    "Missing verification artifact submission/comparator-bloch-result.json",
+    "Missing verification artifact submission/comparator-quaternary-result.json",
+    "Missing verification artifact submission/comparator-cyclic-existence-result.json",
+    "Principal paper claims remain unformalized"
+  ],
+  "pendingPrincipalClaims": [
+    "CT-18-01",
+    "CT-26-02"
+  ],
+  "ready": false,
+  "comparisonGroups": [
+    {
+      "id": "main",
+      "config": "comparator.json"
+    },
+    {
+      "id": "algorithms",
+      "config": "comparator-algorithms.json"
+    },
+    {
+      "id": "repair",
+      "config": "comparator-repair.json"
+    },
+    {
+      "id": "codes",
+      "config": "comparator-codes.json"
+    },
+    {
+      "id": "lattice",
+      "config": "comparator-lattice.json"
+    },
+    {
+      "id": "character",
+      "config": "comparator-character.json"
+    },
+    {
+      "id": "bloch",
+      "config": "comparator-bloch.json"
+    },
+    {
+      "id": "quaternary",
+      "config": "comparator-quaternary.json"
+    },
+    {
+      "id": "cyclic-existence",
+      "config": "comparator-cyclic-existence.json"
+    }
+  ]
+}

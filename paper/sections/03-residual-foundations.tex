@@ -1,0 +1,75 @@
+\section{Residual Gram foundations and fixed-defect decisions}
+Let $n$ be a positive multiple of four, $1\le r<n$, and let
+$P\in\{\pm1\}^{(n-r)\times n}$ satisfy
+$PP^{\mathsf T}=nI_{n-r}$. Define the residual Gram matrix
+\[
+ C=nI_n-P^{\mathsf T}P.
+\]
+\begin{proposition}[Exact residual criterion]\label{prop:residual}
+The matrix $C$ is positive semidefinite, has rank $r$, satisfies
+$C^2=nC$, and has diagonal entries $r$. Moreover $P$ completes to a
+Hadamard matrix if and only if
+\begin{equation}\label{eq:factor}
+ C=B^{\mathsf T}B\quad\hbox{for some }B\in\{\pm1\}^{r\times n}.
+\end{equation}
+For even $n$, all off-diagonal entries of $C$ have parity $r$.
+\end{proposition}
+\begin{proof}
+$P^{\mathsf T}P/n$ is an orthogonal projection of rank $n-r$; its
+complement gives the assertions about $C$. Its diagonal is
+$n-(n-r)=r$. Off-diagonal entries are negatives of sums of $n-r$
+signs. A completion immediately gives \eqref{eq:factor}. Conversely,
+such a factor has rank $r$ and $BB^{\mathsf T}=nI_r$, because its
+nonzero Gram eigenvalues are all $n$. Its row space is the range of
+$C$, perpendicular to the row space of $P$, so stacking $P$ and $B$
+completes the matrix.
+\end{proof}
+
+\subsection{A finite-type reduction for each fixed defect}
+\begin{proposition}[Anchor enumeration]\label{prop:anchor}
+For a fixed $r$, deciding \eqref{eq:factor} reduces to at most
+$2^{r^2}$ sign anchor matrices, followed by exact rational linear
+algebra and sign tests on all columns. The set of possible anchored
+column types is finite independently of $n$.
+\end{proposition}
+\begin{proof}
+Choose $r$ linearly independent columns of any real Gram factor of
+$C$; equivalently choose an invertible principal submatrix $G$ of $C$.
+The Gram matrix of these anchors has diagonal $r$ and entries in the
+finite set $\{-r,-r+2,\ldots,r\}$. A sign factor must have an
+invertible $r\times r$ anchor matrix $S$ satisfying $S^{\mathsf T}S=G$.
+Enumerate the $2^{r^2}$ possible $S$. For each column $j$, let $z_j$
+be its $r$ correlations with the anchors. Its only possible factor
+column is
+\[
+ b_j=(S^{\mathsf T})^{-1}z_j.
+\]
+Test whether every entry of every $b_j$ is $\pm1$. Since $C$ has rank
+$r$, the Schur-complement identity forces these columns to have the
+whole Gram matrix $C$; a final exact Gram comparison also certifies it.
+There are only $(r+1)^r$ possible correlation vectors $z_j$. Both the
+anchor matrices and possible column types thus come from finite lists
+depending only on $r$, though their multiplicities depend on $n$.
+\end{proof}
+
+This is an elementary fixed-parameter decision reduction, not a proof
+that a factor exists. It suggests importing classification of integral
+quadratic forms and spherical configurations. Gram-factorization and
+lattice-reduction algorithms are already used for this problem;
+see Goldberger--Strassler~\cite{LLL}.
+
+\begin{proposition}[An elementary defect-two completion]
+For even $n\ge2$, every real partial Hadamard matrix with $n-2$ rows
+and $n$ columns completes.
+\end{proposition}
+\begin{proof}
+Factor its rank-two residual as columns $v_j\in\R^2$. They have squared
+length two, and pairwise inner products in $\{-2,0,2\}$ by integrality,
+parity and Cauchy--Schwarz. Thus any two are parallel or orthogonal.
+Rank two forces exactly two perpendicular lines. Rotate the lines to
+the directions $(1,1)$ and $(1,-1)$. All columns then have sign
+coordinates, giving \eqref{eq:factor}. This independently recovers a
+small case of the classical completion theory.
+\end{proof}
+
+\paragraph{Formalization.} The theorem \texttt{residual\_\allowbreak anchor\_\allowbreak enumeration} proves the exact rational search equivalence, derives an invertible anchor from the given partial Hadamard matrix, and proves both finite search bounds. The final test checks the entire residual Gram matrix.

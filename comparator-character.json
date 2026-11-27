@@ -1,0 +1,17 @@
+{
+  "challenge_module": "CharacterChallenge",
+  "solution_module": "CharacterSolution",
+  "theorem_names": [
+    "CompletionTheory.CharacterFloor.skew_template_attainment",
+    "CompletionTheory.CharacterFloor.symmetric_template_attainment",
+    "CompletionTheory.CharacterFloor.character_span_sharp_energy_floors",
+    "CompletionTheory.CharacterFloor.prime_character_binary_boundary"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

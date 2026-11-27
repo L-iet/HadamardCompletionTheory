@@ -1,0 +1,85 @@
+{
+  "sourceProject": "phase-geometry",
+  "copyright": "Joshua Mark, 2026",
+  "license": "Apache-2.0",
+  "licenseCopy": "submission/phase-geometry-LICENSE.txt",
+  "purpose": "Standalone copies of original companion proofs for identical CT-20-01 and CT-20-02 statements. No external unlicensed source code.",
+  "copyPolicy": "Exact UTF-8/LF source copies; own root entrypoint added. Files without per-file notices are covered by the included source project root license. All Lean/mathlib versions remain pinned.",
+  "files": [
+    {
+      "module": "PhaseGeometry.ApproximateRounding",
+      "path": "PhaseGeometry/ApproximateRounding.lean",
+      "canonicalLFsha256": "85d62a462ed54f765dbdd7b09bbec35f7bee542aaa9d06a0b0392105ee3102d5"
+    },
+    {
+      "module": "PhaseGeometry.DitaBlock",
+      "path": "PhaseGeometry/DitaBlock.lean",
+      "canonicalLFsha256": "5d20240f5ac1bea4a11f546f2617590b467a64ccb99e20437787e335b08bd7a6"
+    },
+    {
+      "module": "PhaseGeometry.Finite",
+      "path": "PhaseGeometry/Finite.lean",
+      "canonicalLFsha256": "cf9d3095d2a822ef54b961fe0440d464a3461dd7da5a9ca08863788a304fe877"
+    },
+    {
+      "module": "PhaseGeometry.FlipCalculus",
+      "path": "PhaseGeometry/FlipCalculus.lean",
+      "canonicalLFsha256": "af44b1a2edd5b9870b77d162e97b6d452f8a98eb90c798f6f04af36b0878f3b4"
+    },
+    {
+      "module": "PhaseGeometry.FourPhaseSeparation",
+      "path": "PhaseGeometry/FourPhaseSeparation.lean",
+      "canonicalLFsha256": "88ef9f233b971bc5faaa114122a70f38a29447cb075fbae1e3cdc4124c39b868"
+    },
+    {
+      "module": "PhaseGeometry.FourierCharacters",
+      "path": "PhaseGeometry/FourierCharacters.lean",
+      "canonicalLFsha256": "82b4c2341265f03a7c8a0e34217103eebc1f1ce5dc582669effb7d112c2b4978"
+    },
+    {
+      "module": "PhaseGeometry.FourierNorm",
+      "path": "PhaseGeometry/FourierNorm.lean",
+      "canonicalLFsha256": "3459b1e1f903aecb91bc1f816cf7044c82e84f25557a575aec8a928a0b43266e"
+    },
+    {
+      "module": "PhaseGeometry.FourthPhase",
+      "path": "PhaseGeometry/FourthPhase.lean",
+      "canonicalLFsha256": "497bb490362f0938c8dc7b951ab1e91fdd1c7a94c6f842565e8aeb31e303e031"
+    },
+    {
+      "module": "PhaseGeometry.IndexedCalculus",
+      "path": "PhaseGeometry/IndexedCalculus.lean",
+      "canonicalLFsha256": "77732eb93b6c043ff30644b7b914fddedd93a68b78b5e24e68399eb0aa7076e8"
+    },
+    {
+      "module": "PhaseGeometry.OperatorDeficit",
+      "path": "PhaseGeometry/OperatorDeficit.lean",
+      "canonicalLFsha256": "acd3e838b6ffee499fac17fd9180666f1e70f6adecbb44815aaa842a2ead7e8e"
+    },
+    {
+      "module": "PhaseGeometry.PhaseHessian",
+      "path": "PhaseGeometry/PhaseHessian.lean",
+      "canonicalLFsha256": "4cb9a9a25b1a31ad8665307b9282a67c32bf6d7cbae2ffaf7b2519caaa5ee0d4"
+    },
+    {
+      "module": "PhaseGeometry.QuantitativeRounding",
+      "path": "PhaseGeometry/QuantitativeRounding.lean",
+      "canonicalLFsha256": "54ebee3ae4d5ff094125b25515d2e675c95a98e7111240a82445cd6a041c8d60"
+    },
+    {
+      "module": "PhaseGeometry.Rounding",
+      "path": "PhaseGeometry/Rounding.lean",
+      "canonicalLFsha256": "06d539e04a02773019c38739570f6a5efd7a81167fc897e7a95c5da717a37f91"
+    },
+    {
+      "module": "PhaseGeometry.SignedComplexStructure",
+      "path": "PhaseGeometry/SignedComplexStructure.lean",
+      "canonicalLFsha256": "b4573b8f1a958b8c67423613b16469ee8ea492816853594631e577de91c79c7a"
+    },
+    {
+      "module": "PhaseGeometry.TrapCertificate",
+      "path": "PhaseGeometry/TrapCertificate.lean",
+      "canonicalLFsha256": "260411e557aaea142a0acef62b51207318da9c93fce898ec996ddb915a2ef2b9"
+    }
+  ]
+}

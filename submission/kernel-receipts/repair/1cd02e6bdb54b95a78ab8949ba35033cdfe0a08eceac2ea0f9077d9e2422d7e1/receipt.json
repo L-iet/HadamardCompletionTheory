@@ -1,0 +1,42 @@
+{
+  "key": "1cd02e6bdb54b95a78ab8949ba35033cdfe0a08eceac2ea0f9077d9e2422d7e1",
+  "metadata": {
+    "group": "repair",
+    "configPath": "comparator-repair.json",
+    "configSHA256": "84c90add8831118dd46bf95ae009eef74621df585b249f93caa7489a811337ce",
+    "theoremNames": [
+      "CompletionTheory.repairOriginal_gram_entries",
+      "CompletionTheory.repairRetained_is_deletion",
+      "CompletionTheory.repair_exact_one_row_augmentation",
+      "CompletionTheory.repair_augmentation_destroys_odd_feasibility",
+      "CompletionTheory.repairFiveWitnessIndices._proof_1",
+      "CompletionTheory.repairInsertedToSixteen._proof_1",
+      "CompletionTheory.repairRetainedOriginalIndex._proof_2",
+      "CompletionTheory.repairRetainedOriginalIndex._proof_3",
+      "CompletionTheory.repairRetainedToSixteen._proof_1",
+      "CompletionTheory.repairRetainedToSixteen._proof_2",
+      "CompletionTheory.repairTwoToFive._proof_1",
+      "CompletionTheory.repairTwoToFive._proof_2"
+    ],
+    "definitionNames": [],
+    "exports": {
+      "challenge": "3dd6e27851c5d4e345d4a442cdb0488f88a472c369b1c15530d635936fb9e6bb",
+      "solution": "a69d207ad51e91c35844184588aa12f3697bc9613b4ec9059c0ff25a1652bc8f"
+    },
+    "environment": {
+      "toolchain": "leanprover/lean4:v4.35.0",
+      "toolchainSHA256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "binaries": {
+        "lean": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+        "lake": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+        "leanexport": "bda24bb3fafaf299ba472f944942d6293294b76559fafc9f166badd7c0f981b3",
+        "leanchecker": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+        "nanoda_bin": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8"
+      }
+    }
+  },
+  "capturedAtUTC": "2026-11-25T16:19:38.622946+00:00",
+  "reportSHA256": "84a655ddddd15e1e62d57a08c9d41f059ac34ecf225196b7c92dcbb819c22b76",
+  "logSHA256": "52e61c4a487a636e70f2be58d211a166787baa46d5ec7f4241b92f1924d7259b",
+  "scope": "Immutable original Comparator exit0 with explicit Lean/NanoDa acceptance of the exact exports/config/checker environment. Local diagnostic, not registry verification."
+}

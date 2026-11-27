@@ -1,0 +1,11 @@
+{
+  "archiveURL": "https://isa-afp.org/release/afp-Three_Squares-current.tar.gz",
+  "archiveSHA256": "55f71a3764eee5262018d6668b5c81e1f8f784d9b516a78eb145894326d4f87c",
+  "licenseURL": "https://isa-afp.org/LICENSE",
+  "licenseSHA256": "9ac784670a1624c9b0f83f61c2c68163985cfd50f5c2fbe9699623311a5ce4bd",
+  "authors": [
+    "Anna Danilkin",
+    "Lo\u00efc Chevalier"
+  ],
+  "status": "BSD-licensed Isabelle reference source only. No Lean dependency and no Lean theorem proved by this download. Preserve author notices and BSD license for any translated implementation."
+}

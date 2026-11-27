@@ -1,0 +1,39 @@
+PALOMAR COMPARISON ENTRY POINTS
+One public immutable commit and one configuration identify each entry.
+This list describes scope, not registry acceptance.
+
+comparator.json
+  136 proof targets; 196 concrete-definition targets.
+  Principal records wholly covered here: CT-01-03, CT-01-05, CT-03-01, CT-03-02, CT-03-03, CT-04-01, CT-05-01, CT-05-02, CT-06-01, CT-06-02, CT-06-03, CT-07-01, CT-07-02, CT-07-03, CT-07-04, CT-08-01, CT-08-02, CT-09-03, CT-10-01, CT-11-01, CT-11-02, CT-12-01, CT-12-02, CT-12-03, CT-13-02, CT-14-01, CT-14-02, CT-15-01, CT-15-02, CT-16-01, CT-16-02, CT-17-01, CT-18-02, CT-19-01, CT-19-02, CT-20-01, CT-20-02, CT-21-01, CT-21-02, CT-22-01, CT-22-02, CT-22-03, CT-22-04, CT-24-01, CT-24-02, CT-24-04, CT-25-01, CT-25-02, CT-26-01.
+
+comparator-algorithms.json
+  87 proof targets; 0 concrete-definition targets.
+  Principal records wholly covered here: CT-24-03.
+
+comparator-repair.json
+  12 proof targets; 0 concrete-definition targets.
+  Principal records wholly covered here: CT-09-01, CT-09-02.
+
+comparator-codes.json
+  2 proof targets; 0 concrete-definition targets.
+  Principal records wholly covered here: CT-13-01.
+
+comparator-lattice.json
+  2 proof targets; 0 concrete-definition targets.
+  Principal records wholly covered here: CT-08-03.
+
+comparator-character.json
+  4 proof targets; 0 concrete-definition targets.
+  Principal records wholly covered here: CT-02-01, CT-02-02.
+
+comparator-bloch.json
+  2 proof targets; 0 concrete-definition targets.
+  Principal records wholly covered here: CT-23-01.
+
+comparator-quaternary.json
+  4 proof targets; 0 concrete-definition targets.
+  Principal records wholly covered here: CT-23-02, CT-23-03.
+
+comparator-cyclic-existence.json
+  11 proof targets; 9 concrete-definition targets.
+  Principal records wholly covered here: CT-01-01, CT-01-02, CT-01-04.

@@ -1,0 +1,15 @@
+{
+  "challenge_module": "BlochChallenge",
+  "solution_module": "BlochSolution",
+  "theorem_names": [
+    "CompletionTheory.Bloch.residual_bloch_unit_gram",
+    "CompletionTheory.Bloch.complex_defect_two_rank_criterion"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

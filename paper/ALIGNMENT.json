@@ -1,0 +1,1804 @@
+{
+  "project": "CompletionTheory",
+  "all_milestones_complete": false,
+  "ready": false,
+  "principal_claims": [
+    {
+      "id": "CT-01-01",
+      "section": "01-cyclic-hermitian-norms.tex",
+      "kind": "theorem",
+      "title": "Uniform large-energy existence",
+      "statement_tex": "\\label{thm:main}\nIf $m\\ge1$ and $t$ are odd integers and $t\\ge(m^2+3)/4$, then\n\\eqref{eq:target} has a solution of the form\n\\[\n A_i=J+2x_i\\cdot1,\\qquad x_i\\in\\Z.\n\\]\nFor odd $m,t$, this particular form exists if and only if\n$t\\ge(m^2+3)/4$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.ThreeSquares.uniform_family_iff_threshold",
+      "reason": "Exact constant-perturbation cyclic coefficient family; unconditional three-square construction and sharp iff threshold, including m=1. Public integration verification in progress."
+    },
+    {
+      "id": "CT-01-02",
+      "section": "01-cyclic-hermitian-norms.tex",
+      "kind": "corollary",
+      "title": "cyclic-hermitian-norms corollary 2",
+      "statement_tex": "The broader parity-constrained norm problem has a solution for every\nodd $t\\ge m$ when $m=1$ or $m=3$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.ThreeSquares.small_cyclic_orders_all_odd_energy",
+      "reason": "Actual parity-constrained cyclic norm solution for every odd energy at least m for m=1or3. Public integration verification in progress."
+    },
+    {
+      "id": "CT-01-03",
+      "section": "01-cyclic-hermitian-norms.tex",
+      "kind": "proposition",
+      "title": "Odd multiplier closure",
+      "statement_tex": "\\label{prop:multiplier}\nIf \\eqref{eq:target} has a solution at $(m,t)$ and $s$ is any positive\nodd integer, it has a solution at $(m,st)$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.cyclicNorm_odd_multiplier",
+      "reason": "The cyclic ring is modeled by its integer coefficient functions on ZMod m; cyclicNorm is the exact coefficient of the Hermitian norm sum. Original constant quaternion mixing preserves every odd coefficient and scales every autocorrelation coefficient. Mathlib Lagrange four squares supplies every positive odd multiplier."
+    },
+    {
+      "id": "CT-01-04",
+      "section": "01-cyclic-hermitian-norms.tex",
+      "kind": "theorem",
+      "title": "Skew-character large-energy region",
+      "statement_tex": "\\label{thm:skew}\nUnder those hypotheses on $L$, the norm problem is solvable for every\nodd\n\\[\n t\\ge T_m:=\\frac{m^2+6m+21}{16}.\n\\]\nIn particular this holds for every prime $m\\equiv3\\pmod4$.\nThe integer $T_m$ is odd. The threshold is sharp within the family\nused in this proof.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.ThreeSquares.skew_character_large_energy_region",
+      "reason": "Actual skew-character coefficient arrays at every odd energy above the exact threshold; sharp floor and actual prime-character specialization are separately compared. Public integration verification in progress."
+    },
+    {
+      "id": "CT-01-05",
+      "section": "01-cyclic-hermitian-norms.tex",
+      "kind": "proposition",
+      "title": "A zero-aligned character ansatz is impossible",
+      "statement_tex": "With the same $m,L$, it is impossible that all four elements have the\nform\n\\[\n A_i=u_iL+v_i+2w_iJ,\\qquad u_i,v_i\\text{ odd},\\quad w_i\\in\\Z,\n\\]\nand their Hermitian norm sum is a scalar multiple of $1$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.zero_aligned_norm_obstruction",
+      "reason": "For actual cyclic integer coefficient arrays, the character autocorrelation identity implies zero augmentation and energy m-1. Scalarity forces the exact coefficient equation; modulo eight it contradicts odd u and v. No abstract coefficient equation or unproved independence hypothesis is assumed. The proof needs only odd m>1 and the autocorrelation law, strengthening the skew-character statement."
+    },
+    {
+      "id": "CT-02-01",
+      "section": "02-quadratic-character-floor.tex",
+      "kind": "theorem",
+      "title": "Sharp floor in the full character span",
+      "statement_tex": "\\label{thm:spanfloor}\nIf $m\\equiv3\\pmod4$ and $L^*=-L$, the least possible energy in\n\\eqref{eq:fullspan} is\n\\[\n T_-(m)=\\frac{m^2+6m+21}{16}.\n\\]\nIf $m\\equiv1\\pmod4$, $m\\ge5$, and $L^*=L$, the least possible energy is\n\\[\n T_+(m)=\\frac{m^2+2m+5}{8}.\n\\]\nBoth minima are attained by explicit odd-coefficient choices. The\nintegers $T_\\pm(m)$ are odd. These are global minima within the whole\nfamily, not only within the earlier special constructions.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.CharacterFloor.character_span_sharp_energy_floors",
+      "reason": "Complete skew and symmetric sharp floors for actual four-channel arrays with independent shifts. Every coefficient is odd, actual cyclic norms equal scalar energy, both universal lower bounds and explicit attaining constructions are proved, as is oddness of the thresholds. No scalarity hypotheses are added: all are derived from the actual arrays. Four strict mathlib-only targets, zero definition holes, standard three axioms. Private both-kernel comparison passed; fresh integrated six-group verification required."
+    },
+    {
+      "id": "CT-02-02",
+      "section": "02-quadratic-character-floor.tex",
+      "kind": "corollary",
+      "title": "Only three prime lengths can reach the binary boundary",
+      "statement_tex": "For the quadratic character polynomial at an odd prime $p$, the full\nfamily~\\eqref{eq:fullspan} reaches energy $t=p$ if and only if\n$p\\in\\{3,5,7\\}$. In particular no prime $p\\ge11$ can be settled\nby rescaling, independently shifting, or taking arbitrary integer\nlinear combinations of a quadratic character, its zero-position\nmonomial, and $J$ in the four channels.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.CharacterFloor.prime_character_binary_boundary",
+      "reason": "Actual mathlib quadratic character at every odd prime; correlation and reflection identities proved using a completed Mobius bijection and finite-field square criteria. Energy p occurs iff p is 3, 5 or 7, with actual attaining arrays. Original Apache-2.0 character correlation helpers adapted from the same author under an Apache-2.0 license; no sibling project dependency. Four strict mathlib-only targets, zero definition holes, standard three axioms. Private both-kernel comparison passed; fresh integrated six-group verification required."
+    },
+    {
+      "id": "CT-03-01",
+      "section": "03-residual-foundations.tex",
+      "kind": "proposition",
+      "title": "Exact residual criterion",
+      "statement_tex": "\\label{prop:residual}\nThe matrix $C$ is positive semidefinite, has rank $r$, satisfies\n$C^2=nC$, and has diagonal entries $r$. Moreover $P$ completes to a\nHadamard matrix if and only if\n\\begin{equation}\\label{eq:factor}\n C=B^{\\mathsf T}B\\quad\\hbox{for some }B\\in\\{\\pm1\\}^{r\\times n}.\n\\end{equation}\nFor even $n$, all off-diagonal entries of $C$ have parity $r$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.residual_factor_completion_iff",
+      "reason": "Actual residual positive semidefiniteness, exact missing-row rank, scaled projection identity, diagonal and off-diagonal parity, and sign-factor iff standard mathlib Hadamard completion retaining all original rows. Sum-index coordinates represent missing and retained rows without extra algebraic hypotheses.",
+      "lean_declarations": [
+        "CompletionTheory.residual_factor_completion_iff",
+        "CompletionTheory.residualGram_structure",
+        "CompletionTheory.residualGram_diagonal",
+        "CompletionTheory.residualGram_offDiagonal_parity"
+      ]
+    },
+    {
+      "id": "CT-03-02",
+      "section": "03-residual-foundations.tex",
+      "kind": "proposition",
+      "title": "Anchor enumeration",
+      "statement_tex": "\\label{prop:anchor}\nFor a fixed $r$, deciding \\eqref{eq:factor} reduces to at most\n$2^{r^2}$ sign anchor matrices, followed by exact rational linear\nalgebra and sign tests on all columns. The set of possible anchored\ncolumn types is finite independently of $n$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.residual_anchor_enumeration",
+      "reason": "Exact rational fixed-anchor enumeration equivalent to actual Hadamard completion, with an invertible anchor derived from every partial Hadamard input, all 2^(r*r) Boolean anchor choices, and at most (r+1)^r anchored correlation types."
+    },
+    {
+      "id": "CT-03-03",
+      "section": "03-residual-foundations.tex",
+      "kind": "proposition",
+      "title": "An elementary defect-two completion",
+      "statement_tex": "For even $n\\ge2$, every real partial Hadamard matrix with $n-2$ rows\nand $n$ columns completes.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.even_order_defect_two_completion",
+      "reason": "Every even order n>=2 is covered with n-2 original rows retained through an explicit injection, using the proved codimension-two completion theorem.",
+      "lean_declarations": [
+        "CompletionTheory.even_order_defect_two_completion"
+      ]
+    },
+    {
+      "id": "CT-04-01",
+      "section": "04-residual-lattices.tex",
+      "kind": "proposition",
+      "title": "Eight missing rows can already be fatal",
+      "statement_tex": "\\label{prop:eight-defect}\nLet $K$ be a Hadamard matrix of order $m$ and let $s>1$ be odd.\nRepeating every column $s$ times gives an $m\\times ms$ partial\nHadamard matrix with no additional orthogonal sign row.\nIn particular there is an unextendible $4\\times12$ example, with\neight missing rows, although Hadamard matrices of order $12$ exist.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.odd_repetition_unextendible",
+      "reason": "Exact repeated-frame construction and general odd-block no-extension theorem, plus explicit four-by-twelve obstruction and a kernel-checked order-twelve Hadamard matrix.",
+      "lean_declarations": [
+        "CompletionTheory.repetition_partialHadamard",
+        "CompletionTheory.odd_repetition_unextendible",
+        "CompletionTheory.eight_missing_rows_obstruction",
+        "CompletionTheory.seedTwelve_hadamard"
+      ]
+    },
+    {
+      "id": "CT-05-01",
+      "section": "05-exchange-budget.tex",
+      "kind": "theorem",
+      "title": "Odd-block exchange budget",
+      "statement_tex": "Let $K$ be a Hadamard matrix of order $m$, let $s>1$ be odd, and set\n$P=K\\otimes(1,\\ldots,1)$, with $s$ repeated entries in each block.\nSuppose $m-k$ original rows are retained, and $L$ additional sign rows\nare inserted so that all retained and inserted rows are mutually\northogonal. Then\n\\[\n L\\le k s^2.\n\\]\nIn particular, completing a retained subset to an order-$ms$ Hadamard\nmatrix requires deleting at least\n\\[\n k\\ge\\left\\lceil\\frac{m}{s+1}\\right\\rceil\n\\]\noriginal rows. The conclusion allows arbitrary replacement rows and\ndoes not assume product structure in the inserted rows.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.odd_block_exchange_budget",
+      "reason": "Exact L<=k*s^2 arbitrary insertion bound and natural ceiling deletion requirement, obtained using the proved zero-budget block-indicator witness.",
+      "lean_declarations": [
+        "CompletionTheory.odd_block_exchange_budget"
+      ]
+    },
+    {
+      "id": "CT-05-02",
+      "section": "05-exchange-budget.tex",
+      "kind": "theorem",
+      "title": "Cheap augmentation versus exact linear completion cost",
+      "statement_tex": "Let $T$ be a Hadamard matrix of order $t$ and set\n\\[\n P_t=(H_4\\otimes(1,1,1))\\otimes T.\n\\]\nThis is a $4t\\times12t$ partial Hadamard matrix. It has the following\nproperties, allowing a common column permutation throughout.\n\\begin{enumerate}\n\\item It has no additional orthogonal sign row.\n\\item Its minimum deletion count for an augmenting exchange is exactly\none: one old row can be replaced by two orthogonal new rows.\n\\item Its minimum deletion count permitting full completion is exactly\n$t$.\n\\item For every $0\\le k\\le t$, the exchange budget $L\\le9k$ is\nattained: one can delete $k$ old rows and insert $9k$ new rows.\nEvery such intermediate matrix is unextendible by an additional row.\n\\end{enumerate}\nConsequently these two notions of repair cost separate arbitrarily\nfar along, for example, the Sylvester orders $t=2^a$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.cheap_augmentation_exact_completion_cost",
+      "reason": "All four clauses for every positive Hadamard tensor factor: explicit partial seed and original terminality; exchangeCost exactly one; every actual mathlib Hadamard completion retaining an arbitrary subset discards at least card(tau) original rows, with an attaining completion; for every k<=card(tau), explicit k deleted rows and 9k inserted rows, exact 4t+8k row count, partial-Hadamard Gram and terminality. Original 9x12 affine-plane integer Gram/cross certificates are kernel checked. Terminality and exact full-completion lower bound derive from the odd-block exchange theorem. Seven independent construction/completion definitions accompany the full target."
+    },
+    {
+      "id": "CT-06-01",
+      "section": "06-partial-frame-exchanges.tex",
+      "kind": "proposition",
+      "title": "Cube intersections through information coordinates",
+      "statement_tex": "Let $V\\subseteq\\mathbb R^n$ be a $q$-dimensional linear subspace. Then\n$|V\\cap\\{\\pm1\\}^n|\\le2^q$. There is a set of $q$ coordinate positions\nsuch that the projection to those positions is injective on $V$.\nConsequently, if $V$ is given by rational linear equations, all its\nsign vectors can be enumerated by testing at most $2^q$ assignments,\nusing exact rational arithmetic. Antipodal normalization reduces this\nto $2^{q-1}$ assignments when $q>0$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.information_coordinate_enumeration",
+      "reason": "For actual finite coordinate subspaces over any field, coordinate evaluations span the dual and an independent subset gives exactly dim V information coordinates. Their projection is an actual linear equivalence. A finite Boolean-assignment search is complete and has at most 2^q candidates. Explicit reconstruction uses finite sums with coefficients in the same field, so the rational specialization uses exact rational arithmetic. Fixing one information coordinate positive gives a complete antipodal search whose input domain has exactly 2^(q-1) assignments. No enumeration oracle or coordinate injectivity assumption is used."
+    },
+    {
+      "id": "CT-06-02",
+      "section": "06-partial-frame-exchanges.tex",
+      "kind": "proposition",
+      "title": "Maximum cube intersections are duplication spaces",
+      "statement_tex": "The bound $|V\\cap\\{\\pm1\\}^n|=2^q$ holds if and only if, after\npermuting and negating coordinates, $V$ consists of vectors constant\non each of $q$ nonempty coordinate blocks.\nIf $V$ is the residual space of a partial Hadamard matrix, all these\nblocks have size $n/q$. In that case completion is equivalent to the\nexistence of a Hadamard matrix of order $q$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.maximum_residual_cube_completion",
+      "reason": "All clauses are proved. The exact maximum-intersection iff signed-duplication classification includes nonempty blocks and converse attainment. For an actual partial-Hadamard residual space, the residual Gram columns imply equal block sizes n/q and identify the block count with the true residual dimension. Explicit sign factors lift an actual order-q mathlib Hadamard matrix to a full completion retaining every original row, and extract an actual order-q matrix from any such completion. The final wrapper derives the block representation from maximum intersection and derives positive residual dimension from positive column order, rather than assuming the representation or completion.",
+      "lean_declarations": [
+        "CompletionTheory.maximum_cube_iff_signed_duplication",
+        "CompletionTheory.residual_blocks_equal_size",
+        "CompletionTheory.residual_block_size_quotient",
+        "CompletionTheory.duplication_residual_completion_iff",
+        "CompletionTheory.maximum_residual_cube_completion"
+      ]
+    },
+    {
+      "id": "CT-06-03",
+      "section": "06-partial-frame-exchanges.tex",
+      "kind": "proposition",
+      "title": "A three-row deletion barrier",
+      "statement_tex": "This partial matrix has no augmenting exchange that deletes at most\ntwo rows. Deleting three rows does admit an augmenting exchange and\na subsequent full completion. Thus any universal row-exchange\naugmentation theorem must permit at least three deletions.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.base24_exchangeCost_eq_three",
+      "reason": "The literal sixteen-by-twenty-four frame is checked. Exact rational reconstruction and complete finite sign tests for all 120 row pairs prove the correlation restriction; singleton rigidity follows formally. The general shared-projection bound excludes all zero-, one- and two-row augmenting exchanges. A literal three-for-four exchange embeds all repaired rows into a checked full order-24 Hadamard matrix.",
+      "lean_declarations": [
+        "CompletionTheory.base24Frame_partialHadamard",
+        "CompletionTheory.base24_no_exchange_le_two",
+        "CompletionTheory.base24_exchangeCost_eq_three",
+        "CompletionTheory.base24_exchange_with_completion"
+      ]
+    },
+    {
+      "id": "CT-07-01",
+      "section": "07-tensor-exchange-barrier.tex",
+      "kind": "proposition",
+      "title": "Tensoring cannot amplify the exchange cost upward",
+      "statement_tex": "If $H$ is a full Hadamard matrix, then\n\\[\n \\rho(P\\otimes H)\\le\\rho(P).\n\\]",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.tensor_exchangeCost_le",
+      "reason": "HasAugmentingExchange specifies deletion of exactly k old rows and insertion of k+1 orthogonal sign rows, all orthogonal to retained rows. The actual combined matrix is partial Hadamard. exchangeCost is the minimum k, or infinity if no exchange exists; both semantics are independently specified. The actual tensor product remains partial Hadamard, and every exchange lifts to one chosen full-Hadamard row fiber, proving the stated cost inequality."
+    },
+    {
+      "id": "CT-07-02",
+      "section": "07-tensor-exchange-barrier.tex",
+      "kind": "proposition",
+      "title": "A general span-rigidity criterion",
+      "statement_tex": "Suppose $P$ is maximal and, for every index set $I$ of size at most $c$,\n\\[\n \\mathcal C_I\\subseteq\\operatorname{span}\\{p_i:i\\in I\\}.\n\\]\nThen no tensor $P\\otimes H$ with a full Hadamard factor admits an\naugmenting exchange deleting at most $c$ rows.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.span_rigidity_excludes_tensor_exchange",
+      "reason": "The complete stated maximality and span-rigidity hypotheses are encoded for actual sign vectors and row spans. Invertibility of the full Hadamard factor gives original-row orthogonality in every reshaped candidate column. Those columns put the entire candidate in the tensor row range; exact Gram cancellation then confines it to the deleted-row range. A locally proved row-range dimension bound excludes k+1 orthogonal nonzero inserted rows for every deletion count k<=c. The equivalent strict WithTop cost bound includes the infinite-cost case. No confinement hypothesis or finite example certificate is assumed.",
+      "lean_declarations": [
+        "CompletionTheory.span_rigid_tensor_candidate_confined",
+        "CompletionTheory.span_rigidity_excludes_tensor_exchange",
+        "CompletionTheory.span_rigidity_tensor_cost_lower"
+      ]
+    },
+    {
+      "id": "CT-07-03",
+      "section": "07-tensor-exchange-barrier.tex",
+      "kind": "theorem",
+      "title": "Preservation under half-overlap pair structure",
+      "statement_tex": "Suppose $P$ is maximal and has the following properties:\n\\begin{enumerate}\n\\item $\\mathcal C_{\\{i\\}}$ has just the line of $p_i$.\n\\item For every pair $i,j$, either $\\mathcal C_{\\{i,j\\}}$ has only the\nlines of $p_i,p_j$, or it has exactly four lines. In the latter case\nthe two extra lines can be oriented as $x,y$ so that\n\\[\n x\\cdot y=0,\\qquad\n (p_i\\cdot x,p_j\\cdot x)=(p_i\\cdot y,p_j\\cdot y)\n =\\tfrac n2(1,\\sigma),\\quad\\sigma\\in\\{\\pm1\\}.\n\\]\n\\end{enumerate}\nThen for every full Hadamard matrix $H$, $P\\otimes H$ has no augmenting\nexchange deleting at most two rows. In particular, if $\\rho(P)=3$, then\n$\\rho(P\\otimes H)=3$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.half_overlap_pair_structure_excludes_exchange",
+      "reason": "All paper hypotheses are encoded as maximality, exact singleton line exhaustion, and old-only or four-line pair exhaustion with oriented half-correlations and orthogonal extra lines. These imply the weaker correlation conditions locally. Retained tensor orthogonality gives exact single-fiber formulas. Flat correlations force the half-overlap shared-projection identity; the actual Bessel inequality excludes three orthogonal replacements, including arbitrary mixed tensor columns. Zero, one, same-original-index and distinct-original-index deletion cases are exhausted. The exact cost-three preservation corollary is proved using the independently verified finite/infinite exchange cost semantics and tensor upper bound. No finite example certificate is assumed or claimed.",
+      "lean_declarations": [
+        "CompletionTheory.half_overlap_structure_implies_correlations",
+        "CompletionTheory.two_distinct_rows_half_overlap_bound",
+        "CompletionTheory.half_overlap_pair_structure_excludes_exchange",
+        "CompletionTheory.half_overlap_tensor_cost_three"
+      ]
+    },
+    {
+      "id": "CT-07-04",
+      "section": "07-tensor-exchange-barrier.tex",
+      "kind": "corollary",
+      "title": "tensor-exchange-barrier corollary 4",
+      "statement_tex": "For every Hadamard order $s$, there is a maximal partial matrix of\nshape $16s\\times24s$ whose minimum augmenting exchange deletes exactly\nthree rows. In particular such examples exist at every order\n$24\\cdot2^a$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.base24_tensor_exchangeCost_eq_three",
+      "reason": "For every supplied full real Hadamard matrix, the actual tensor frame has orthogonal sign rows, is terminal, and has exact augmenting-exchange cost three. The proof handles arbitrary mixed tensor candidates using the general correlation barrier and all 120 kernel-checked base-pair certificates. The power-of-two specialization constructs its Hadamard factor by Sylvester tensor recursion, without an existence assumption.",
+      "lean_declarations": [
+        "CompletionTheory.base24_tensor_partialHadamard",
+        "CompletionTheory.base24_tensor_noSignExtension",
+        "CompletionTheory.base24_tensor_exchangeCost_eq_three",
+        "CompletionTheory.exists_hadamard_power_two",
+        "CompletionTheory.base24_sylvester_family"
+      ]
+    },
+    {
+      "id": "CT-08-01",
+      "section": "08-parity-lattices.tex",
+      "kind": "theorem",
+      "title": "Weighted odd-witness budget",
+      "statement_tex": "Let $P$ have $r$ orthogonal sign rows $p_1,\\ldots,p_r$ of length $N$,\nand let $f\\in\\mathbb Z^N$ have odd coordinate sum. Set\n\\[\n R=NI_N-P^{\\mathsf T}P,\\qquad\n C_f=f^{\\mathsf T}Rf\n     =N\\|f\\|^2-\\sum_i(p_i\\cdot f)^2\\ge0.\n\\]\nIf rows indexed by $D$ are deleted and $L$ mutually orthogonal sign\nrows are inserted, orthogonal also to all retained rows, then\n\\[\n L\\le C_f+\\sum_{i\\in D}(p_i\\cdot f)^2.\n\\]\nConsequently full completion requires\n\\[\n \\sum_{i\\in D}\\bigl((p_i\\cdot f)^2-1\\bigr)\n       \\ge N-r-C_f.\n\\]\nEvery odd-sum integer $f$ gives such an inequality, so a collection\nof witnesses gives simultaneous weighted constraints on row selection.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.weighted_odd_witness_budget",
+      "reason": "Exact residual quadratic identity, nonnegative budget, weighted arbitrary row-exchange inequality and its full-completion consequence. Retained set S is complement of deleted set D.",
+      "lean_declarations": [
+        "CompletionTheory.witnessBudget_eq_residual",
+        "CompletionTheory.weighted_odd_witness_budget"
+      ]
+    },
+    {
+      "id": "CT-08-02",
+      "section": "08-parity-lattices.tex",
+      "kind": "proposition",
+      "title": "The first possible parity deficit is eight",
+      "statement_tex": "Assume $4\\mid N$ and write $d=N-r$. For every odd-sum integer $f$,\n\\[\n C_f\\equiv d\\pmod8.\n\\]\nThus for $0\\le d\\le7$ these witness inequalities automatically give\n$C_f\\ge d$; they cannot certify failure of full completion without\nrow deletion. At $d=8$, the value $C_f=0$ is possible.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.witnessBudget_mod_eight",
+      "reason": "Exact integer congruence C_f=(N-r)+8*t, the full d<=7 nonnegative-budget consequence, and an explicit odd-sum zero-budget 4-by-12 witness at defect8.",
+      "lean_declarations": [
+        "CompletionTheory.witnessBudget_mod_eight",
+        "CompletionTheory.small_defect_budget",
+        "CompletionTheory.defect_eight_zero"
+      ]
+    },
+    {
+      "id": "CT-08-03",
+      "section": "08-parity-lattices.tex",
+      "kind": "theorem",
+      "title": "Saturated-lattice alternative",
+      "statement_tex": "For any rational row space $V\\subseteq\\mathbb Q^N$, exactly one of\nthe following holds:\n\\begin{enumerate}\n\\item $V\\cap\\mathbb Z^N$ contains a vector with odd coordinate sum;\n\\item $V^\\perp\\cap\\mathbb Z^N$ contains a vector all of whose\ncoordinates are odd.\n\\end{enumerate}\nFor a partial Hadamard row space, the first case supplies a zero-budget\nwitness. The second case supplies arithmetic parity feasibility,\nbut does not assert a sign vector exists.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.rational_saturated_lattice_alternative",
+      "reason": "Full rational-space alternative for every N: existence of an odd-sum integer vector in V or an all-odd integer vector in the actual rational dot-product orthogonal space, and explicit exclusivity. No saturation or basis-extension assumption is added: an original retraction proof derives the integer-kernel splitting from finite torsion-free PID modules and projectivity in licensed mathlib, then clears denominators. The paper's zero-budget consequence for every normalized orthogonal integer row frame and rational-span integer witness is also proved and independently targeted. Two strict mathlib-only targets, zero definition holes, standard three axioms, original Apache-2.0 proofs; private both-kernel comparison passed. Fresh integrated five-group verification required."
+    },
+    {
+      "id": "CT-09-01",
+      "section": "09-short-coset-repair.tex",
+      "kind": "proposition",
+      "title": "Exact one-row augmentation",
+      "statement_tex": "The minimum number of original rows that must be deleted from $P$\nto permit an augmenting exchange is exactly one. Specifically delete\nrow index $1$, with mask $16773120$, and insert rows with masks\n\\[\n3198332,\\qquad6782212.\n\\]\nThe resulting thirteen rows are orthogonal. More strongly, after this\nsame deletion the maximum number of mutually orthogonal inserted\nrows is exactly five, attained by\n\\[\n3198332,6782212,8735670,11139280,13957672.\n\\]\nThe resulting sixteen-row matrix $Q$ is terminal.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.repair_exact_one_row_augmentation",
+      "reason": "Exact minimum one deletion for any augmenting exchange, explicit two-row insertion, universal five-row maximum after the specified deletion, five-row attainment, retained/insertion identities, Gram matrix, and terminality. Original finite certificates cover every information-coordinate assignment; a proper five-coloring proves the universal bound. Independent mathlib-only RepairChallenge uses no definition holes. All code is original Apache-2.0 with mathlib as the only mathematical dependency.",
+      "lean_declarations": [
+        "CompletionTheory.repair_exact_one_row_augmentation",
+        "CompletionTheory.repairOriginal_gram_entries",
+        "CompletionTheory.repairRetained_is_deletion"
+      ]
+    },
+    {
+      "id": "CT-09-02",
+      "section": "09-short-coset-repair.tex",
+      "kind": "proposition",
+      "title": "Augmentation can destroy odd integer feasibility",
+      "statement_tex": "The larger frame $Q$ has no all-odd integer kernel vector. In particular\nthe minimum squared norm in the odd integer coset increases from\n$40$ for $P$ to $+\\infty$ for $Q$, under an explicit row-augmenting\nexchange.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.repair_augmentation_destroys_odd_feasibility",
+      "reason": "Universal odd-integer kernel minimum40 for P with an explicit attaining witness, and universal odd-integer infeasibility for Q from an exact row-span parity certificate. The deletion/retention and Gram identities identify the explicit augmenting exchange. No bounded-search substitute for the universal lower bound is used. Independent mathlib-only RepairChallenge uses no definition holes. All code is original Apache-2.0 with mathlib as the only mathematical dependency.",
+      "lean_declarations": [
+        "CompletionTheory.repair_augmentation_destroys_odd_feasibility",
+        "CompletionTheory.repairOriginal_gram_entries",
+        "CompletionTheory.repairRetained_is_deletion"
+      ]
+    },
+    {
+      "id": "CT-09-03",
+      "section": "09-short-coset-repair.tex",
+      "kind": "proposition",
+      "title": "Rounding defect",
+      "statement_tex": "Let $P$ have $r$ orthogonal sign rows of length $N$, and suppose\n$v\\in\\ker P$ has entries in $\\{\\pm1,\\pm3\\}$. Let $w$ be its\ncoordinatewise sign, and let $t$ count the coordinates of magnitude\n$3$. Define $e_j=w_j$ on those coordinates and $e_j=0$ otherwise.\nThen $v=w+2e$ and $Pw=-2Pe$.\nIf $t$ is odd, $w$ is orthogonal to \\emph{none} of the original rows.\nIf $t$ is even, the number $b$ of rows not orthogonal to $w$ satisfies\n\\[\n b\\le\\min\\{r,Nt/4\\}.\n\\]\nDeleting exactly those $b$ rows permits inserting $w$ as a single\nsign row. This need not be an augmenting exchange.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.rounding_defect",
+      "reason": "For actual real partial Hadamard matrices and kernel vectors with entries in {+1,-1,+3,-3}, the canonical coordinate sign rounding and exact magnitude-three support are defined. The theorem proves v=w+2e, Pw=-2Pe, nonorthogonality to every row for odd support size, and 4b<=N*t together with b<=r for even support size. Deleting exactly the explicitly defined bad rows yields an actual orthogonal sign frame after inserting w. The Bessel and sign-parity arguments are kernel checked.",
+      "lean_declarations": [
+        "CompletionTheory.rounding_defect",
+        "CompletionTheory.rounding_defect_bound",
+        "CompletionTheory.rounded_row_repair"
+      ]
+    },
+    {
+      "id": "CT-10-01",
+      "section": "10-modular-lifting-eight.tex",
+      "kind": "theorem",
+      "title": "Exact modular count with a column-pair correction",
+      "statement_tex": "Suppose $q\\ge3$ is odd,\n\\[\n N=4(q+1),\\qquad r>\\frac{4(q+1)^2}{q^2}.\n\\]\nThen\n\\[\n \\boxed{E(P)=M_q(P)-A(P).}\n\\]\nMore precisely, every modular sign extension which is not exact differs\nin exactly two coordinates from the sign or negative of a unique\nexisting row. Such nonexact classes correspond bijectively to the\ncolumn pairs counted by $A(P)$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.column_pair_modular_correction",
+      "reason": "Full actual finite count E=M-A plus a constructed equivalence between counted unordered column pairs and spurious normalized modular sign classes, realized by two-coordinate flips of the unique exceptional row. Separate independent near_modular_spurious_unique_row target proves uniqueness among every original row, with no outlier certificate assumed. Natural cross-multiplied row threshold is exactly the paper threshold for q>=3."
+    },
+    {
+      "id": "CT-11-01",
+      "section": "11-modular-lifting-four.tex",
+      "kind": "theorem",
+      "title": "The row correction at orders $4\\bmod8$",
+      "statement_tex": "Let $q\\ge3$ be any odd integer, $N=4q$, and $r\\ge5$. Then\n\\[\n \\boxed{E(P)=M_q(P)-r.}\n\\]\nEvery modular sign extension which is not exact is the sign or\nnegative of exactly one existing row. Primality of $q$ is not required.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.modular_row_correction",
+      "reason": "Full original integer sign/Bessel proof; exact finite normalized candidate counts E=M-r and uniqueness of every installed-row class. Arbitrary initial row signs allowed via formally proved normalization invariance. No modular-lifting or residue certificate assumed; odd composite q allowed."
+    },
+    {
+      "id": "CT-11-02",
+      "section": "11-modular-lifting-four.tex",
+      "kind": "proposition",
+      "title": "Exact boundary correction",
+      "statement_tex": "For four orthogonal sign rows of length $N=4q$, $q\\ge3$ odd,\n\\[\n E(P)=M_q(P)-4-4\\,\\mathbf1_{\\{P\\text{ is closed}\\}}.\n\\]\nWhen the quadruple is closed, the four extra modular classes are\nrepresented by half-sums\n\\[\n v=\\frac12\\sum_{i=1}^4\\sigma_i p_i,\n \\qquad\\sigma_i\\in\\{\\pm1\\},\\qquad\n \\prod_i\\sigma_i=-c,\n\\]\nwhere $c$ is the constant entrywise row product. Negating all four\n$\\sigma_i$ gives the same antipodal class.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.four_row_boundary_correction",
+      "reason": "Full exact finite count E=M-4-4*indicator(closed quadruple), for arbitrary original row signs and all positive odd composite or prime modulus. Independent targets also classify every normalized modular candidate as exact, installed, or one of the four closed-quadruple half-sum classes and verify the actual half-sum coordinate formula."
+    },
+    {
+      "id": "CT-12-01",
+      "section": "12-compatible-codes.tex",
+      "kind": "theorem",
+      "title": "Two-parity rigidity",
+      "statement_tex": "\\label{code:parity}\nIn a modularly orthogonal family of distinct sign classes, the\nclasses of each fixed parity are pairwise orthogonal over the reals.\nIf both parities occur, each parity has at most four classes.\nConsequently any such family with at least nine classes is a real\npartial Hadamard matrix, and every family has at most $N$ classes.\nThe mixed-parity bound of eight is sharp for every odd $q\\ge3$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.modular_two_parity_bounds",
+      "reason": "Full universal two-parity bounds, nine-class real orthogonality, total cardinality bound; separate independent target modular_two_parity_bound_sharp constructs the actual eight-class family attaining four classes of each parity for every positive odd modulus."
+    },
+    {
+      "id": "CT-12-02",
+      "section": "12-compatible-codes.tex",
+      "kind": "corollary",
+      "title": "Five rows remove compatibility tests",
+      "statement_tex": "\\label{code:five}\nLet $C$ be a submodule of $(\\mathbb Z/q\\mathbb Z)^N$ with\n$C\\subseteq C^\\perp$, and let\n\\[\n S(C)=\\{v\\in\\{\\pm1\\}^N:v\\bmod q\\in C,\\ v_1=1\\}.\n\\]\nIf $C$ contains five mutually orthogonal sign rows, every pair of\ndistinct members of $S(C)$ is orthogonal over the reals.\nThus $5\\le |S(C)|\\le N$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.five_rows_remove_code_compatibility",
+      "reason": "Actual self-orthogonal ZMod submodule and its full normalized sign set. Five contained orthogonal sign classes imply integer orthogonality of all distinct classes and exact bounds 5 <= cardinality <= N, for odd composite as well as prime modulus. No parity or compatibility certificate is assumed."
+    },
+    {
+      "id": "CT-12-03",
+      "section": "12-compatible-codes.tex",
+      "kind": "proposition",
+      "title": "Exact code pivot",
+      "statement_tex": "\\label{code:pivot}\nThe space $C'$ is self-dual, $\\dim(C\\cap C')=N/2-1$, and\n$S(C)\\subsetneq S(C')$. Conversely, if no real sign extension of\n$S(C)$ exists, no self-orthogonal code preserving every member\nof $S(C)$ can acquire a new sign class.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.self_dual_sign_code_pivot",
+      "reason": "Actual dot-product self-dual code pivot, exact intersection dimension N/2-1, and strict inclusion of full sign sets. Separate independent terminal_code_preserving_no_new_signs target proves the terminality converse without assuming an extending vector. Generic symmetric bilinear pivot is proved from scratch using finite-dimensional mathlib linear algebra."
+    },
+    {
+      "id": "CT-13-01",
+      "section": "13-terminal-code-trap.tex",
+      "kind": "theorem",
+      "title": "Finite certified example",
+      "statement_tex": "There is a self-dual ten-dimensional code $C\\subseteq\\mathbb F_5^{20}$\nwith exactly twelve antipodal classes of sign words. Representatives\nwith first coordinate $+1$ form a real orthogonal $12\\times20$ sign\nframe $P$, and span $C$ over $\\mathbb F_5$.\nNo further sign row is orthogonal to every row of $P$.\nEvery new sign class is orthogonal to at most ten old rows, so no\none-row deletion admits even one genuinely new row.\nDeleting the two old rows indexed $3,8$ (zero based) permits a full\nHadamard completion of the remaining ten rows. Its mod-five code\n$C'$ is a self-dual neighbor: $\\dim(C\\cap C')=9$.\nOne explicit neighbor pivot takes the sign count from twelve to twenty.\nThus two is the exact minimum number of old rows lost in such an escape.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.finite_self_dual_code_trap",
+      "reason": "Complete unconditional statement, not only terminality: both explicit self-dual F5 codes have dimension10; all normalized sign words are exhausted by the twelve and twenty displayed rows; the original rows span C; the actual real frame is terminal; every genuinely new sign class is compatible with at most10 old rows; deleting exactly3,8 gives the explicit standard mathlib real Hadamard matrix; its actual mod-five row code is the stated pivot neighbor with intersection dimension9 and union dimension11; every real order20 Hadamard matrix loses at least2 old antipodal row classes and the displayed one loses exactly2. All finite cases are original kernel-only certificates with exact reconstruction and symbolic field reflection. CodeChallenge/comparator-codes.json has zero definition holes.",
+      "lean_declarations": [
+        "CompletionTheory.finite_self_dual_code_trap"
+      ]
+    },
+    {
+      "id": "CT-13-02",
+      "section": "13-terminal-code-trap.tex",
+      "kind": "theorem",
+      "title": "Elementary tensor persistence",
+      "statement_tex": "If a sign frame $P$ admits no orthogonal sign row and $H$ is a square\nHadamard matrix of order $t$, then $P\\otimes H$ also admits no\northogonal sign row. In particular this certificate gives terminal\n$12t\\times20t$ frames whenever such an $H$ is supplied.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.tensor_noSignExtension",
+      "reason": "The general tensor-persistence theorem and the explicit twelve-by-twenty paper seed are proved. The actual stored sign rows have integer Gram 20 I, an exact rational reconstruction identity, and no sign seed among all 256 assignments. Every assertion is checked by Lean's kernel; no native computation or external verification oracle is used. No modular code properties or two-row escape are asserted by this claim.",
+      "lean_declarations": [
+        "CompletionTheory.tensor_noSignExtension",
+        "CompletionTheory.codeTrap20_partialHadamard",
+        "CompletionTheory.codeTrap20_noSignExtension",
+        "CompletionTheory.codeTrap20_tensor_partialHadamard",
+        "CompletionTheory.codeTrap20_tensor_noSignExtension"
+      ]
+    },
+    {
+      "id": "CT-14-01",
+      "section": "14-neighbor-incidence.tex",
+      "kind": "theorem",
+      "title": "Exact restricted-neighbor incidence count",
+      "statement_tex": "\\label{code:neighbor-average}\nThere are $(p^h-1)/(p-1)$ codes in $\\mathcal N_G(C)$, and\n\\[\n \\boxed{\\quad\n \\sum_{C'\\in\\mathcal N_G(C)}\\bigl(|S(C')|-r_C\\bigr)\n =M_G-r_C-(r_C-b_G)p^{h-1}.\\quad}\n\\]\nIn particular, if the right-hand side is positive, some neighbor\nstrictly increases the sign count while preserving $G$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.restricted_neighbor_incidence_and_improvement",
+      "reason": "Full actual finite restricted-neighbor cardinality (p^h-1)/(p-1), exact signed incidence surplus M-r-(r-b)*p^(h-1), and positive-surplus existence of an improving neighbor preserving G. Proves the classical hyperplane geometry and cardinality from mathlib projectivization and quotient spaces; every outside sign is counted once, and every old sign outside G is lost p^(h-1) times. No positivity or sign-distribution bound is assumed."
+    },
+    {
+      "id": "CT-14-02",
+      "section": "14-neighbor-incidence.tex",
+      "kind": "corollary",
+      "title": "A modular pool splits into two codes",
+      "statement_tex": "\\label{code:two-codes}\nIf $G$ has dimension $m-1$, there is exactly one other self-dual\ncode $C'$ containing $G$, and\n\\[\n \\{ \\text{sign classes in }G^\\perp\\}=S(C)\\cup S(C'),\\qquad\n S(C)\\cap S(C')=S(G),\\qquad\n |S(C')|=M_G-r_C+b_G.\n\\]\nIf $G$ contains five orthogonal sign rows, the sign words of each\ncode separately form a real orthogonal frame.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.two_code_sign_pool",
+      "reason": "Full unique second self-dual code, exact actual sign-pool union/intersection and cardinality identity. The independent two_code_pool_real_frames target supplies real orthogonality and size bounds for both codes from five retained rows."
+    },
+    {
+      "id": "CT-15-01",
+      "section": "15-quotient-grid.tex",
+      "kind": "theorem",
+      "title": "Weighted-grid classification",
+      "statement_tex": "The self-dual codes containing $G$ correspond to the $2(p+1)$ rows\nand columns of a $(p+1)\\times(p+1)$ grid. There are nonnegative\ninteger point weights $w_{ij}$ such that\n\\[\n M=b+\\sum_{ij}w_{ij},\\qquad\n |S(C_{\\mathrm{row}\\ i})|=b+\\sum_jw_{ij},\\qquad\n |S(C_{\\mathrm{col}\\ j})|=b+\\sum_iw_{ij}.\n\\]\nEvery sign class outside $G$ is counted at exactly one grid point,\nand belongs to exactly two of these codes. The classes in $G$ belong\nto every code.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.weighted_code_grid_classification",
+      "reason": "Full actual-code classification: an equivalence from two disjoint Fin(p+1) ruling families to every self-dual code containing G, a (p+1)-square natural weight array, exact total/row/column sign counts, a unique grid-point assignment for every outside sign class, membership in exactly its two incident codes, and weights equal to the actual fiber cardinalities. Quotient nondegeneracy, hyperbolic coordinates, determinant model, and ruling classification proved from scratch using permissive mathlib."
+    },
+    {
+      "id": "CT-15-02",
+      "section": "15-quotient-grid.tex",
+      "kind": "theorem",
+      "title": "Exact compatibility and optimal retained-space repair",
+      "statement_tex": "Every pairwise orthogonal subfamily of $\\mathcal P$ lies in the\nsign set of one of the $2(p+1)$ codes above. Consequently the maximum\nsize of a real orthogonal sign frame preserving the prescribed\nretained rows spanning $G$ is exactly\n\\[\n \\boxed{b+\\max\\left\\{\\max_i\\sum_jw_{ij},\\ \\max_j\\sum_iw_{ij}\\right\\}.}\n\\]\nThus full completion with this retained space is equivalent to a\ngrid line of weight $N-b$, and finding the optimum requires only\nrow and column sums after the sign pool has been computed.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.weighted_grid_optimal_repair",
+      "reason": "Full actual-family coverage by one ruling code; exact maximum b+max(row sums,column sums); upper bound for every orthogonal pool subfamily; an attaining real orthogonal family containing every sign class of G; full-N family iff a line has weight N-b. No compatibility/distribution assumption replaces these conclusions. Separate independent full_sign_family_gives_hadamard target constructs an actual mathlib Hadamard matrix from any full-N family and preserves exactly its sign rows."
+    },
+    {
+      "id": "CT-16-01",
+      "section": "16-completion-moments.tex",
+      "kind": "theorem",
+      "title": "Exact first and second completion moments",
+      "statement_tex": "\\label{mom:two}\nChoose uniformly among all self-dual codes $C$ containing $G$ and\nput $Y=|S(C)|-b$. With $D_1=p^{h-1}+1$ and $D_2=p^{h-2}+1$,\n\\[\n \\mathbb E Y=\\frac{W}{D_1},\\qquad\n \\mathbb E Y^2=\\frac{S_2}{D_1}+\\frac{T}{D_1D_2}.\n\\]\nIf $W>0$, at least one such code satisfies\n\\[\n |S(C)|\\ \\ge\\\n b+\\left\\lceil\\frac{S_2+T/D_2}{W}\\right\\rceil.\n\\]",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.retained_actual_sign_first_two_moments",
+      "reason": "Exact first and second uniform completion moments for actual normalized sign classes outside G; one- and two-vector incidence derived from the independently proved split-generator counts. The actual-code integer ceiling certificate is proved. Fiber-square and ordered orthogonal-fiber product identities identify the direct pair counts with the paper weights, using canonical preimages G+span(v); their quotient rank is proved to be one. No incidence probabilities or abstract moment identities are assumed as hypotheses.",
+      "lean_declarations": [
+        "CompletionTheory.retained_actual_sign_first_two_moments",
+        "CompletionTheory.retained_actual_sign_second_moment_certificate",
+        "CompletionTheory.retained_line_weight_pair_identities",
+        "CompletionTheory.retained_line_quotient_rank_one"
+      ]
+    },
+    {
+      "id": "CT-16-02",
+      "section": "16-completion-moments.tex",
+      "kind": "proposition",
+      "title": "Exact expected sign count along the walk",
+      "statement_tex": "For every starting code $C_0\\supset G$ and every integer $t\\ge0$,\n\\[\n \\mathbb E |S(C_t)|=\\mu+\\rho_h^t(|S(C_0)|-\\mu).\n\\]\nFor $h=2$, $\\rho_h=0$. For $h\\ge3$, $0<\\rho_h<1/p$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.retained_code_walk_exact_expectation",
+      "reason": "The actual restricted self-dual-code neighbor graph and its nonempty neighbor sets are constructed explicitly. Recursive uniform-neighbor averaging has exact expectation mu+rho^t(f(C0)-mu) for every starting code and every t. The theorem also proves rho=0 at h=2 and 0<rho<1/p at h>=3. The one-step affine drift is derived from the exact incidence theorem, not assumed as an input."
+    },
+    {
+      "id": "CT-17-01",
+      "section": "17-third-moments.tex",
+      "kind": "theorem",
+      "title": "Exact third-moment certificate",
+      "statement_tex": "For $h\\ge3$,\n\\[\n \\mathbb E Y^3=\\frac{R_1}{D_1}+\n \\frac{R_2}{D_1D_2}+\\frac{R_3}{D_1D_2D_3}.\n\\]\nFor $h=2$ omit the final term. If $\\mathbb EY^2>0$, some completion\nsatisfies $|S(C)|\\ge b+\\lceil\\mathbb EY^3/\\mathbb EY^2\\rceil$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.actual_sign_third_moment_formulas",
+      "reason": "Exact actual-sign third moments grouped by full isotropic tuple-span rank, with repetitions and dependent distinct triples included. Proves h>=3 formula, rank-three vanishing and reduced formula at h=2, and actual-code ceil(EY^3/EY^2) certificate under positive second moment. General finite fiber-tuple counting and canonical retained-point joins identify the rank counts exactly with the displayed weighted ordered triples, not an independence approximation.",
+      "lean_declarations": [
+        "CompletionTheory.actual_sign_third_moment_formulas",
+        "CompletionTheory.actual_sign_third_moment_certificate",
+        "CompletionTheory.retained_tuple_count_as_weighted_points"
+      ]
+    },
+    {
+      "id": "CT-18-01",
+      "section": "18-conditional-half-frame.tex",
+      "kind": "theorem",
+      "title": "Conditional quantitative half-frame",
+      "statement_tex": "Assume GRH for primitive Dirichlet $L$-functions whose conductors are\npowers of two, including conductor one. There are positive constants\n$B,K$ such that every sufficiently large $n\\equiv0\\pmod4$ satisfies\n\\[\n \\boxed{r(n)\\ge\\frac n2-\n B\\sqrt n\\exp\\!\\left(K\\frac{\\log n}{\\log\\log n}\\right).}\n\\]\nIn particular the conditional deficit is $n^{1/2+o(1)}$ with a\nspecified subpower envelope, not merely $O_\\epsilon(n^{1/2+\\epsilon})$.\nThe theorem remains conditional even though its $\\tau$ input is\nunconditional.",
+      "lean_status": "pending",
+      "lean_declaration": null,
+      "reason": "The full paper statement is not yet formalized.",
+      "submissionStatus": "excluded-unformalized",
+      "formalizationScopeNote": "The complete principal statement has not been formalized. Supporting lemmas or computational certificates do not establish the whole claim."
+    },
+    {
+      "id": "CT-18-02",
+      "section": "18-conditional-half-frame.tex",
+      "kind": "lemma",
+      "title": "Uniform power-of-two buffer",
+      "statement_tex": "There is an integer-valued function $T(n)\\ge2$ such that\n\\[\n T(n)=O\\!\\left(\\frac{\\log n}{\\log\\log n}\\right),\n \\qquad \\tau(u)\\le T(n)\\quad\n \\text{for every positive odd }u\\le n.\n\\]\nFor $Q(n)=2^{T(n)}$, every integer $1\\le k\\le n$ has a Hadamard\nmatrix of order $Q(n)k$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.unconditional_uniform_power_buffer",
+      "reason": "Complete unconditional buffer for all natural n: T(n)>=2, Big-O log/loglog bound, least exponent tau(u)<=T(n) for all odd u<=n, actual integer mathlib Hadamard orders 2^T(n) k for every1<=k<=n, and explicit eventual Q(n)<=n^epsilon for every positive epsilon. All Diophantine/construction inputs discharged by a standalone exact author-owned Apache-2.0 baseline source closure; license and87 source hashes recorded and checked. No GRH assumption for this lemma."
+    },
+    {
+      "id": "CT-19-01",
+      "section": "19-real-dilations.tex",
+      "kind": "theorem",
+      "title": "An exact residual parameterization",
+      "statement_tex": "\\label{dil:parameterization}\nThe real matrices\n\\[\n Z=\\begin{pmatrix}A&B\\\\B^T&D\\end{pmatrix},\\qquad ZZ^T=nI_n,\n\\]\nare exactly those with\n\\[\n \\boxed{D=\\frac1b\\left(-B^TA^TB+E^TVE\\right),\\qquad\n                         VV^T=nI_d.}\n\\]\nIn particular a rational such $Z$ always exists. Its only possibly\nnonsign entries are in the lower-right $b$-square block.\nA sign-valued completion with this prescribed transpose corner\nexists if and only if some such $V$ makes every entry of $D$ equal\nto $+1$ or $-1$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.hadamard_seed_dilation_iff",
+      "reason": "Exact real residual parameterization in both directions from actual mathlib Hadamard seeds; hadamard_seed_rational_completion constructs the entire rational matrix retaining all prescribed blocks and its exact real Gram identity; hadamard_seed_rational_dilation constructs rational entries using original quaternion blocks and mathlib Lagrange four squares for every residual dimension divisible by four. hadamard_seed_sign_completion_iff proves the exact prescribed-corner sign criterion. Sum index labels reindex the order-b seed by its first a and residual d rows. No completion or Gram certificate is assumed."
+    },
+    {
+      "id": "CT-19-02",
+      "section": "19-real-dilations.tex",
+      "kind": "proposition",
+      "title": "A rounding threshold for real completions",
+      "statement_tex": "\\label{dil:flatness-gap}\nLet $n$ be a positive multiple of four and let $Z$ be any real matrix\nwith $ZZ^T=nI_n$. Define\n\\[\n \\Delta=\\sum_{ij}(Z_{ij}^2-1)^2=\\sum_{ij}Z_{ij}^4-n^2.\n\\]\nIf\n\\[\n \\Delta<(\\sqrt{n+2}-\\sqrt n)^2,\n\\]\nrounding each entry to a sign gives a Hadamard matrix.\nConsequently if some prescribed sign rows cannot be completed,\nevery real completion preserving them has\n$\\Delta\\ge(\\sqrt{n+2}-\\sqrt n)^2>1/(n+2)$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.real_flatness_rounding_hadamard",
+      "reason": "Full actual real-matrix theorem: literal nearest-sign rounding at zero chooses +1; quartic defect identity; scaled orthogonality; exact mathlib Hadamard Gram below the stated threshold; prescribed sign rows retained; no-completion lower gap and strict threshold >1/(n+2). Proof uses actual Euclidean operator norms, scalar error, and real even-integer correlation rigidity. No assumed rounding certificate.",
+      "lean_declarations": [
+        "CompletionTheory.real_flatness_rounding_hadamard",
+        "CompletionTheory.quarticFlatness_identity",
+        "CompletionTheory.realFlatnessThreshold_lower",
+        "CompletionTheory.noncompletable_real_flatness_gap"
+      ]
+    },
+    {
+      "id": "CT-20-01",
+      "section": "20-quaternary-realification.tex",
+      "kind": "proposition",
+      "title": "A signed complex-structure criterion",
+      "statement_tex": "\\label{quat:structure}\nA real Hadamard matrix $H$ of order $2m$ is equivalent, by row/column\npermutations and sign changes, to such a realification if and only if there are signed\npermutation matrices $J_{\\rm row},J_{\\rm col}$ with\n\\[\n J_{\\rm row}^2=J_{\\rm col}^2=-I,\\qquad\n                         HJ_{\\rm col}=J_{\\rm row}H.\n\\]",
+      "lean_status": "proved",
+      "lean_declaration": "PhaseGeometry.signed_complex_structure_criterion",
+      "reason": "Exact duplicate of original companion signed complex-structure theorem. Standalone Apache-2.0 proof sources included with root license and exact hash provenance; full signed equivalence and actual quaternary output."
+    },
+    {
+      "id": "CT-20-02",
+      "section": "20-quaternary-realification.tex",
+      "kind": "theorem",
+      "title": "Exact criterion and quantitative separation",
+      "statement_tex": "\\label{quat:phase-defect}\nOne has $\\rho_4(F)\\le1$, with equality if and only if $F$ can be\nconverted into a quaternary Hadamard matrix by row and column phases.\nFor every matrix $F'$ equivalent to $F$ under row/column phases and\npermutations, and every matrix $Q$ with entries in $\\mu_4$,\n\\[\n              \\frac{\\|F'-Q\\|_F^2}{n^2}\n                    \\ge\\frac{1-\\rho_4(F)}8.\n\\]\nThe comparison matrix $Q$ need not be Hadamard.",
+      "lean_status": "proved",
+      "lean_declaration": "PhaseGeometry.rhoFourth_one_iff_quaternary_phase_equivalent",
+      "reason": "Actual Euclidean norm upper bound/equality criterion and all-equivalent normalized distance bound. Standalone original Apache-2.0 proof sources included; independent specs and kernel checks required here.",
+      "lean_declarations": [
+        "PhaseGeometry.rhoFourth_le_one",
+        "PhaseGeometry.rhoFourth_one_iff_quaternary_phase_equivalent",
+        "PhaseGeometry.equivalent_quaternary_distance_lower"
+      ]
+    },
+    {
+      "id": "CT-21-01",
+      "section": "21-weighing-normal-form.tex",
+      "kind": "theorem",
+      "title": "Forced block structure",
+      "statement_tex": "Let $n>0$, $4\\mid n$, and $W$ be $W(n,n-2)$. After independently permuting\nrows and columns, its zeros are precisely the diagonal $2\\times2$\nblocks. Every off-diagonal $2\\times2$ block is itself Hadamard.\nEquivalently, with $m=n/2$,\n\\[\n A=\\tfrac12W(I_m\\otimes F)\n\\]\nhas zero diagonal blocks and off-diagonal blocks $A_{ij}\\in\\mathcal D$,\nand $AA^{\\mathsf T}=(m-1)I_n$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.forced_two_zero_block_structure",
+      "reason": "Full actual weighing-matrix theorem at positive order divisible by four: constructs independent row/column equivalences from paired zero neighborhoods; exact zero-block iff and block count; proves every offdiagonal block Hadamard via integral half-Walsh normalization and mod-two invertibility; explicit real transform has signed-permutation offdiagonal blocks and exact (m-1)I Gram. Only standard axioms, original proofs and pinned permissive mathlib."
+    },
+    {
+      "id": "CT-21-02",
+      "section": "21-weighing-normal-form.tex",
+      "kind": "theorem",
+      "title": "All sign fillings in quadratic time",
+      "statement_tex": "For a normalized $W(n,n-2)$, all zero-preserving Hadamard fillings\ncan be listed by testing eight initial states. There are at most\neight fillings, and the test uses $O(n^2)$ integer operations.\nSpecifically, a filling has diagonal blocks $S_i=R_iF$,\n$R_i\\in\\mathcal D$. Choose $R_0\\in\\mathcal D$, force\n\\[\n R_j=-A_{j0}R_0^{\\mathsf T}A_{0j}\\quad(j>0),\n\\]\nand accept exactly when\n\\[\n A_{ij}R_j^{\\mathsf T}+R_iA_{ji}^{\\mathsf T}=0\n \\quad\\text{for every }i<j.\n\\]\nEach accepted state gives one complete Hadamard matrix.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.all_sign_fillings_quadratic_time",
+      "reason": "Full actual-matrix soundness/completeness for every normalized two-zero weighing input: computable eight-root integer circuit algorithm lists exactly every mathlib Hadamard filling preserving every nonzero entry, with at most eight outputs. Proves signed-permutation root forcing and its full finite closure; every sign2x2 Gram2 block has the required state factor; exact global diagonal-patch Gram iff all block constraints. Explicit WF^T/2 preprocessing circuits recover the normalized states. Circuit normalization+checking+output arithmetic cost <=740*n^2 and exact8*m^2 root/pair slots. The separate raw weighing block-normalization claim CT21.01 is not substituted for or marked complete."
+    },
+    {
+      "id": "CT-22-01",
+      "section": "22-real-weighing-exactness.tex",
+      "kind": "lemma",
+      "title": "The only possible component sections",
+      "statement_tex": "Before imposing any additional consequences of the weighing\nproperty, each of $K\\cap\\mathcal R$ and $K\\cap\\mathcal F$ is zero,\nthe whole plane, a coordinate-axis line, or one of the two diagonal\nlines in the displayed coefficient bases.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.real_root_original_component_sections",
+      "reason": "Complete component-section classification for the original propagated real cross equations, for every finite signed-two-state block family and either rotation/reflection coefficient plane. Proves exact invertible factorization to actual root-triangle constraints, original computable rational row-space identities for every signed-state operator, transfer to real matrices and finite intersections. Only zero/full/coordinate-axis/diagonal lines occur. No section-classification assumption, numerical solver, conference theorem or external proof code. Only standard axioms; actual linear algebra proved."
+    },
+    {
+      "id": "CT-22-02",
+      "section": "22-real-weighing-exactness.tex",
+      "kind": "lemma",
+      "title": "Conference conversion",
+      "statement_tex": "If $K$ contains a diagonal line in either coefficient plane, then\nthat entire plane is contained in $K$.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.real_diagonal_root_forces_full_plane",
+      "reason": "Full conference-conversion lemma under the actual normalized weighing Gram identity and original propagated cross equations, for either coefficient plane and diagonal sign. Original formal proof of the classical conference normalization input (Geramita-Verner 1976, Theorem 2), signed matching fill, paired skewness, root transfer and independent-plane classification. No imported conference proof code or normalization assumption. Only standard axioms."
+    },
+    {
+      "id": "CT-22-03",
+      "section": "22-real-weighing-exactness.tex",
+      "kind": "theorem",
+      "title": "Exact real feasibility and solution topology",
+      "statement_tex": "A real matrix $H$ with $HH^{\\mathsf T}=nI_n$, obtained by changing\nonly zeros of $W$, exists if and only if a zero-preserving Hadamard\nfilling exists. More precisely each component section\n$K\\cap\\mathcal R$, $K\\cap\\mathcal F$ is only zero, a coordinate\naxis, or the full plane. Each axis contributes two isolated\ncompletions, both sign-valued. Each full plane contributes a full\ncircle of real completions containing exactly four sign fillings.\nThere are no isolated nonsign real completions.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.real_feasibility_and_solution_topology",
+      "reason": "Full actual real-matrix feasibility equivalence; explicit root/completion homeomorphism and inverse; exact zero/axis/circle classification; complete sign-filling enumeration with two or four actual matrices per component; axis isolation in the full actual solution space; explicit Cayley-circle deformations and non-isolation of every nonsign completion. Original proofs only, standard axioms. No real-rounding or topology assumption."
+    },
+    {
+      "id": "CT-22-04",
+      "section": "22-real-weighing-exactness.tex",
+      "kind": "proposition",
+      "title": "A sharper cardinality bound",
+      "statement_tex": "For $n\\ge8$ the number of zero-preserving Hadamard fillings belongs\nto $\\{0,2,4,6\\}$ and is at most six. The bound six is attained.\nAt order four there are exactly eight fillings.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.sharp_zero_preserving_fill_cardinalities",
+      "reason": "Full actual filling cardinality proposition: exact finite set of all zero-preserving Hadamard fillings has cardinality 0,2,4,6 for admissible normalized orders with at least three blocks (hence n>=8); original signed-triangle obstruction excludes two full planes; disjoint exact component enumeration. Exact integer kernel certificates and cast/completeness proofs give a six-fill order-eight example; every normalized order-four matrix has exactly eight actual fills. No finite-search assumption, native evaluation or extra axiom."
+    },
+    {
+      "id": "CT-23-01",
+      "section": "23-complex-defect-two.tex",
+      "kind": "theorem",
+      "title": "An exact rank test for a two-column flat completion",
+      "statement_tex": "The matrix $B$ is a Gram matrix of unit vectors in $\\mathbb R^3$.\nThe partial complex Hadamard matrix $V$ can be completed by two\nunit-modulus columns if and only if $\\operatorname{rank}B\\le2$.",
+      "lean_status": "proved",
+      "lean_declaration": null,
+      "reason": "FULL exact complex two-column rank criterion and unit Bloch Gram realization for the actual n by n-2 partial complex matrix. The residual factor is constructed by scaled orthonormal extension; every row has norm squared two. Original Bloch algebra, real Gram rank-nullity/unit-normal equivalence, and spectral diagonalization of the Hermitian axis give an explicit common unitary making both completing columns unit modulus. The converse uses their planar Bloch vectors. Completion means the actual appended matrix has full column Gram nI, retaining every given entry. No assumed residual factor, normal, rotation, or flat extension is added. Two independent mathlib-only targets, zero definition holes, ten raw source/olean receipts, standard three axioms and private both-kernel acceptance. CT-23-02 and CT-23-03 remain pending. Fresh integrated seven-group verification required.",
+      "lean_declarations": [
+        "CompletionTheory.Bloch.residual_bloch_unit_gram",
+        "CompletionTheory.Bloch.complex_defect_two_rank_criterion"
+      ]
+    },
+    {
+      "id": "CT-23-02",
+      "section": "23-complex-defect-two.tex",
+      "kind": "theorem",
+      "title": "Quaternary input needs no extra phase freedom",
+      "statement_tex": "Suppose $n$ is even and $V$ has entries in $\\mu_4$.\nThen $B_{ij}\\in\\{-1,0,1\\}$, and $\\operatorname{rank}B\\le3$.\nWhenever $\\operatorname{rank}B\\le2$, the two completing columns\ncan also be chosen in $\\mu_4$. Thus complex and quaternary\ncompletability are equivalent for this codimension-two input.",
+      "lean_status": "proved",
+      "lean_declaration": null,
+      "reason": "Exact Gaussian residual discreteness and equivalence of actual complex-flat and fourth-root two-column completions. Phase representatives chosen by fourth powers preserve every residual Gram entry. Four independent mathlib-only targets, zero definition holes, standard three axioms, private both-kernel acceptance. Fresh integrated eight-group verification required.",
+      "lean_declarations": [
+        "CompletionTheory.Bloch.quaternary_bloch_discreteness",
+        "CompletionTheory.Bloch.quaternary_defect_two_completion_equivalence"
+      ]
+    },
+    {
+      "id": "CT-23-03",
+      "section": "23-complex-defect-two.tex",
+      "kind": "theorem",
+      "title": "Automatic quaternary completion using a classical real input",
+      "statement_tex": "Every even-order quaternary partial Hadamard matrix missing two\ncolumns has a quaternary completion.\nThis assertion uses the classical real codimension-four Hadamard\ncompletion theorem as an input; it is not proved here from scratch.",
+      "lean_status": "proved",
+      "lean_declaration": null,
+      "reason": "Unconditional automatic fourth-root completion for every even n >= 2. Original Gaussian cyclic-triple parity excludes three orthogonal Bloch directions; explicit two-axis factorization proves rank at most two. No real codimension-four completion theorem is assumed. Four independent mathlib-only targets, zero definition holes, standard three axioms, private both-kernel acceptance. Fresh integrated eight-group verification required.",
+      "lean_declarations": [
+        "CompletionTheory.Bloch.automatic_quaternary_bloch_rank",
+        "CompletionTheory.Bloch.automatic_quaternary_defect_two_completion"
+      ]
+    },
+    {
+      "id": "CT-24-01",
+      "section": "24-quaternary-defect-three.tex",
+      "kind": "lemma",
+      "title": "A one-column extension gate through realification",
+      "statement_tex": "For arbitrary $r\\ge1$, a quaternary column orthogonal to all columns\nof $V$ exists if and only if the real sign frame\n$A=\\mathcal R((1+i)V)$ has an orthogonal real sign column.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.quaternary_realification_gate",
+      "reason": "For every actual fourth-root matrix with complex column Gram nI, constructs the canonical realified matrix of (1+i)V, proves all its entries are signs and its column Gram is 2nI, and proves the iff between an actual orthogonal fourth-root column and an actual orthogonal real sign column. Stronger statement has no codimension restriction. All real/imaginary identities, scalar conversion, and four-point alphabet cases proved from scratch with mathlib; no classical real completion assumption is used in this gate."
+    },
+    {
+      "id": "CT-24-02",
+      "section": "24-quaternary-defect-three.tex",
+      "kind": "theorem",
+      "title": "Automatic completion in complex codimension at most three",
+      "statement_tex": "Every such $V$ with $1\\le r\\le3$ can be completed to a\n$\\mathrm{BH}(n,4)$ matrix, retaining all its original columns.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.small_defect_quaternary_completion",
+      "reason": "Full retaining-columns completion theorem for every even order and complex defect at most three, under the explicitly stated RealSmallDefectExtension hypothesis corresponding to the classical real completion input assumed in this paper section. Each realification, fourth-root extension, append Gram identity, and defect induction is proved from scratch. The classical real theorem is an explicit proposition parameter, not an axiom and not claimed as formalized here."
+    },
+    {
+      "id": "CT-24-03",
+      "section": "24-quaternary-defect-three.tex",
+      "kind": "theorem",
+      "title": "An explicit finite exact algorithm",
+      "statement_tex": "For $r\\le3$, Gaussian-rational row reduction and at most\n$4^{r-1}+\\cdots+4+1\\le21$ candidate-column tests construct the\ncompletion. The theorem does not require a real Hadamard completion\nas algorithmic input.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.exact_quaternary_completion_algorithm_for_complex_input",
+      "reason": "Executable Gaussian-rational row elimination, sound and complete normalized enumeration, counted first-success search, recursive appends, and original-column retention. The actual counter is at most21 through defect three. Every complex fourth-root input has an exact encoding and returned completion with the required Gram matrix. The classical real small-defect input remains an explicit hypothesis exactly as in the paper; no supplied completion is an algorithm input. The separate O(n^3) scalar-operation discussion is not included in this counter theorem. AlgorithmChallenge/comparator-algorithms.json covers87 obligations without definition holes.",
+      "lean_declarations": [
+        "CompletionTheory.exact_quaternary_completion_algorithm_for_complex_input",
+        "CompletionTheory.exact_quaternary_completion_algorithm"
+      ]
+    },
+    {
+      "id": "CT-24-04",
+      "section": "24-quaternary-defect-three.tex",
+      "kind": "corollary",
+      "title": "A precise codimension-four gate",
+      "statement_tex": "For a quaternary input with $r=4$, full quaternary completion is\nequivalent to the existence of even one new fourth-root column.\nThe latter is decided by at most $4^3=64$ normalized candidate tests.\nIf a new column exists, the remaining defect three is automatically\ncompleted by the theorem. No automatic existence of that first\ncolumn at defect four is asserted.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.quaternary_defect_four_completion_gate",
+      "reason": "Full codimension-four iff and exact 64-candidate normalized fourth-root kernel test, with sound and complete membership. Uses the same explicit classical real completion input as the paper. Original proofs establish information coordinates, phase normalization, kernel rank-nullity, append preservation, retention, and the return to defect three. The separate Gaussian-rational operation-count algorithm claim CT-24-03 remains pending."
+    },
+    {
+      "id": "CT-25-01",
+      "section": "25-support-moving-repair.tex",
+      "kind": "theorem",
+      "title": "A four-row support-moving switch",
+      "statement_tex": "Select two complete zero-row pairs, ordered as four rows, and let\n\\[\n Q=\\frac12\\begin{pmatrix}\n1&1&1&1\\\\1&-1&1&-1\\\\1&1&-1&-1\\\\1&-1&-1&1\n\\end{pmatrix}.\n\\]\nReplace those four rows by their product with $Q$, leaving all\nother rows unchanged. The output is another $W(n,n-2)$ if and\nonly if the product of the four selected entries is $-1$ in every\ncolumn outside the two selected zero-column pairs.\nWhen it succeeds, zero positions can move only inside the four-square\nsubmatrix formed by the selected row and zero-column pairs.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.walshLift_switch_iff",
+      "reason": "Exact necessary-and-sufficient switch and support-motion conclusion, for arbitrary weight and selected two-zero/full-sign column shapes; specializes to normalized W(n,n-2).",
+      "lean_declarations": [
+        "CompletionTheory.walshLift_switch_iff",
+        "CompletionTheory.walshLift_support_motion"
+      ]
+    },
+    {
+      "id": "CT-25-02",
+      "section": "25-support-moving-repair.tex",
+      "kind": "proposition",
+      "title": "Two fixed-support row blocks cannot change feasibility",
+      "statement_tex": "Suppose $W'$ is another normalized $W(n,n-2)$ with exactly the same\nzero positions as $W$, and only one or two zero-row pairs are allowed\nto differ. Then $W'$ is obtained from $W$ by signed row permutations\ninside those pairs. In particular their zero-preserving Hadamard\ncompletion problems are equivalent.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.two_fixed_support_pairs_preserve_feasibility",
+      "reason": "Complete fixed-support rigidity for normalized weighing matrices with only two selected row pairs allowed to differ (including the one-pair case by repeated selection): constructs actual signed two-state block diagonal row permutation, proves it is identity on unchanged pairs, and gives both directions of zero-preserving mathlib Hadamard-fill feasibility. Proves scaled inverse, orthogonal row mixing, unchanged row/column support, zero-block cross cancellation, signed-block classification and inverse transfer. No rigidity or feasibility assumptions; only original normalized weighing hypotheses and standard axioms."
+    },
+    {
+      "id": "CT-26-01",
+      "section": "26-complete-neighbor-census.tex",
+      "kind": "theorem",
+      "title": "Syndrome census identity",
+      "statement_tex": "For a self-dual code $C$ of dimension $r$ over an odd prime field,\neach hyperplane $H\\subset C$ determines exactly one other self-dual\ncode $C_H$ containing $H$. If $B$ is a basis of $C$ and $v$ is an\nisotropic vector outside $C$, its nonzero projective syndrome\n$[Bv^T]$ labels $H=C\\cap v^\\perp$ and hence $C_H$.\nConsequently counting all sign vectors outside $C$ by projective\nsyndrome counts all new sign classes in each neighbor. Adding the\nold sign classes annihilated by that syndrome gives its entire\nsign count. Neighbors with no outside sign cannot improve the count.",
+      "lean_status": "proved",
+      "lean_declaration": "CompletionTheory.syndrome_neighbor_census",
+      "reason": "Aggregate actual finite-neighbor census partitions every outside normalized sign class exactly once; each neighbor count splits into retained old classes plus new classes, and no-outside neighbors cannot improve. Independent hyperplane_two_self_dual_spaces proves existence and uniqueness for each hyperplane; pivot_hyperplane_syndrome_label proves precisely nonzero projective syndrome equivalence in every basis; sign_vector_unique_code_neighbor links actual sign residues to their unique neighbor."
+    },
+    {
+      "id": "CT-26-02",
+      "section": "26-complete-neighbor-census.tex",
+      "kind": "theorem",
+      "title": "Complete improving-neighbor census for this code",
+      "statement_tex": "Of the $(5^{10}-1)/4=2441406$ self-dual neighbors of $C$, exactly\n42 have more than twelve sign classes. Every one of those has\ntwenty sign classes and forms a real Hadamard matrix. Ten retain\nten old rows and add ten; thirty-two retain nine old rows and add\neleven. Thus the code is not a local maximum for sign count, but\nevery improving move loses at least two old rows.\nThere are 2678 tied neighbors with twelve sign classes.\nThe complete neighbor sign-count distribution is\n\\[\n\\begin{array}{c|rrrrrr}\n\\text{sign count}&0&1&2&3&4&5\\\\\\hline\n\\text{neighbors}&94504&426152&792872&559560&330124&130000\n\\end{array}\n\\]\n\\[\n\\begin{array}{c|rrrrr}\n\\text{sign count}&6&8&12&20&\\text{all other counts}\\\\\\hline\n\\text{neighbors}&77096&28378&2678&42&0\n\\end{array}\n\\]",
+      "lean_status": "pending",
+      "lean_declaration": null,
+      "reason": "The full paper statement is not yet formalized.",
+      "submissionStatus": "excluded-unformalized",
+      "formalizationScopeNote": "The complete principal statement has not been formalized. Supporting lemmas or computational certificates do not establish the whole claim."
+    }
+  ],
+  "formalized_supporting_results": [
+    {
+      "id": "CT-SUPPORT-001",
+      "lean": "CompletionTheory.concatenate_gram",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-002",
+      "lean": "CompletionTheory.concatenate_partialHadamard",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-003",
+      "lean": "CompletionTheory.orthogonal_row_transform",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-004",
+      "lean": "CompletionTheory.orthogonal_design_gram",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-005",
+      "lean": "CompletionTheory.orthogonal_design_mathlib_hadamard",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-006",
+      "lean": "CompletionTheory.walshFour_orthogonal",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-007",
+      "lean": "CompletionTheory.walshFour_sign_iff",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-008",
+      "lean": "CompletionTheory.walshLift_weighing",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-009",
+      "lean": "CompletionTheory.walshFour_alphabet_iff",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-010",
+      "lean": "CompletionTheory.walshLift_switch_iff",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-011",
+      "lean": "CompletionTheory.walshLift_support_motion",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-012",
+      "lean": "CompletionTheory.codimension_one_completion",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-013",
+      "lean": "CompletionTheory.codimension_two_completion",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-014",
+      "lean": "CompletionTheory.repetition_partialHadamard",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-015",
+      "lean": "CompletionTheory.odd_repetition_unextendible",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-016",
+      "lean": "CompletionTheory.seedTwelve_hadamard",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-017",
+      "lean": "CompletionTheory.eight_missing_rows_obstruction",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-018",
+      "lean": "CompletionTheory.witnessBudget_eq_residual",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-019",
+      "lean": "CompletionTheory.weighted_odd_witness_budget",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-020",
+      "lean": "CompletionTheory.tetrahedral_sign_factor",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-021",
+      "lean": "CompletionTheory.tetrahedral_completion_of_card",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-022",
+      "lean": "CompletionTheory.codimension_one_completion_of_card",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-023",
+      "lean": "CompletionTheory.codimension_two_completion_of_card",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-024",
+      "lean": "CompletionTheory.codimension_three_completion_of_card",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-025",
+      "lean": "CompletionTheory.codimension_le_three_completion",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-026",
+      "lean": "CompletionTheory.odd_block_exchange_budget",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-027",
+      "lean": "CompletionTheory.witnessBudget_mod_eight",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-028",
+      "lean": "CompletionTheory.small_defect_budget",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-SUPPORT-029",
+      "lean": "CompletionTheory.defect_eight_zero",
+      "status": "compiled",
+      "verification": "lake build CompletionTheory Challenge Solution; Lean 4.35.0"
+    },
+    {
+      "id": "CT-CYCLIC-29",
+      "lean": "CompletionTheory.quaternionMix_pair",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CYCLIC-30",
+      "lean": "CompletionTheory.cyclicNorm_mix",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CYCLIC-31",
+      "lean": "CompletionTheory.quaternionMix_odd",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CYCLIC-32",
+      "lean": "CompletionTheory.cyclicNorm_odd_multiplier",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-0",
+      "lean": "CompletionTheory.odd_coefficient_square_lower",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-1",
+      "lean": "CompletionTheory.cyclicNorm_energy_lower",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-2",
+      "lean": "CompletionTheory.cyclicNorm_solution_energy_lower",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-3",
+      "lean": "CompletionTheory.cyclicNorm_augmentation",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-4",
+      "lean": "CompletionTheory.odd_coefficient_square_mod_eight",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-5",
+      "lean": "CompletionTheory.characterAnsatz_augmentation",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-6",
+      "lean": "CompletionTheory.characterAnsatz_energy",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-7",
+      "lean": "CompletionTheory.characterAnsatz_scalar_equation",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-8",
+      "lean": "CompletionTheory.odd_character_scalar_equation_impossible",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-9",
+      "lean": "CompletionTheory.zero_aligned_character_ansatz_impossible",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-10",
+      "lean": "CompletionTheory.character_norm_moments",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-11",
+      "lean": "CompletionTheory.zero_aligned_norm_obstruction",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-12",
+      "lean": "CompletionTheory.cyclicNorm_solution_parity",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ENERGY-13",
+      "lean": "CompletionTheory.cyclicNorm_boundary_signs",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-0",
+      "lean": "CompletionTheory.exchangeFrame_partialHadamard",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-1",
+      "lean": "CompletionTheory.tensor_row_dot",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-2",
+      "lean": "CompletionTheory.tensorFrame_partialHadamard",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-3",
+      "lean": "CompletionTheory.fiberLift_partialHadamard",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-4",
+      "lean": "CompletionTheory.tensor_augmenting_exchange",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-5",
+      "lean": "CompletionTheory.exchangeCost_eq_minimum",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-6",
+      "lean": "CompletionTheory.exchangeCost_eq_top",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-7",
+      "lean": "CompletionTheory.exchangeCost_le_iff",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-8",
+      "lean": "CompletionTheory.tensor_exchangeCost_le",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-TENSOR-9",
+      "lean": "CompletionTheory.tensor_noSignExtension",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-0",
+      "lean": "CompletionTheory.coordinateFunctionals_span",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-1",
+      "lean": "CompletionTheory.exists_information_coordinates",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-2",
+      "lean": "CompletionTheory.exists_information_coordinate_set",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-3",
+      "lean": "CompletionTheory.exists_information_equivalence",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-4",
+      "lean": "CompletionTheory.mem_cubeCandidates_iff",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-5",
+      "lean": "CompletionTheory.cubeCandidates_card_le",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-6",
+      "lean": "CompletionTheory.isCubeVector_neg",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-7",
+      "lean": "CompletionTheory.normalizedCubeCandidates_cover",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-8",
+      "lean": "CompletionTheory.normalizedCubeCandidates_card_le",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-9",
+      "lean": "CompletionTheory.normalized_information_assignment_count",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-10",
+      "lean": "CompletionTheory.normalizedInformationSearch_eq",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-11",
+      "lean": "CompletionTheory.normalizedInformationSearch_card_le",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-12",
+      "lean": "CompletionTheory.information_reconstruction_formula",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-13",
+      "lean": "CompletionTheory.informationMatrix_parameterizes",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-14",
+      "lean": "CompletionTheory.exists_cube_enumeration",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-INFO-15",
+      "lean": "CompletionTheory.information_coordinate_enumeration",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-0",
+      "lean": "CompletionTheory.sign_linear_form_coefficients",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-1",
+      "lean": "CompletionTheory.sign_linear_form_abs_sum",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-2",
+      "lean": "CompletionTheory.sign_linear_form_rigidity",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-3",
+      "lean": "CompletionTheory.cubeCandidates_saturated",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-4",
+      "lean": "CompletionTheory.maximum_cube_signed_coordinates",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-5",
+      "lean": "CompletionTheory.maximum_cube_duplication_space",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-6",
+      "lean": "CompletionTheory.duplicationMap_injective",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-7",
+      "lean": "CompletionTheory.duplicationMap_preserves_cube",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-8",
+      "lean": "CompletionTheory.duplicationMap_reflects_cube",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-9",
+      "lean": "CompletionTheory.duplication_space_dimension",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-10",
+      "lean": "CompletionTheory.duplication_space_maximum",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-CUBE-11",
+      "lean": "CompletionTheory.maximum_cube_iff_signed_duplication",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-0",
+      "lean": "CompletionTheory.duplicationMap_single",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-1",
+      "lean": "CompletionTheory.residualGram_transpose",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-2",
+      "lean": "CompletionTheory.partial_mul_residualGram_zero",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-3",
+      "lean": "CompletionTheory.residualGram_column_mem_kernel",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-4",
+      "lean": "CompletionTheory.residualGram_mulVec_kernel",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-5",
+      "lean": "CompletionTheory.blockIndicator_in_kernel",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-6",
+      "lean": "CompletionTheory.indicator_dot_duplication",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-7",
+      "lean": "CompletionTheory.blockSize_mul_residual_diagonal",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-8",
+      "lean": "CompletionTheory.blockSize_pos",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-9",
+      "lean": "CompletionTheory.sum_blockSize",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-10",
+      "lean": "CompletionTheory.residual_block_size_equation",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-11",
+      "lean": "CompletionTheory.residual_blocks_equal_size",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-12",
+      "lean": "CompletionTheory.residual_block_size_quotient",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-13",
+      "lean": "CompletionTheory.residual_block_count",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-14",
+      "lean": "CompletionTheory.indicator_dot_residual_column",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-15",
+      "lean": "CompletionTheory.residualGram_duplication_formula",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-16",
+      "lean": "CompletionTheory.block_hadamard_gives_sign_factor",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-17",
+      "lean": "CompletionTheory.sign_factor_gives_block_hadamard",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-18",
+      "lean": "CompletionTheory.duplication_residual_completion_iff",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-19",
+      "lean": "CompletionTheory.partial_kernel_dimension_sum",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-RESBLOCK-20",
+      "lean": "CompletionTheory.maximum_residual_cube_completion",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-SPAN-0",
+      "lean": "CompletionTheory.partial_transpose_mulVec_injective",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-SPAN-1",
+      "lean": "CompletionTheory.row_range_family_card_le",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-SPAN-2",
+      "lean": "CompletionTheory.row_range_restrict_of_orthogonal",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-SPAN-3",
+      "lean": "CompletionTheory.hadamard_transpose_mulVec_surjective",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-SPAN-4",
+      "lean": "CompletionTheory.tensor_row_range_of_columns",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-SPAN-5",
+      "lean": "CompletionTheory.tensor_fiber_orthogonal_columns",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-SPAN-6",
+      "lean": "CompletionTheory.span_rigid_tensor_candidate_confined",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-SPAN-7",
+      "lean": "CompletionTheory.span_rigidity_excludes_tensor_exchange",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-SPAN-8",
+      "lean": "CompletionTheory.span_rigidity_tensor_cost_lower",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-0",
+      "lean": "CompletionTheory.halfOverlapWitness_norm",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-1",
+      "lean": "CompletionTheory.halfOverlapWitness_dot",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-2",
+      "lean": "CompletionTheory.shared_half_projection_card_le_two",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-3",
+      "lean": "CompletionTheory.partial_row_pair_witness_norm",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-4",
+      "lean": "CompletionTheory.halfCorrelationPattern_flat_rows",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-5",
+      "lean": "CompletionTheory.tensor_fiber_correlation",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-6",
+      "lean": "CompletionTheory.flat_half_overlap_projection",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-7",
+      "lean": "CompletionTheory.flat_half_overlap_family_card_le_two",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-8",
+      "lean": "CompletionTheory.hadamard_single_fiber_reconstruction",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-9",
+      "lean": "CompletionTheory.tensor_correlation_as_fiber",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-10",
+      "lean": "CompletionTheory.tensor_single_deleted_fiber",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-11",
+      "lean": "CompletionTheory.two_deleted_tensor_correlations",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-12",
+      "lean": "CompletionTheory.two_distinct_rows_half_overlap_bound",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-13",
+      "lean": "CompletionTheory.halfCorrelationPattern_neg",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-14",
+      "lean": "CompletionTheory.sameSignLine_correlation_pattern",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-15",
+      "lean": "CompletionTheory.partial_row_correlation",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-16",
+      "lean": "CompletionTheory.half_overlap_structure_implies_correlations",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-17",
+      "lean": "CompletionTheory.single_original_deletion_card_bound",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-18",
+      "lean": "CompletionTheory.half_overlap_correlation_excludes_exchange",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-19",
+      "lean": "CompletionTheory.half_overlap_pair_structure_excludes_exchange",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-HALF-20",
+      "lean": "CompletionTheory.half_overlap_tensor_cost_three",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-0",
+      "lean": "CompletionTheory.encodedRealFrame_sign",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-1",
+      "lean": "CompletionTheory.encodedRealFrame_partialHadamard",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-2",
+      "lean": "CompletionTheory.delete24Rows_card",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-3",
+      "lean": "CompletionTheory.completion24_retains_masks",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-4",
+      "lean": "CompletionTheory.completion24_insert_masks",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-5",
+      "lean": "CompletionTheory.base24_integer_gram",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-6",
+      "lean": "CompletionTheory.insert24_integer_gram",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-7",
+      "lean": "CompletionTheory.completion24_integer_gram",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-8",
+      "lean": "CompletionTheory.base24_insert_cross_integer",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-9",
+      "lean": "CompletionTheory.base24Frame_partialHadamard",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-10",
+      "lean": "CompletionTheory.insert24Frame_partialHadamard",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-11",
+      "lean": "CompletionTheory.completion24Frame_hadamard",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-12",
+      "lean": "CompletionTheory.base24_insert_cross",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-13",
+      "lean": "CompletionTheory.base24_three_row_exchange",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-14",
+      "lean": "CompletionTheory.base24_exchangeCost_le_three",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-15",
+      "lean": "CompletionTheory.order24RepairIndex_injective",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-16",
+      "lean": "CompletionTheory.completion24_retains_base",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-17",
+      "lean": "CompletionTheory.completion24_retains_insert",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-18",
+      "lean": "CompletionTheory.completion24_retains_exchange",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-19",
+      "lean": "CompletionTheory.base24_exchange_with_completion",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-20",
+      "lean": "CompletionTheory.rational_reconstruction_complete",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-21",
+      "lean": "CompletionTheory.rational_seed_has_signs",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-22",
+      "lean": "CompletionTheory.base24RationalFrame_cast",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-23",
+      "lean": "CompletionTheory.base24Frame_noSignExtension",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-24",
+      "lean": "CompletionTheory.base24_tensor_partialHadamard",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-25",
+      "lean": "CompletionTheory.base24_tensor_noSignExtension",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    },
+    {
+      "id": "CT-ORDER24-26",
+      "lean": "CompletionTheory.base24_tensor_exchangeCost_le_three",
+      "status": "compiled",
+      "verification": "Full build, independent Challenge, axiom audit and local Comparator snapshot"
+    }
+  ],
+  "formalized_additional_results": [
+    {
+      "id": "CT-EXTRA-TETRAHEDRAL",
+      "lean_declarations": [
+        "CompletionTheory.tetrahedral_sign_factor",
+        "CompletionTheory.tetrahedral_completion_of_card"
+      ],
+      "status": "proved",
+      "statement": "Any codimension-three real sign frame with switched off-diagonal column correlations -3 or 1 completes, retaining all rows. This does not assert arbitrary codimension-three completion."
+    }
+  ],
+  "formalized_classical_inputs": [
+    {
+      "id": "CT-CLASSICAL-CODIM-THREE",
+      "lean": "CompletionTheory.codimension_le_three_completion",
+      "lean_declarations": [
+        "CompletionTheory.codimension_one_completion_of_card",
+        "CompletionTheory.codimension_two_completion_of_card",
+        "CompletionTheory.codimension_three_completion_of_card",
+        "CompletionTheory.codimension_le_three_completion"
+      ],
+      "status": "proved",
+      "statement": "Every positive-order partial sign Hadamard of order divisible by four with at most three missing rows completes, retaining all original rows through an injection. No completion theorem is assumed."
+    },
+    {
+      "id": "CT-CLASSICAL-CODIM-TWO",
+      "lean": "CompletionTheory.codimension_two_completion",
+      "status": "proved",
+      "statement": "Every even-order sign frame of codimension two completes, retaining every original row."
+    },
+    {
+      "id": "CT-CLASSICAL-CODIM-ONE",
+      "lean": "CompletionTheory.codimension_one_completion",
+      "status": "proved",
+      "statement": "Every n by n+1 partial real Hadamard frame completes, retaining every original row."
+    }
+  ],
+  "classical_inputs": [
+    "Real codimension-at-most-seven completion theorem",
+    "Conference normalization theorem",
+    "Paley constructions",
+    "Finite-field hyperbolic geometry",
+    "Lagrange four-square theorem",
+    "Dirichlet GRH only in the explicitly conditional arithmetic section"
+  ],
+  "policy": "No pending principal statement is represented by a weaker formal target or assumed as a Lean axiom.",
+  "submissionScope": "Only principal claims mapped to configured, proved Comparator targets are submitted. Excluded statements remain in the paper with explicit status labels.",
+  "formalizationDevelopment": "Paused by the author on 26 November 2026; no further proofs developed in this release preparation."
+}

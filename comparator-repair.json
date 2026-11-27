@@ -1,0 +1,25 @@
+{
+  "challenge_module": "RepairChallenge",
+  "solution_module": "RepairSolution",
+  "theorem_names": [
+    "CompletionTheory.repairOriginal_gram_entries",
+    "CompletionTheory.repairRetained_is_deletion",
+    "CompletionTheory.repair_exact_one_row_augmentation",
+    "CompletionTheory.repair_augmentation_destroys_odd_feasibility",
+    "CompletionTheory.repairFiveWitnessIndices._proof_1",
+    "CompletionTheory.repairInsertedToSixteen._proof_1",
+    "CompletionTheory.repairRetainedOriginalIndex._proof_2",
+    "CompletionTheory.repairRetainedOriginalIndex._proof_3",
+    "CompletionTheory.repairRetainedToSixteen._proof_1",
+    "CompletionTheory.repairRetainedToSixteen._proof_2",
+    "CompletionTheory.repairTwoToFive._proof_1",
+    "CompletionTheory.repairTwoToFive._proof_2"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

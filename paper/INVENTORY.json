@@ -1,0 +1,325 @@
+{
+  "project": "CompletionTheory",
+  "sections": [
+    {
+      "id": "CT-S01",
+      "source": "arithmetic/large_energy.tex",
+      "source_sha256": "4224836772eabce6a2ee9e34e86bcab0d5ad9fa83a4e7470d90b888d146e8fed",
+      "local_section": "sections/01-cyclic-hermitian-norms.tex",
+      "claim_ids": [
+        "CT-01-01",
+        "CT-01-02",
+        "CT-01-03",
+        "CT-01-04",
+        "CT-01-05"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S02",
+      "source": "round3/arithmetic/sharp_character_span.tex",
+      "source_sha256": "26f5db07d1ee8c762016a7569c7fd64ec9f15c2ae90e51f4f64a25c423488def",
+      "local_section": "sections/02-quadratic-character-floor.tex",
+      "claim_ids": [
+        "CT-02-01",
+        "CT-02-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S03",
+      "source": "paper/research.tex",
+      "source_sha256": "e56f0c00cd3496d634e2ff54592614a61618151295e528be1791b74fee643375",
+      "local_section": "sections/03-residual-foundations.tex",
+      "claim_ids": [
+        "CT-03-01",
+        "CT-03-02",
+        "CT-03-03"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S04",
+      "source": "round5/completion.tex",
+      "source_sha256": "54d16caefe341b980f049db70698f553129b2a62bc2eacf17438a2b704949ecc",
+      "local_section": "sections/04-residual-lattices.tex",
+      "claim_ids": [
+        "CT-04-01"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S05",
+      "source": "round6/completion/completion.tex",
+      "source_sha256": "ad97b2f05c98e29303e2dce51a35f7dac6f967680a9224bbf3229721f1433131",
+      "local_section": "sections/05-exchange-budget.tex",
+      "claim_ids": [
+        "CT-05-01",
+        "CT-05-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S06",
+      "source": "exchanges/results.tex",
+      "source_sha256": "d0809b230213826bcf5edd91473b758d5f963cd97e8c7b42ddc39a406296dad4",
+      "local_section": "sections/06-partial-frame-exchanges.tex",
+      "claim_ids": [
+        "CT-06-01",
+        "CT-06-02",
+        "CT-06-03"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S07",
+      "source": "round3/exchanges/tensor_barrier.tex",
+      "source_sha256": "bf9fd0e2c37af20608d4827c4ceaccb983ce42d281919de1bd14c6e3ed422d08",
+      "local_section": "sections/07-tensor-exchange-barrier.tex",
+      "claim_ids": [
+        "CT-07-01",
+        "CT-07-02",
+        "CT-07-03",
+        "CT-07-04"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S08",
+      "source": "round7/repair/repair.tex",
+      "source_sha256": "2557b95b369ecab708fc188866d8997297b3738c22affcd78436f84cb18b2c20",
+      "local_section": "sections/08-parity-lattices.tex",
+      "claim_ids": [
+        "CT-08-01",
+        "CT-08-02",
+        "CT-08-03"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S09",
+      "source": "round8/lattice/lattice.tex",
+      "source_sha256": "45028914d565416c7ac1a8f4bc9c31cfc168389b00c1ffb87577b4b5fdb95cf4",
+      "local_section": "sections/09-short-coset-repair.tex",
+      "claim_ids": [
+        "CT-09-01",
+        "CT-09-02",
+        "CT-09-03"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S10",
+      "source": "round9/lattice/lattice.tex",
+      "source_sha256": "08e8d1612beffa7c51fe1d10e0045bd5cad96e45cad2c9929043352a47b074fc",
+      "local_section": "sections/10-modular-lifting-eight.tex",
+      "claim_ids": [
+        "CT-10-01"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S11",
+      "source": "round10/modular/modular.tex",
+      "source_sha256": "217afa9e4ff4fdf1f4f07a5b47cc5e8b52095b670c953ac636c9f7cbf36e6513",
+      "local_section": "sections/11-modular-lifting-four.tex",
+      "claim_ids": [
+        "CT-11-01",
+        "CT-11-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S12",
+      "source": "round10/codes/codes.tex",
+      "source_sha256": "220977df3b03965bb82fd4c7458e5e29a0592a33ffb1dde16d666a08dfa4943e",
+      "local_section": "sections/12-compatible-codes.tex",
+      "claim_ids": [
+        "CT-12-01",
+        "CT-12-02",
+        "CT-12-03"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S13",
+      "source": "round10/code_traps/traps.tex",
+      "source_sha256": "d64a6d8c18161b32d6ca2f8162fbc1a3665d02fe8050442d4692876f62497121",
+      "local_section": "sections/13-terminal-code-trap.tex",
+      "claim_ids": [
+        "CT-13-01",
+        "CT-13-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S14",
+      "source": "round10/codes/neighbor_counts.tex",
+      "source_sha256": "aa6d5082d24f6c091c685d89146a21d0d90c6caf49be3f699b36b705aa8cbac9",
+      "local_section": "sections/14-neighbor-incidence.tex",
+      "claim_ids": [
+        "CT-14-01",
+        "CT-14-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S15",
+      "source": "round11/quotients/quotients.tex",
+      "source_sha256": "73a317315ba06547468cd9ea6e63b7d528c78f54f7d2893964961584692d0893",
+      "local_section": "sections/15-quotient-grid.tex",
+      "claim_ids": [
+        "CT-15-01",
+        "CT-15-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S16",
+      "source": "round11/moments/moments.tex",
+      "source_sha256": "7c52bb2f24149682aee3975d223bd11d3aec08bc30612b9b7c0f699945d9affb",
+      "local_section": "sections/16-completion-moments.tex",
+      "claim_ids": [
+        "CT-16-01",
+        "CT-16-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S17",
+      "source": "round12/moments/third.tex",
+      "source_sha256": "230f5880cc76f9c54a4adedc009c5b43c1d7206a70773b56cffd30ef43915fc6",
+      "local_section": "sections/17-third-moments.tex",
+      "claim_ids": [
+        "CT-17-01"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S18",
+      "source": "round12/arithmetic/arithmetic.tex",
+      "source_sha256": "f5b25fe1869db9803e03469b0bc25e7c12aa6257eac4410016651f2b4edc6a38",
+      "local_section": "sections/18-conditional-half-frame.tex",
+      "claim_ids": [
+        "CT-18-01",
+        "CT-18-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S19",
+      "source": "round12/dilations/dilations.tex",
+      "source_sha256": "c3dcdd34c6e1b734c75bb2612880d6ff059a134f1a6c577814df193aa56b26f3",
+      "local_section": "sections/19-real-dilations.tex",
+      "claim_ids": [
+        "CT-19-01",
+        "CT-19-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S20",
+      "source": "round13/quaternary/quaternary.tex",
+      "source_sha256": "9ebf321ed869dad6c03db9fa5df66314100ab126cf0996b6bb1408000bd152d9",
+      "local_section": "sections/20-quaternary-realification.tex",
+      "claim_ids": [
+        "CT-20-01",
+        "CT-20-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S21",
+      "source": "round13/weighing/weighing.tex",
+      "source_sha256": "32a727257fae5246aa46eb8b935ff86a038847deb63970ef7d60495c6404b5cf",
+      "local_section": "sections/21-weighing-normal-form.tex",
+      "claim_ids": [
+        "CT-21-01",
+        "CT-21-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S22",
+      "source": "round14/weighing/weighing.tex",
+      "source_sha256": "ae43be1fc640731deb113fdd8668090cd903c4874406564acdfc0567ca74dafa",
+      "local_section": "sections/22-real-weighing-exactness.tex",
+      "claim_ids": [
+        "CT-22-01",
+        "CT-22-02",
+        "CT-22-03",
+        "CT-22-04"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S23",
+      "source": "round14/phase_quantum/completion.tex",
+      "source_sha256": "1efafb32ccce2e8b0cf0a8a6d98bc9266227955bde9b4b62ae7be142d50bb7d5",
+      "local_section": "sections/23-complex-defect-two.tex",
+      "claim_ids": [
+        "CT-23-01",
+        "CT-23-02",
+        "CT-23-03"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S24",
+      "source": "round15/completion/main.tex",
+      "source_sha256": "95f9c751d82829ed42546dc26270ee004a02978930b649d5e2f69efed1266d26",
+      "local_section": "sections/24-quaternary-defect-three.tex",
+      "claim_ids": [
+        "CT-24-01",
+        "CT-24-02",
+        "CT-24-03",
+        "CT-24-04"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S25",
+      "source": "round15/weighing/main.tex",
+      "source_sha256": "0a2cc0a827d2feb0876597298ecb9fcacb591ae000c8a3c13a0e44ccd58afe04",
+      "local_section": "sections/25-support-moving-repair.tex",
+      "claim_ids": [
+        "CT-25-01",
+        "CT-25-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    },
+    {
+      "id": "CT-S26",
+      "source": "round11/landscape/landscape.tex",
+      "source_sha256": "2ed377cab99a92db8b50b87894fdc42aa61dd53a0a7b4de05e02ee6ba467de0f",
+      "local_section": "sections/26-complete-neighbor-census.tex",
+      "claim_ids": [
+        "CT-26-01",
+        "CT-26-02"
+      ],
+      "scope": "Original proof retained; classical inputs and conditional hypotheses remain explicit."
+    }
+  ],
+  "overlap_and_cross_references": [
+    {
+      "source": "paper/research.tex: lattice/tight-frame foundations",
+      "destination": "CompletionTheory foundations; superseded by later retained full proofs"
+    },
+    {
+      "source": "round5/collision_entropy.tex: rank<=3 real completion interface",
+      "destination": "RootEntropyDesigns owns full entropy proof; cited classical/input interface here"
+    },
+    {
+      "source": "exchanges/results.tex, round3/exchanges/tensor_barrier.tex",
+      "destination": "CompletionTheory retains the full partial-Hadamard augmentation proofs"
+    },
+    {
+      "source": "round9/exchanges/, round10/exchanges/, round15/exchanges/",
+      "destination": "RootEntropyDesigns owns fair-bit atom exchange; PhaseGeometry owns discrete Gram-energy strip moves"
+    },
+    {
+      "source": "round8/nonlinear/, round9/nonlinear/, round10/nonlinear/, round13/quantum/, round14/phase_quantum/paper.tex",
+      "destination": "PhaseGeometry owns ambient analytic/quantum obstructions; real and quaternary completion interfaces retained here"
+    }
+  ]
+}

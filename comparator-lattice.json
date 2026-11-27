@@ -1,0 +1,15 @@
+{
+  "challenge_module": "LatticeChallenge",
+  "solution_module": "LatticeSolution",
+  "theorem_names": [
+    "CompletionTheory.rational_saturated_lattice_alternative",
+    "CompletionTheory.rational_row_span_zero_budget"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

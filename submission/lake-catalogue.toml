@@ -1,0 +1,110 @@
+# Library catalogue; executable native-aware configuration is lakefile.lean.
+name = "completion_theory"
+version = "0.1.0"
+defaultTargets = ["CompletionTheory", "Solution", "AlgorithmSolution", "RepairSolution", "CodeSolution", "LatticeSolution", "CharacterSolution", "BlochSolution", "QuaternarySolution", "CyclicExistenceSolution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.35.0"
+
+[[lean_lib]]
+name = "CompletionTheory"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
+
+[[lean_lib]]
+name = "PhaseGeometry"
+
+[[lean_lib]]
+name = "HadamardMultibase"
+
+[[lean_lib]]
+name = "AlgorithmChallenge"
+
+[[lean_lib]]
+name = "AlgorithmSolution"
+
+[[lean_lib]]
+name = "CompletionRepair"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "RepairChallenge"
+
+[[lean_lib]]
+name = "RepairSolution"
+
+[[lean_lib]]
+name = "CompletionCodeTrap"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "CodeChallenge"
+
+[[lean_lib]]
+name = "CodeSolution"
+
+[[lean_lib]]
+name = "CompletionLattice"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "LatticeChallenge"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "LatticeSolution"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "CompletionCharacter"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "CharacterChallenge"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "CharacterSolution"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "CompletionBloch"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "BlochChallenge"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "BlochSolution"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "CompletionQuaternary"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "QuaternaryChallenge"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "QuaternarySolution"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "CompletionCyclicExistence"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "CyclicExistenceChallenge"
+moreLeanArgs = ["-M1024"]
+
+[[lean_lib]]
+name = "CyclicExistenceSolution"
+moreLeanArgs = ["-M1024"]

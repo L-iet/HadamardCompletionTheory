@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "main",
+      "config": "comparator.json"
+    },
+    {
+      "id": "algorithms",
+      "config": "comparator-algorithms.json"
+    },
+    {
+      "id": "repair",
+      "config": "comparator-repair.json"
+    },
+    {
+      "id": "codes",
+      "config": "comparator-codes.json"
+    },
+    {
+      "id": "lattice",
+      "config": "comparator-lattice.json"
+    },
+    {
+      "id": "character",
+      "config": "comparator-character.json"
+    },
+    {
+      "id": "bloch",
+      "config": "comparator-bloch.json"
+    },
+    {
+      "id": "quaternary",
+      "config": "comparator-quaternary.json"
+    },
+    {
+      "id": "cyclic-existence",
+      "config": "comparator-cyclic-existence.json"
+    }
+  ]
+}

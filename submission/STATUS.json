@@ -1,0 +1,25 @@
+{
+  "project": "completion-theory",
+  "paperPages": 65,
+  "comparedTheorems": 260,
+  "comparedDefinitions": 203,
+  "paperClaimRecords": 64,
+  "provedClaimRecords": 62,
+  "unfinishedClaimRecords": 2,
+  "unsubmittedPrincipalClaims": [
+    "CT-18-01",
+    "CT-26-02"
+  ],
+  "proofBuild": "passed",
+  "axiomAudit": "passed",
+  "auditedDeclarations": 463,
+  "localComparator": "passed dual-kernel checks, using fresh acceptance or revalidated byte-identical exported-proof receipts as recorded per group",
+  "paperSnapshotCurrent": true,
+  "submissionReady": true,
+  "readinessMode": "local preparation of declared verified scope",
+  "formalizationDevelopment": "paused",
+  "principalCoverageComplete": false,
+  "registryVerified": false,
+  "registrationPerformed": false,
+  "publicImmutableCommitRequired": true
+}

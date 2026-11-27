@@ -1,0 +1,34 @@
+{
+  "key": "443516d2dce25369ded8f5237823892ecb7a5c00cc5f8e25d66042ba465b3ff4",
+  "metadata": {
+    "group": "character",
+    "configPath": "comparator-character.json",
+    "configSHA256": "ea99da1bcff706dee1b11384729b5524aeff5ddc600d8f7203955d033b7f82d9",
+    "theoremNames": [
+      "CompletionTheory.CharacterFloor.skew_template_attainment",
+      "CompletionTheory.CharacterFloor.symmetric_template_attainment",
+      "CompletionTheory.CharacterFloor.character_span_sharp_energy_floors",
+      "CompletionTheory.CharacterFloor.prime_character_binary_boundary"
+    ],
+    "definitionNames": [],
+    "exports": {
+      "challenge": "15fe03a8a9e291c98ba09afeb90b584bd0743606efbd4e800e875a253c7ce6da",
+      "solution": "72e36f44a0af376222044532e3c4602c202d7fef8f7d3a716f0e874de4038e71"
+    },
+    "environment": {
+      "toolchain": "leanprover/lean4:v4.35.0",
+      "toolchainSHA256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "binaries": {
+        "lean": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+        "lake": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+        "leanexport": "bda24bb3fafaf299ba472f944942d6293294b76559fafc9f166badd7c0f981b3",
+        "leanchecker": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+        "nanoda_bin": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8"
+      }
+    }
+  },
+  "capturedAtUTC": "2026-11-25T16:28:22.926868+00:00",
+  "reportSHA256": "ff5460f43688e2bd1877242624b2a7d57438221c9dc4909830516afca8b5e824",
+  "logSHA256": "52e61c4a487a636e70f2be58d211a166787baa46d5ec7f4241b92f1924d7259b",
+  "scope": "Immutable original Comparator exit0 with explicit Lean/NanoDa acceptance of the exact exports/config/checker environment. Local diagnostic, not registry verification."
+}
