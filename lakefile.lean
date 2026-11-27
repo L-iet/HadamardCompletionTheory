@@ -10,17 +10,19 @@ package completion_theory where
 require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ "v4.35.0"
 
 target nativeRuntime pkg : Lake.Dynlib := do
+  let runtimeDir := pkg.buildDir / "cyclic-native"
   let pythonExe := if System.Platform.isWindows then "python" else "python3"
   let output ← IO.Process.output {
     cmd := pythonExe
-    args := #["scripts/bootstrap_native_mathlib.py", "--project-root", pkg.dir.toString]
+    args := #["scripts/bootstrap_native_mathlib.py", "--project-root", pkg.dir.toString,
+      "--output-dir", runtimeDir.toString]
     cwd := some pkg.dir
     env := #[("LEAN_NUM_THREADS", some "1")]
   }
   if output.exitCode != 0 then
     error s!"Native runtime bootstrap failed ({output.exitCode}):\n{output.stdout}\n{output.stderr}"
   Lake.logInfo output.stdout
-  let text ← IO.FS.readFile (pkg.dir / ".lake" / "cyclic-native" / "result.json")
+  let text ← IO.FS.readFile (runtimeDir / "result.json")
   let data ← IO.ofExcept (Json.parse text)
   let loader ← IO.ofExcept (data.getObjVal? "loader")
   let file ← IO.ofExcept (loader.getObjValAs? String "file")

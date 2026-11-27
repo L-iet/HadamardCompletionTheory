@@ -1,0 +1,32 @@
+{
+  "evidenceVerifiedAtUTC": "2026-11-27T03:44:24.760553+00:00",
+  "proofBuild": "passed",
+  "axiomAudit": "passed",
+  "localComparator": "passed dual-kernel checks, using fresh acceptance or revalidated byte-identical exported-proof receipts as recorded per group",
+  "localComparisonCheckedAtUTC": "2026-11-25T16:07:26.936950+00:00",
+  "leanKernelAccepted": true,
+  "nanodaAccepted": true,
+  "principalCoverageComplete": false,
+  "sandboxedRegistryVerification": false,
+  "registryVerificationScope": "Local diagnostics do not assert registry verification.",
+  "groupComparisonCheckedAtUTC": {
+    "main": "2026-11-25T16:07:26.936950+00:00",
+    "algorithms": "2026-11-25T16:12:43.321248+00:00",
+    "repair": "2026-11-25T16:19:37.934567+00:00",
+    "codes": "2026-11-25T16:24:48.353191+00:00",
+    "lattice": "2026-11-25T16:26:34.711618+00:00",
+    "character": "2026-11-25T16:28:21.988775+00:00",
+    "bloch": "2026-11-25T16:31:11.119703+00:00",
+    "quaternary": "2026-11-25T16:34:02.226715+00:00",
+    "cyclic-existence": "2026-11-25T15:42:42.838099+00:00"
+  },
+  "submissionReady": true,
+  "gitCommitsMade": false,
+  "proofHashRecord": "submission/proof-hashes.json",
+  "scope": "Declared configured results only; excluded manuscript results remain explicitly unsubmitted.",
+  "readinessMode": "local preparation of declared verified scope",
+  "sourceScope": "submission/SCOPE.json",
+  "preparationReport": "submission/submission-preparation.json",
+  "registrationPerformed": false,
+  "formalizationDevelopment": "paused"
+}

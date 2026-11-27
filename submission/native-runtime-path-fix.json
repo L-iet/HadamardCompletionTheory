@@ -1,0 +1,27 @@
+{
+  "updatedAtUTC": "2026-11-27T06:30:57.198124+00:00",
+  "previousPublishedCommit": "9d4c7250c065832f3ccd601329b601fa9a192ed6",
+  "reportedFailure": "OSError: [Errno 30] Read-only file system: source/.lake/cyclic-native",
+  "cause": "Palomar makes only .lake/build and .lake/config writable; the runtime bootstrap created a sibling directory under read-only .lake.",
+  "fix": "Lake passes pkg.buildDir/cyclic-native with --output-dir. The Python default and receipt reader use .lake/build/cyclic-native. All generated native artifacts, locks, logs and receipts stay in that build tree.",
+  "changedSourceInventoryFiles": [
+    "lakefile.lean",
+    "scripts/bootstrap_native_mathlib.py",
+    "scripts/native_runtime.py",
+    "scripts/test_native_runtime.py",
+    "formalization.yaml"
+  ],
+  "mathematicalLeanSourcesAndSelectedTargetsUnchanged": true,
+  "historicalEvidence": "submission/history/9d4c7250c065832f3ccd601329b601fa9a192ed6",
+  "checks": {
+    "windowsRuntimeRegressions": "3 passed, POSIX-permissions test skipped on Windows",
+    "lakeCatalogueRegressions": "4 passed",
+    "lakeConfigurationElaboration": "lake -R check-build passed",
+    "linuxReadOnlyTest": "Added to ordinary Ubuntu CI; local WSL launch was unresponsive and stopped without running tests.",
+    "fullProofBuildRerun": false,
+    "comparatorRerun": false,
+    "kernelChecksRerun": false
+  },
+  "freshMechanicalVerificationRequired": true,
+  "metadataChange": "Review status distinguishes historical evidence from the changed runtime build integration."
+}

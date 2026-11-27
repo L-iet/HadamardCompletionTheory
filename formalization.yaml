@@ -91,7 +91,7 @@
   },
   "review": {
     "status": "unchecked",
-    "notes": "Selected declarations have local build, axiom-audit and comparison evidence. This does not claim independent human review, whole-manuscript formalization beyond the declared scope, or Palomar registry acceptance."
+    "notes": "The previous source snapshot has historical local build, axiom-audit and comparison evidence. The native runtime build integration was corrected after Palomar rejected a write to read-only source; the new build configuration awaits fresh mechanical verification. See submission/native-runtime-path-fix.json. This does not claim independent human review or registry acceptance."
   },
   "limitations": [
     "Full Hadamard conjecture not proved.",

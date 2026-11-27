@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 """Build licensed elaborator support. Mathematical proofs still use Lean-M1024.
-All output is disposable .lake data. No theorem or axiom is supplied by this code.
+All output is disposable data under the writable Lake build directory. No theorem or axiom is supplied by this code.
 """
 from pathlib import Path
 import argparse,concurrent.futures,hashlib,json,os,queue,re,shutil,subprocess,sys,threading,time
@@ -14,9 +14,12 @@ def atomic(f,a):
 def run(cmd,r,log):
  with log.open('wb') as w:return subprocess.run(cmd,cwd=r,stdout=w,stderr=subprocess.STDOUT,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0)).returncode
 
+def default_output_dir(project_root):
+ return project_root.resolve()/'.lake/build/cyclic-native'
+
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--project-root',type=Path,default=Path(__file__).resolve().parents[1]);ap.add_argument('--jobs',type=int,choices=[1,2],default=2);ap.add_argument('--seed-cache',type=Path);args=ap.parse_args()
- r=args.project_root.resolve();out=r/'.lake/cyclic-native';out.mkdir(parents=True,exist_ok=True)
+ ap=argparse.ArgumentParser();ap.add_argument('--project-root',type=Path,default=Path(__file__).resolve().parents[1]);ap.add_argument('--jobs',type=int,choices=[1,2],default=2);ap.add_argument('--seed-cache',type=Path);ap.add_argument('--output-dir',type=Path);args=ap.parse_args()
+ r=args.project_root.resolve();out=args.output_dir.resolve() if args.output_dir else default_output_dir(r);out.mkdir(parents=True,exist_ok=True)
  # This lock is local to the runtime target, not the outer verification/record lock.
  # It cannot deadlock a recorder which already holds the latter.
  lock=(out/'build.lock').open('a+b')

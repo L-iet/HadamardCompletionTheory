@@ -116,15 +116,20 @@ CompletionCyclicExistence/ contains the three-mod-eight three-square theorem,
 fixed-sum four squares and actual uniform/skew cyclic coefficient constructions.
 CyclicExistenceChallenge supplies eleven independent theorem targets and nine
 concrete definitions. Its public group is comparator-cyclic-existence.json.
-The current integration passed full local builds, bounded axiom audits and
-all nine local comparison groups on one source snapshot. Full readiness also
+The previous integration snapshot passed full local builds, bounded axiom audits
+and all nine local comparison groups. The runtime-path correction now awaits
+fresh mechanical verification; see `submission/native-runtime-path-fix.json`. Full readiness also
 requires the remaining principal proofs and registry checks.
 
 The executable build configuration is lakefile.lean. submission/lake-catalogue.toml is the
 machine-readable library catalogue; scripts/check_lake_catalogue.py checks their
 agreement. The runtime plugin is restricted to the four libraries that need it.
 On the first build, Python3 and the pinned Lean leanc compiler build licensed
-mathlib elaborator support under .lake/cyclic-native. This can take substantial
+mathlib elaborator support under `.lake/build/cyclic-native` (or the configured Lake build directory).
+The Lake target passes its build directory explicitly to the bootstrap and reads
+the loader receipt from that same directory. Palomar mounts source read-only
+and permits writes in `.lake/build` and `.lake/config`; no generated runtime
+files are written beside those directories. This can take substantial
 time and disk space. Compilation uses at most two workers and is resumable.
 The generated libraries initialize the elaborator; they supply no mathematical
 axioms. New proof modules and the axiom-profile reader retain the 1GiB limit.

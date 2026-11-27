@@ -20,6 +20,7 @@ jobs:
           python3 scripts/test_submission_checks.py
           python3 scripts/test_comparison_groups.py
           python3 scripts/test_comparison_coverage.py
+          python3 scripts/test_native_runtime.py
           python3 scripts/test_lake_catalogue.py
           python3 scripts/test_submission_scope.py
           python3 scripts/check_submission.py
